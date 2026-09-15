@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SD Patra Dharma 3 Balikpapan</title>
+    
+    <!-- Google Fonts: Nunito -->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- AOS Animation CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Nunito', 'sans-serif'],
+                    },
+                    colors: {
+                        sekolah: {
+                            biru: '#1e3a8a',    // Biru Tua/Navy
+                            birumuda: '#3b82f6', // Biru Cerah
+                            merah: '#ef4444',   // Merah Ceria
+                            kuning: '#f59e0b',  // Kuning Ceria
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="font-sans antialiased text-gray-800 bg-gray-50 overflow-x-hidden">
+
+    <!-- Navbar -->
+    <nav class="fixed w-full bg-white/90 backdrop-blur-md shadow-sm z-50 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center gap-3">
+                    <!-- Ganti src dengan link logo aslimu nanti -->
+                    <div class="w-12 h-12 bg-sekolah-biru rounded-full flex items-center justify-center text-white font-bold text-xl shadow-lg">PD3</div>
+                    <span class="font-extrabold text-xl md:text-2xl text-sekolah-biru">SD Patra Dharma 3</span>
+                </div>
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="#" class="text-gray-600 hover:text-sekolah-birumuda font-semibold transition">Beranda</a>
+                    <a href="#profil" class="text-gray-600 hover:text-sekolah-birumuda font-semibold transition">Profil</a>
+                    <a href="#unggulan" class="text-gray-600 hover:text-sekolah-birumuda font-semibold transition">Keunggulan</a>
+                    <!-- Link Out ke Google Sites -->
+                    <a href="LINK_GOOGLE_SITES_PMB" target="_blank" class="bg-sekolah-kuning hover:bg-yellow-400 text-white px-6 py-2.5 rounded-full font-bold shadow-md hover:shadow-lg transform hover:-translate-y-1 transition duration-300">
+                        <i class="fas fa-user-plus mr-2"></i>Daftar PMB
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 bg-gradient-to-br from-sekolah-birumuda to-sekolah-biru text-white overflow-hidden">
+        <!-- Dekorasi Background -->
+        <div class="absolute top-20 right-10 w-32 h-32 bg-white opacity-10 rounded-full blur-2xl"></div>
+        <div class="absolute bottom-10 left-10 w-48 h-48 bg-sekolah-kuning opacity-20 rounded-full blur-3xl"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div data-aos="fade-right" data-aos-duration="1000">
+                    <span class="inline-block py-1 px-3 rounded-full bg-sekolah-kuning text-white text-sm font-bold tracking-wider mb-4 shadow-sm">TAHUN AJARAN 2024/2025</span>
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight mb-6">
+                        Belajar Bahagia, <br>
+                        Tumbuh <span class="text-sekolah-kuning">Bermakna.</span>
+                    </h1>
+                    <p class="text-lg md:text-xl text-blue-100 mb-8 max-w-lg">
+                        Membentuk generasi cerdas, berkarakter mulia, dan kreatif di lingkungan belajar yang menyenangkan bersama SD Patra Dharma 3 Balikpapan.
+                    </p>
+                    <div class="flex flex-wrap gap-4">
+                        <a href="LINK_GOOGLE_SITES_PMB" target="_blank" class="bg-sekolah-merah hover:bg-red-500 text-white px-8 py-3.5 rounded-full font-bold text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition duration-300">
+                            Info PMB Sekarang
+                        </a>
+                        <a href="#profil" class="bg-white/20 hover:bg-white/30 backdrop-blur-sm text-white px-8 py-3.5 rounded-full font-bold text-lg transition duration-300">
+                            Jelajahi Sekolah
+                        </a>
+                    </div>
+                </div>
+                <div class="relative" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
+                    <!-- Placeholder Gambar Anak SD Ceria -->
+                    <img src="https://images.unsplash.com/photo-1577896851231-70ef18881754?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Siswa Ceria" class="rounded-[2rem] shadow-2xl border-4 border-white/20 transform rotate-2 hover:rotate-0 transition duration-500">
+                    
+                    <!-- Floating Badge -->
+                    <div class="absolute -bottom-6 -left-6 bg-white p-4 rounded-2xl shadow-xl flex items-center gap-4 animate-bounce" style="animation-duration: 3s;">
+                        <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center text-green-500 text-2xl">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <div>
+                            <p class="text-sm text-gray-500 font-semibold">Akreditasi</p>
+                            <p class="text-xl font-bold text-gray-800">Unggul (A)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Wave Divider Bawah -->
+        <div class="absolute bottom-0 left-0 w-full overflow-hidden leading-none transform translate-y-1">
+            <svg class="relative block w-full h-16 md:h-24 lg:h-32" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V95.8C59.71,118,130.95,130,195.4,115.1,239.5,104.9,282.8,80.7,321.39,56.44Z" fill="#f9fafb"></path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Keunggulan Section -->
+    <section id="unggulan" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-extrabold text-sekolah-biru mb-4">Mengapa Memilih Kami?</h2>
+                <div class="w-24 h-1.5 bg-sekolah-kuning mx-auto rounded-full"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="bg-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition duration-300 border-b-4 border-sekolah-birumuda" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center text-sekolah-birumuda text-3xl mb-6 transform -rotate-6">
+                        <i class="fas fa-book-reader"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Kurikulum Modern</h3>
+                    <p class="text-gray-600">Memadukan kurikulum nasional dengan pendekatan belajar interaktif yang memacu nalar kritis anak.</p>
+                </div>
+                <!-- Card 2 -->
+                <div class="bg-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition duration-300 border-b-4 border-sekolah-merah" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="w-16 h-16 bg-red-100 rounded-2xl flex items-center justify-center text-sekolah-merah text-3xl mb-6 transform rotate-6">
+                        <i class="fas fa-paint-palette"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Fasilitas Lengkap</h3>
+                    <p class="text-gray-600">Dilengkapi dengan ruang kelas nyaman, laboratorium, perpustakaan, dan area bermain yang luas.</p>
+                </div>
+                <!-- Card 3 -->
+                <div class="bg-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition duration-300 border-b-4 border-sekolah-kuning" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="w-16 h-16 bg-yellow-100 rounded-2xl flex items-center justify-center text-sekolah-kuning text-3xl mb-6 transform -rotate-3">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Lingkungan Positif</h3>
+                    <p class="text-gray-600">Menciptakan suasana kekeluargaan yang aman, anti-bullying, dan mengedepankan adab sopan santun.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Banner Info PMB -->
+    <section class="py-16">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-sekolah-biru rounded-[2.5rem] p-10 md:p-16 text-center text-white relative overflow-hidden shadow-2xl" data-aos="flip-up">
+                <!-- Ornamen -->
+                <div class="absolute top-0 right-0 w-64 h-64 bg-white opacity-5 rounded-full -translate-y-1/2 translate-x-1/4"></div>
+                <div class="absolute bottom-0 left-0 w-32 h-32 bg-sekolah-kuning opacity-20 rounded-full translate-y-1/4 -translate-x-1/4"></div>
+                
+                <h2 class="text-3xl md:text-5xl font-extrabold mb-6 relative z-10">Penerimaan Murid Baru (PMB) <br> Telah Dibuka!</h2>
+                <p class="text-blue-100 text-lg mb-10 max-w-2xl mx-auto relative z-10">Jangan lewatkan kesempatan untuk bergabung menjadi bagian dari keluarga besar SD Patra Dharma 3 Balikpapan. Kuota terbatas!</p>
+                <a href="LINK_GOOGLE_SITES_PMB" target="_blank" class="inline-block bg-sekolah-kuning hover:bg-yellow-400 text-gray-900 px-10 py-4 rounded-full font-extrabold text-xl shadow-lg transform hover:scale-105 transition duration-300 relative z-10">
+                    Menuju Portal PMB <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+                <div>
+                    <h3 class="text-2xl font-bold text-white mb-6">SD Patra Dharma 3</h3>
+                    <p class="mb-4">Mencetak generasi penerus bangsa yang beriman, berilmu, dan berakhlak mulia.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-sekolah-birumuda transition text-white"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-sekolah-merah transition text-white"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-red-600 transition text-white"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold text-white mb-6">Kontak Kami</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-map-marker-alt mt-1 text-sekolah-kuning"></i>
+                            <span>Jl. Contoh Alamat No. 123, Kota Balikpapan, Kalimantan Timur</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fas fa-phone text-sekolah-kuning"></i>
+                            <span>(0542) 123456</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fas fa-envelope text-sekolah-kuning"></i>
+                            <span>info@sdpd3balikpapan.sch.id</span>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold text-white mb-6">Lokasi</h3>
+                    <div class="w-full h-40 bg-gray-800 rounded-xl overflow-hidden">
+                        <!-- Ganti dengan Embed Iframe Google Maps Asli -->
+                        <div class="w-full h-full flex items-center justify-center text-gray-500">
+                            [ Area Google Maps ]
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 text-center text-sm">
+                <p>&copy; 2024 SD Patra Dharma 3 Balikpapan. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- AOS Initialization -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            once: true, // Animasi hanya berjalan sekali saat discroll ke bawah
+            offset: 100, // Jarak trigger animasi (px)
+        });
+    </script>
+</body>
+</html>
