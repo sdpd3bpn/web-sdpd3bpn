@@ -315,7 +315,7 @@
                 <span class="font-display font-bold text-[13px] sm:text-base text-ink whitespace-nowrap leading-none">SD Patra Dharma 3</span>
             </a>
 
-            <!-- Center Pill: Nav Links (Desktop) -->
+            <!-- Nav Links (Desktop) -->
             <nav aria-label="Navigasi utama" class="hidden lg:flex pointer-events-auto pill-glass rounded-full p-1.5 items-center gap-1">
                 <a href="#tentang" data-spy="tentang" class="nav-link px-4 py-1.5 rounded-full text-sm font-semibold text-ink2 hover:text-ink transition-colors">Tentang</a>
                 <a href="#pilar" data-spy="pilar" class="nav-link px-4 py-1.5 rounded-full text-sm font-semibold text-ink2 hover:text-ink transition-colors">Pilar</a>
@@ -325,21 +325,11 @@
                 <a href="#kontak" data-spy="kontak" class="nav-link px-4 py-1.5 rounded-full text-sm font-semibold text-ink2 hover:text-ink transition-colors">Kontak</a>
             </nav>
 
-            <!-- Right Group: Hotline Panitia PMB + CTA + Mobile Toggle -->
-            <div class="pointer-events-auto flex items-center gap-1.5 sm:gap-2 shrink-0">
-                <button type="button" id="open-hotline-btn" title="Hubungi Panitia PMB (WhatsApp)" aria-label="Hubungi Panitia PMB"
-                        class="hidden sm:flex pill-glass w-10 h-10 rounded-full items-center justify-center text-[#2463A6] hover:bg-[#2463A6] hover:text-white hover:scale-105 transition">
-                    <i class="fab fa-whatsapp text-lg"></i>
-                </button>
-                <a href="https://pmb.sdpd3balikpapan.sch.id" target="_blank" rel="noopener noreferrer"
-                   class="btn-pill bg-[#2463A6] hover:bg-[#1B4E85] text-white px-3.5 sm:px-5 py-2 sm:py-2.5 text-xs sm:text-sm shadow-md shadow-blue-900/15">
-                    <span class="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-yellow-300"></span>
-                    <span>Daftar</span>
-                    <i class="fas fa-chevron-right text-[10px] btn-chev"></i>
-                </a>
+            <!-- Mobile Menu Toggle -->
+            <div class="lg:hidden pointer-events-auto flex items-center shrink-0">
                 <button type="button" id="mobile-drawer-btn" aria-label="Buka menu"
-                        class="lg:hidden pill-glass w-9 h-9 sm:w-10 sm:h-10 rounded-full flex items-center justify-center text-ink">
-                    <i class="fas fa-equals text-sm sm:text-base" id="mobile-drawer-icon"></i>
+                        class="pill-glass w-10 h-10 rounded-full flex items-center justify-center text-ink">
+                    <i class="fas fa-equals text-base" id="mobile-drawer-icon"></i>
                 </button>
             </div>
         </div>
@@ -404,16 +394,18 @@
                 <div class="absolute inset-0 bg-[#0B1736]/60"></div>
             </div>
 
-            <!-- Interactive Floating STEM Preview Card -->
-            <div class="hidden md:block absolute top-28 right-8 lg:right-14 z-20 w-72 rounded-3xl overflow-hidden border-2 border-white/25 bg-night/55 backdrop-blur-md shadow-2xl transform rotate-2 hover:rotate-0 transition-transform duration-500">
-                <img src="assets/stem2425.JPG" alt="Pembelajaran proyek kreatif STEM SD Patra Dharma 3" class="w-full h-40 object-cover">
+            <!-- Interactive Floating Showcase Card (Siap untuk koleksi foto siswa & guru berprestasi) -->
+            <div id="hero-prestasi-card" class="hidden md:block absolute top-28 right-8 lg:right-14 z-20 w-72 rounded-3xl overflow-hidden border-2 border-white/25 bg-night/60 backdrop-blur-md shadow-2xl transform rotate-2 hover:rotate-0 transition-transform duration-500">
+                <div class="relative h-40 overflow-hidden">
+                    <img id="hero-card-img" src="assets/stem2425.JPG" alt="Pembelajaran proyek kreatif STEM SD Patra Dharma 3" class="w-full h-full object-cover transition-opacity duration-500">
+                </div>
                 <div class="p-4 flex items-center justify-between gap-3">
                     <div>
-                        <p class="text-[11px] uppercase tracking-widest text-sky-300 font-extrabold">Kurikulum Merdeka</p>
-                        <p class="font-display font-bold text-sm text-white">Belajar Aktif &amp; Proyek STEM</p>
+                        <p id="hero-card-tag" class="text-[11px] uppercase tracking-widest text-sky-300 font-extrabold">Kurikulum Merdeka</p>
+                        <p id="hero-card-title" class="font-display font-bold text-sm text-white">Belajar Aktif &amp; Proyek STEM</p>
                     </div>
                     <span class="w-9 h-9 rounded-full bg-yellow-400 text-night flex items-center justify-center shrink-0">
-                        <i class="fas fa-lightbulb"></i>
+                        <i id="hero-card-icon" class="fas fa-award"></i>
                     </span>
                 </div>
             </div>
@@ -1033,8 +1025,8 @@
                     </p>
                 </div>
 
-                <!-- 4 Cards Grid (Dominan Biru + Sentuhan Kuning & Merah Logo) -->
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 reveal-up">
+                <!-- 3 Cards Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 reveal-up">
                     <!-- Card 1: Biru Sky -->
                     <div class="rounded-[28px] bg-[#E0F2FE] border border-sky-200 p-6 flex flex-col justify-between gap-6 hover:-translate-y-1.5 transition-transform duration-300">
                         <div>
@@ -1046,7 +1038,7 @@
                             <p class="text-sm text-ink2 leading-relaxed">Pendidikan dasar Kurikulum Merdeka dengan keseimbangan akademik, seni, olahraga, dan karakter.</p>
                         </div>
                         <div class="space-y-4">
-                            <div class="rounded-2xl overflow-hidden h-36">
+                            <div class="rounded-2xl overflow-hidden h-40">
                                 <img src="assets/upcarasenin.JPG" alt="Siswa SD Patra Dharma 3" class="w-full h-full object-cover">
                             </div>
                             <a href="https://pmb.sdpd3balikpapan.sch.id" target="_blank" rel="noopener noreferrer"
@@ -1068,7 +1060,7 @@
                             <p class="text-sm text-ink2 leading-relaxed">Memadukan pembelajaran kurikulum nasional dengan penguatan nilai keislaman serta praktik kreatif.</p>
                         </div>
                         <div class="space-y-4">
-                            <div class="rounded-2xl overflow-hidden h-36">
+                            <div class="rounded-2xl overflow-hidden h-40">
                                 <img src="assets/stem2425.JPG" alt="Pembelajaran aktif di SD Patra Dharma 3" class="w-full h-full object-cover">
                             </div>
                             <a href="https://pmb.sdpd3balikpapan.sch.id" target="_blank" rel="noopener noreferrer"
@@ -1090,7 +1082,7 @@
                             <p class="text-sm text-ink2 leading-relaxed">Membuka jalur pendaftaran Umum dan kuota Inklusi untuk mendampingi potensi setiap anak.</p>
                         </div>
                         <div class="space-y-4">
-                            <div class="rounded-2xl bg-white/80 p-4 h-36 flex flex-col justify-center gap-2 border border-yellow-300/60">
+                            <div class="rounded-2xl bg-white/80 p-4 h-40 flex flex-col justify-center gap-2.5 border border-yellow-300/60">
                                 <div class="flex items-center gap-2 text-xs font-bold text-ink"><i class="fas fa-check-circle text-patra-blue"></i> Alur Pendaftaran Online</div>
                                 <div class="flex items-center gap-2 text-xs font-bold text-ink"><i class="fas fa-check-circle text-patra-blue"></i> Cek Kuota Kelas Real-Time</div>
                                 <div class="flex items-center gap-2 text-xs font-bold text-ink"><i class="fas fa-check-circle text-patra-blue"></i> Cek Status Hasil Seleksi</div>
@@ -1100,30 +1092,6 @@
                                 <span class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-yellow-300"></span>Lihat Jalur PMB</span>
                                 <i class="fas fa-chevron-right text-[10px] btn-chev"></i>
                             </a>
-                        </div>
-                    </div>
-
-                    <!-- Card 4: Sentuhan Merah Logo Lembut -> Konsultasi Panitia PMB -->
-                    <div class="rounded-[28px] bg-[#FEECEC] border border-red-200/80 p-6 flex flex-col justify-between gap-6 hover:-translate-y-1.5 transition-transform duration-300">
-                        <div>
-                            <div class="flex items-center justify-between mb-4">
-                                <span class="px-3 py-1 rounded-full bg-white/90 text-xs font-extrabold text-patra-crimson">Tanya Panitia</span>
-                                <i class="fab fa-whatsapp text-emerald-600 text-xl"></i>
-                            </div>
-                            <h3 class="font-display text-2xl font-bold text-ink mb-2">Hotline PMB</h3>
-                            <p class="text-sm text-ink2 leading-relaxed">Konsultasi langsung seputar gelombang, syarat pendaftaran, biaya, atau jadwal observasi.</p>
-                        </div>
-                        <div class="space-y-4">
-                            <div class="rounded-2xl bg-white/85 p-4 h-36 flex flex-col justify-center gap-1.5 text-xs font-bold text-ink border border-red-200/60">
-                                <div class="flex items-center justify-between"><span>Bu Radiah</span><span class="text-patra-royal">0821-1115-6179</span></div>
-                                <div class="flex items-center justify-between"><span>Bu Nurin</span><span class="text-patra-royal">0813-5088-9571</span></div>
-                                <div class="flex items-center justify-between"><span>Bu Lenny</span><span class="text-patra-royal">0853-8777-5357</span></div>
-                            </div>
-                            <button type="button" id="card-hotline-trigger"
-                                    class="btn-pill w-full justify-between bg-[#0B1736] hover:bg-[#1D4ED8] text-white px-5 py-3 text-sm">
-                                <span class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-red-400"></span>Hubungi Panitia</span>
-                                <i class="fas fa-chevron-right text-[10px] btn-chev"></i>
-                            </button>
                         </div>
                     </div>
                 </div>
@@ -1157,24 +1125,14 @@
                     </div>
 
                     <div>
-                        <p class="text-xs font-extrabold uppercase tracking-widest text-ink3 mb-2.5">WhatsApp Panitia PMB</p>
-                        <div class="space-y-2.5">
-                            <a href="https://wa.me/6282111156179" target="_blank" rel="noopener noreferrer"
-                               class="flex items-center justify-between px-4 py-2.5 rounded-2xl bg-white border border-blue-900/10 hover:border-emerald-500 transition group">
-                                <span class="font-bold text-sm text-ink group-hover:text-emerald-700"><i class="fab fa-whatsapp text-emerald-600 mr-2"></i>Bu Radiah</span>
-                                <span class="font-mono text-sm font-bold text-patra-royal">0821-1115-6179</span>
-                            </a>
-                            <a href="https://wa.me/6281350889571" target="_blank" rel="noopener noreferrer"
-                               class="flex items-center justify-between px-4 py-2.5 rounded-2xl bg-white border border-blue-900/10 hover:border-emerald-500 transition group">
-                                <span class="font-bold text-sm text-ink group-hover:text-emerald-700"><i class="fab fa-whatsapp text-emerald-600 mr-2"></i>Bu Nurin</span>
-                                <span class="font-mono text-sm font-bold text-patra-royal">0813-5088-9571</span>
-                            </a>
-                            <a href="https://wa.me/6285387775357" target="_blank" rel="noopener noreferrer"
-                               class="flex items-center justify-between px-4 py-2.5 rounded-2xl bg-white border border-blue-900/10 hover:border-emerald-500 transition group">
-                                <span class="font-bold text-sm text-ink group-hover:text-emerald-700"><i class="fab fa-whatsapp text-emerald-600 mr-2"></i>Bu Lenny</span>
-                                <span class="font-mono text-sm font-bold text-patra-royal">0853-8777-5357</span>
-                            </a>
-                        </div>
+                        <p class="text-xs font-extrabold uppercase tracking-widest text-ink3 mb-3">WhatsApp Panitia PMB</p>
+                        <button type="button" id="kontak-hotline-trigger"
+                                class="btn-pill bg-[#2463A6] hover:bg-[#1B4E85] text-white px-6 py-3.5 text-sm shadow-md shadow-blue-900/15">
+                            <i class="fab fa-whatsapp text-lg text-emerald-300"></i>
+                            <span>Chat WhatsApp Panitia PMB</span>
+                            <i class="fas fa-chevron-right text-[10px] btn-chev"></i>
+                        </button>
+                        <p class="text-xs text-ink2 mt-3">Klik tombol di atas untuk memilih kontak panitia PMB yang ingin Anda hubungi.</p>
                     </div>
 
                     <div>
@@ -1458,43 +1416,48 @@
                 <a href="https://wa.me/6282111156179" target="_blank" rel="noopener noreferrer"
                    class="flex items-center justify-between p-4 rounded-2xl bg-sky-50/70 hover:bg-sky-100 border border-sky-200/80 transition group">
                     <div class="flex items-center gap-3">
-                        <span class="w-10 h-10 rounded-full bg-patra-blue text-white font-display font-bold flex items-center justify-center">R</span>
+                        <span class="w-10 h-10 rounded-full bg-[#2463A6] text-white font-display font-bold flex items-center justify-center">R</span>
                         <div>
-                            <p class="font-bold text-ink text-sm">Bu Radiah</p>
-                            <p class="text-xs text-ink2 font-mono">0821-1115-6179</p>
+                            <p class="font-bold text-ink text-base">Bu Radiah</p>
+                            <p class="text-xs text-ink2">Panitia PMB</p>
                         </div>
                     </div>
-                    <span class="px-3 py-1.5 rounded-full bg-emerald-600 text-white text-xs font-bold group-hover:bg-emerald-500">Chat WA</span>
+                    <span class="px-3.5 py-1.5 rounded-full bg-emerald-600 text-white text-xs font-bold group-hover:bg-emerald-500 inline-flex items-center gap-1.5">
+                        <i class="fab fa-whatsapp"></i> Chat WA
+                    </span>
                 </a>
 
                 <a href="https://wa.me/6281350889571" target="_blank" rel="noopener noreferrer"
                    class="flex items-center justify-between p-4 rounded-2xl bg-sky-50/70 hover:bg-sky-100 border border-sky-200/80 transition group">
                     <div class="flex items-center gap-3">
-                        <span class="w-10 h-10 rounded-full bg-patra-royal text-white font-display font-bold flex items-center justify-center">N</span>
+                        <span class="w-10 h-10 rounded-full bg-[#1D4ED8] text-white font-display font-bold flex items-center justify-center">N</span>
                         <div>
-                            <p class="font-bold text-ink text-sm">Bu Nurin</p>
-                            <p class="text-xs text-ink2 font-mono">0813-5088-9571</p>
+                            <p class="font-bold text-ink text-base">Bu Nurin</p>
+                            <p class="text-xs text-ink2">Panitia PMB</p>
                         </div>
                     </div>
-                    <span class="px-3 py-1.5 rounded-full bg-emerald-600 text-white text-xs font-bold group-hover:bg-emerald-500">Chat WA</span>
+                    <span class="px-3.5 py-1.5 rounded-full bg-emerald-600 text-white text-xs font-bold group-hover:bg-emerald-500 inline-flex items-center gap-1.5">
+                        <i class="fab fa-whatsapp"></i> Chat WA
+                    </span>
                 </a>
 
                 <a href="https://wa.me/6285387775357" target="_blank" rel="noopener noreferrer"
                    class="flex items-center justify-between p-4 rounded-2xl bg-sky-50/70 hover:bg-sky-100 border border-sky-200/80 transition group">
                     <div class="flex items-center gap-3">
-                        <span class="w-10 h-10 rounded-full bg-patra-deep text-white font-display font-bold flex items-center justify-center">L</span>
+                        <span class="w-10 h-10 rounded-full bg-[#0B1736] text-white font-display font-bold flex items-center justify-center">L</span>
                         <div>
-                            <p class="font-bold text-ink text-sm">Bu Lenny</p>
-                            <p class="text-xs text-ink2 font-mono">0853-8777-5357</p>
+                            <p class="font-bold text-ink text-base">Bu Lenny</p>
+                            <p class="text-xs text-ink2">Panitia PMB</p>
                         </div>
                     </div>
-                    <span class="px-3 py-1.5 rounded-full bg-emerald-600 text-white text-xs font-bold group-hover:bg-emerald-500">Chat WA</span>
+                    <span class="px-3.5 py-1.5 rounded-full bg-emerald-600 text-white text-xs font-bold group-hover:bg-emerald-500 inline-flex items-center gap-1.5">
+                        <i class="fab fa-whatsapp"></i> Chat WA
+                    </span>
                 </a>
             </div>
 
-            <div class="pt-2 border-t border-black/5 flex items-center justify-between text-xs text-ink2">
-                <span>Telepon Kantor: <a href="tel:05427517662" class="font-bold text-patra-royal hover:underline">(0542) 7517662</a></span>
-                <a href="https://pmb.sdpd3balikpapan.sch.id" target="_blank" rel="noopener noreferrer" class="font-bold text-patra-blue hover:underline">Buka Portal PMB &rarr;</a>
+            <div class="pt-2 border-t border-black/5 flex items-center justify-end text-xs text-ink2">
+                <a href="https://pmb.sdpd3balikpapan.sch.id" target="_blank" rel="noopener noreferrer" class="font-bold text-[#2463A6] hover:underline">Buka Portal PMB &rarr;</a>
             </div>
         </div>
     </div>
@@ -2000,7 +1963,7 @@
                 hlModal.classList.add('hidden');
                 hlModal.classList.remove('flex');
             };
-            ['open-hotline-btn', 'mob-hotline-trigger', 'card-hotline-trigger', 'banner-hotline-trigger'].forEach((id) => {
+            ['mob-hotline-trigger', 'kontak-hotline-trigger', 'banner-hotline-trigger'].forEach((id) => {
                 const el = document.getElementById(id);
                 if (el) el.addEventListener('click', openHotline);
             });
@@ -2016,6 +1979,31 @@
                     spModal.classList.add('hidden'); spModal.classList.remove('flex');
                 }
             });
+
+            // 15. Hero Showcase Slider (Siap diisi foto siswa & guru berprestasi)
+            const prestasiSlides = [
+                { src: 'assets/stem2425.JPG', tag: 'Kurikulum Merdeka', title: 'Belajar Aktif & Proyek STEM', icon: 'fa-award' },
+                { src: 'assets/upcarasenin.JPG', tag: 'Karakter & Kedisiplinan', title: 'Lingkungan Asri & Berkarakter', icon: 'fa-star' }
+            ];
+            const heroCardImg = document.getElementById('hero-card-img');
+            const heroCardTag = document.getElementById('hero-card-tag');
+            const heroCardTitle = document.getElementById('hero-card-title');
+            const heroCardIcon = document.getElementById('hero-card-icon');
+            if (heroCardImg && prestasiSlides.length > 1 && !prefersReduced) {
+                let slideIdx = 0;
+                setInterval(() => {
+                    slideIdx = (slideIdx + 1) % prestasiSlides.length;
+                    const item = prestasiSlides[slideIdx];
+                    heroCardImg.style.opacity = '0.25';
+                    setTimeout(() => {
+                        heroCardImg.src = item.src;
+                        heroCardTag.textContent = item.tag;
+                        heroCardTitle.textContent = item.title;
+                        heroCardIcon.className = `fas ${item.icon}`;
+                        heroCardImg.style.opacity = '1';
+                    }, 260);
+                }, 4200);
+            }
         })();
     </script>
 </body>
