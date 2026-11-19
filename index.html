@@ -8,12 +8,16 @@
     <meta name="keywords" content="SD Patra Dharma 3, SD PD 3 Balikpapan, Sekolah Dasar Balikpapan, SD Swasta Terbaik Balikpapan, PMB SD Balikpapan, Sekolah Berkarakter Balikpapan">
     <meta name="author" content="SD Patra Dharma 3 Balikpapan">
 
-<!-- Open Graph (Agar link web tampil cantik saat di-share di WA/Facebook) -->
+    <!-- Open Graph & Google Site Name -->
     <meta name="application-name" content="SD Patra Dharma 3 Balikpapan">
     <link rel="canonical" href="https://sdpd3balikpapan.sch.id/">
     <meta property="og:site_name" content="SD Patra Dharma 3 Balikpapan">
     <meta property="og:type" content="website">
     <meta property="og:title" content="SD Patra Dharma 3 Balikpapan">
+    <meta property="og:description" content="Sekolah Dasar unggulan di Balikpapan. Membentuk generasi cerdas, berakhlak mulia, dan berwawasan lingkungan.">
+    <meta property="og:image" content="https://sdpd3balikpapan.sch.id/assets/upcarasenin.JPG">
+    <meta property="og:url" content="https://sdpd3balikpapan.sch.id/">
+
     <!-- Structured Data (Schema.org WebSite & School) untuk Nama Situs di Google Search -->
     <script type="application/ld+json">
     {
@@ -34,7 +38,7 @@
           "logo": "https://sdpd3balikpapan.sch.id/assets/logo%20ypdm.png",
           "image": "https://sdpd3balikpapan.sch.id/assets/upcarasenin.JPG",
           "telephone": "(0542) 7517662",
-          "email": "info@sdpd3balikpapan.sch.id",
+          "email": "sdpd3bpn@gmail.com",
           "address": {
             "@type": "PostalAddress",
             "streetAddress": "Jl. Sekolah No.1, Prapatan, Kec. Balikpapan Kota",
@@ -47,18 +51,18 @@
       ]
     }
     </script>
-    <meta property="og:description" content="Sekolah Dasar unggulan di Balikpapan. Membentuk generasi cerdas, berakhlak mulia, dan berwawasan lingkungan.">
-    <meta property="og:image" content="https://sdpd3balikpapan.sch.id/assets/upcarasenin.JPG">
-    <meta property="og:url" content="https://sdpd3balikpapan.sch.id/">
+
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="assets/logo%20ypdm.png">
-    
-    <!-- Google Fonts: Nunito -->
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
-    
-    <!-- AOS Animation CSS -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    
+
+    <!-- Google Fonts: Plus Jakarta Sans, Fredoka & Caveat (Handwriting) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Fredoka:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- FontAwesome Icons (6.4.0 Free) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -66,495 +70,1953 @@
             theme: {
                 extend: {
                     fontFamily: {
-                        sans: ['Nunito', 'sans-serif'],
+                        sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
+                        display: ['"Fredoka"', '"Plus Jakarta Sans"', 'sans-serif'],
+                        hand: ['"Caveat"', 'cursive'],
                     },
                     colors: {
-                        sekolah: {
-                            biru: '#1e3a8a',
-                            birumuda: '#3b82f6',
-                            merah: '#ef4444',
-                            kuning: '#f59e0b',
+                        canvas: '#FAF8F4',
+                        ink: '#162032',
+                        ink2: '#475569',
+                        ink3: '#8592A6',
+                        night: '#0B1736',
+                        night2: '#13244E',
+                        patra: {
+                            blue: '#0284C7',
+                            royal: '#1D4ED8',
+                            deep: '#1E3A8A',
+                            sky: '#38BDF8',
+                            yellow: '#FACC15',
+                            gold: '#EAB308',
+                            red: '#EF4444',
+                            crimson: '#DC2626',
+                            green: '#15803D',
                         }
                     }
                 }
             }
         }
     </script>
-    
-    <!-- FontAwesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-</head>
-<body class="font-sans antialiased text-gray-800 bg-gray-50 overflow-x-hidden">
 
-    <!-- Navbar -->
-    <nav class="fixed w-full bg-white/90 backdrop-blur-md shadow-sm z-50 transition-all duration-300">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-20">
-                <div class="flex-shrink-0 flex items-center gap-3">
-                    <img src="assets/logo%20ypdm.png" alt="Logo SD Patra Dharma 3" class="w-12 h-12 object-contain drop-shadow-md">
-                    <span class="font-extrabold text-xl md:text-2xl text-sekolah-biru">SD Patra Dharma 3</span>
+    <style>
+        :root {
+            --bg: #FAF8F4;
+            --white: #FFFFFF;
+            --night: #0B1736;
+            --night-2: #13244E;
+            --ink: #162032;
+            --ink-2: #475569;
+            --ink-3: #8592A6;
+            --line: rgba(22, 32, 50, 0.11);
+            --accent: #0284C7;
+            --accent-2: #2563EB;
+            --r: 20px;
+            --r-lg: clamp(24px, 2.6vw, 40px);
+        }
+
+        html, body {
+            background-color: var(--bg);
+            color: var(--ink);
+            overflow-x: clip;
+        }
+
+        /* Editorial Fluid Typography */
+        .t-hero { font-size: clamp(2.4rem, 5.4vw, 5.1rem); line-height: 1.04; letter-spacing: -0.03em; }
+        .t-statement { font-size: clamp(1.65rem, 3.2vw, 3.3rem); line-height: 1.18; letter-spacing: -0.025em; }
+        .t-display { font-size: clamp(1.9rem, 3.6vw, 3.7rem); line-height: 1.1; letter-spacing: -0.025em; }
+        .t-zoom-word { font-size: clamp(2.6rem, 7vw, 6.8rem); line-height: 0.95; letter-spacing: -0.04em; }
+
+        /* Preloader */
+        #preloader {
+            transition: opacity 0.45s cubic-bezier(0.22, 1, 0.36, 1), visibility 0.45s;
+        }
+        #preloader.done {
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+        }
+
+        /* Detached 3-Pill Floating Header */
+        .pill-glass {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(2, 132, 199, 0.14);
+            box-shadow: 0 8px 28px -8px rgba(11, 23, 54, 0.12);
+        }
+        .nav-link.is-active {
+            background-color: var(--accent-2);
+            color: #FFFFFF;
+        }
+
+        /* Signature Pill Buttons */
+        .btn-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.65rem;
+            border-radius: 9999px;
+            font-weight: 700;
+            transition: transform 0.28s cubic-bezier(0.34, 1.56, 0.64, 1), background-color 0.25s, box-shadow 0.25s;
+        }
+        .btn-pill:hover {
+            transform: translateY(-2px);
+        }
+        .btn-pill:hover .btn-chev {
+            transform: translateX(3px);
+        }
+        .btn-chev {
+            transition: transform 0.25s ease;
+        }
+
+        /* Numbered Editorial Eyebrow */
+        .eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.6rem;
+            font-size: 0.78rem;
+            font-weight: 800;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+        }
+        .eyebrow-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 9999px;
+            background-color: var(--accent);
+            flex-shrink: 0;
+        }
+
+        /* Odometer Rolling Digit Reel */
+        .odo-digit {
+            display: inline-block;
+            height: 1.05em;
+            overflow: hidden;
+            vertical-align: bottom;
+        }
+        .odo-reel {
+            display: flex;
+            flex-direction: column;
+            transition: transform 1.25s cubic-bezier(0.22, 1, 0.36, 1);
+            will-change: transform;
+        }
+        .odo-reel span {
+            height: 1.05em;
+            line-height: 1.05em;
+            display: block;
+        }
+
+        /* Reveal on Scroll */
+        .reveal-up {
+            opacity: 0;
+            transform: translateY(28px);
+            transition: opacity 0.75s cubic-bezier(0.22, 1, 0.36, 1), transform 0.75s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+        .reveal-up.in-view {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Horizontal Scroll Stage (Desktop) */
+        @media (min-width: 1024px) {
+            .hb-stage {
+                height: 280vh;
+                position: relative;
+            }
+            .hb-sticky {
+                position: sticky;
+                top: 0;
+                height: 100vh;
+                overflow: hidden;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+        }
+
+        /* Dynamic Theme Re-coloring for Roadmap & Ekskul */
+        #roadmap {
+            transition: background-color 0.55s ease, color 0.35s ease;
+        }
+
+        /* Hide scrollbar cleanly on horizontal tracks */
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+        /* Marquee Animations */
+        @keyframes marqueeLeft {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        .marquee-track {
+            display: flex;
+            width: max-content;
+            animation: marqueeLeft 32s linear infinite;
+        }
+        .marquee-wrap:hover .marquee-track {
+            animation-play-state: paused;
+        }
+
+        /* Slide-over Sheet Drawer */
+        .sheet-backdrop {
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s ease;
+        }
+        .sheet-backdrop.open {
+            opacity: 1;
+            pointer-events: auto;
+        }
+        .sheet-panel {
+            transform: translateX(104%);
+            transition: transform 0.42s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+        .sheet-backdrop.open .sheet-panel {
+            transform: translateX(0);
+        }
+
+        /* Subtle Canvas Wave / Float */
+        @keyframes gentleWave {
+            0%, 100% { transform: scale(1.03) translateY(0px); }
+            50% { transform: scale(1.05) translateY(-6px); }
+        }
+        .wave-photo {
+            animation: gentleWave 8s ease-in-out infinite;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .wave-photo, .marquee-track { animation: none !important; }
+            .reveal-up { opacity: 1; transform: none; transition: none; }
+        }
+    </style>
+</head>
+<body class="font-sans antialiased selection:bg-sky-200 selection:text-night">
+
+    <!-- 00. Fast Editorial Preloader -->
+    <div id="preloader" class="fixed inset-0 z-[100] bg-canvas flex flex-col items-center justify-center gap-5 px-6">
+        <div class="flex items-center gap-3.5">
+            <img src="assets/logo%20ypdm.png" alt="Logo SD Patra Dharma 3" class="w-12 h-12 object-contain">
+            <div>
+                <p class="font-display font-bold text-xl text-ink leading-tight">SD Patra Dharma 3</p>
+                <p class="text-xs font-bold uppercase tracking-[0.2em] text-patra-blue">Balikpapan</p>
+            </div>
+        </div>
+        <div class="flex items-center gap-3 text-xs font-extrabold tracking-[0.22em] text-ink2 uppercase">
+            <span>MEMUAT</span>
+            <span id="preload-pct" class="font-mono text-patra-royal">01%</span>
+        </div>
+    </div>
+
+    <!-- 01. Header Navigasi Utama -->
+    <header class="fixed top-0 inset-x-0 z-50 px-3 sm:px-6 lg:px-8 pt-4 pointer-events-none">
+        <div class="max-w-[1600px] mx-auto flex items-center justify-between gap-2 sm:gap-3">
+            <!-- Left Pill: Brand -->
+            <a href="#beranda" class="pointer-events-auto shrink-0 pill-glass rounded-full pl-2 pr-3.5 sm:pl-2.5 sm:pr-4 py-1.5 flex items-center gap-2 sm:gap-2.5 hover:scale-[1.02] transition-transform">
+                <img src="assets/logo%20ypdm.png" alt="Logo SD Patra Dharma 3" class="w-7 h-7 sm:w-8 sm:h-8 object-contain shrink-0">
+                <span class="font-display font-bold text-[13px] sm:text-base text-ink whitespace-nowrap leading-none">SD Patra Dharma 3</span>
+            </a>
+
+            <!-- Center Pill: Nav Links (Desktop) -->
+            <nav aria-label="Navigasi utama" class="hidden lg:flex pointer-events-auto pill-glass rounded-full p-1.5 items-center gap-1">
+                <a href="#tentang" data-spy="tentang" class="nav-link px-4 py-1.5 rounded-full text-sm font-semibold text-ink2 hover:text-ink transition-colors">Tentang</a>
+                <a href="#pilar" data-spy="pilar" class="nav-link px-4 py-1.5 rounded-full text-sm font-semibold text-ink2 hover:text-ink transition-colors">Pilar</a>
+                <a href="#roadmap" data-spy="roadmap" class="nav-link px-4 py-1.5 rounded-full text-sm font-semibold text-ink2 hover:text-ink transition-colors">Program</a>
+                <a href="#galeri" data-spy="galeri" class="nav-link px-4 py-1.5 rounded-full text-sm font-semibold text-ink2 hover:text-ink transition-colors">Galeri</a>
+                <a href="#pendaftaran" data-spy="pendaftaran" class="nav-link px-4 py-1.5 rounded-full text-sm font-semibold text-ink2 hover:text-ink transition-colors">Pendaftaran</a>
+                <a href="#kontak" data-spy="kontak" class="nav-link px-4 py-1.5 rounded-full text-sm font-semibold text-ink2 hover:text-ink transition-colors">Kontak</a>
+            </nav>
+
+            <!-- Right Group: Hotline Panitia PMB + CTA + Mobile Toggle -->
+            <div class="pointer-events-auto flex items-center gap-1.5 sm:gap-2 shrink-0">
+                <button type="button" id="open-hotline-btn" title="Hubungi Panitia PMB (WhatsApp)" aria-label="Hubungi Panitia PMB"
+                        class="hidden sm:flex pill-glass w-10 h-10 rounded-full items-center justify-center text-[#2463A6] hover:bg-[#2463A6] hover:text-white hover:scale-105 transition">
+                    <i class="fab fa-whatsapp text-lg"></i>
+                </button>
+                <a href="https://pmb.sdpd3balikpapan.sch.id" target="_blank" rel="noopener noreferrer"
+                   class="btn-pill bg-[#2463A6] hover:bg-[#1B4E85] text-white px-3.5 sm:px-5 py-2 sm:py-2.5 text-xs sm:text-sm shadow-md shadow-blue-900/15">
+                    <span class="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-yellow-300"></span>
+                    <span>Daftar</span>
+                    <i class="fas fa-chevron-right text-[10px] btn-chev"></i>
+                </a>
+                <button type="button" id="mobile-drawer-btn" aria-label="Buka menu"
+                        class="lg:hidden pill-glass w-9 h-9 sm:w-10 sm:h-10 rounded-full flex items-center justify-center text-ink">
+                    <i class="fas fa-equals text-sm sm:text-base" id="mobile-drawer-icon"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Fullscreen Dual-Card Menu Overlay -->
+    <div id="mobile-drawer" class="fixed inset-0 z-40 bg-canvas/90 backdrop-blur-2xl hidden lg:hidden flex-col justify-between p-4 pt-20 pb-6">
+        <div class="bg-white rounded-[28px] border border-blue-900/10 shadow-xl overflow-hidden divide-y divide-black/5">
+            <a href="#beranda" class="mob-link flex items-center justify-between px-6 py-4 font-bold text-lg text-ink hover:bg-sky-50">
+                <span>Beranda</span><i class="fas fa-chevron-right text-xs text-ink3"></i>
+            </a>
+            <a href="#tentang" class="mob-link flex items-center justify-between px-6 py-4 font-bold text-lg text-ink hover:bg-sky-50">
+                <span>Tentang Sekolah</span><i class="fas fa-chevron-right text-xs text-ink3"></i>
+            </a>
+            <a href="#pilar" class="mob-link flex items-center justify-between px-6 py-4 font-bold text-lg text-ink hover:bg-sky-50">
+                <span>4 Pilar Pendidikan</span><i class="fas fa-chevron-right text-xs text-ink3"></i>
+            </a>
+            <a href="#roadmap" class="mob-link flex items-center justify-between px-6 py-4 font-bold text-lg text-ink hover:bg-sky-50">
+                <span>Roadmap &amp; Ekskul</span><i class="fas fa-chevron-right text-xs text-ink3"></i>
+            </a>
+            <a href="#galeri" class="mob-link flex items-center justify-between px-6 py-4 font-bold text-lg text-ink hover:bg-sky-50">
+                <span>Galeri &amp; Kabar</span><i class="fas fa-chevron-right text-xs text-ink3"></i>
+            </a>
+            <a href="#pendaftaran" class="mob-link flex items-center justify-between px-6 py-4 font-bold text-lg text-ink hover:bg-sky-50">
+                <span>Pendaftaran PMB</span><i class="fas fa-chevron-right text-xs text-ink3"></i>
+            </a>
+            <a href="#kontak" class="mob-link flex items-center justify-between px-6 py-4 font-bold text-lg text-ink hover:bg-sky-50">
+                <span>Kontak Panitia PMB</span><i class="fas fa-chevron-right text-xs text-ink3"></i>
+            </a>
+        </div>
+
+        <div class="bg-white rounded-[28px] border border-blue-900/10 shadow-xl p-4 space-y-2.5">
+            <a href="https://pmb.sdpd3balikpapan.sch.id" target="_blank" rel="noopener noreferrer"
+               class="btn-pill w-full justify-between bg-[#2463A6] hover:bg-[#1B4E85] text-white px-6 py-4 text-base shadow-md">
+                <span class="flex items-center gap-3">
+                    <span class="w-2.5 h-2.5 rounded-full bg-yellow-300"></span>
+                    <span>Pendaftaran Murid Baru (PMB)</span>
+                </span>
+                <i class="fas fa-chevron-right text-xs btn-chev"></i>
+            </a>
+            <button type="button" id="mob-hotline-trigger"
+                    class="btn-pill w-full justify-between bg-canvas border border-black/10 text-ink px-6 py-3.5 text-sm">
+                <span class="flex items-center gap-2.5">
+                    <i class="fab fa-whatsapp text-emerald-600 text-base"></i>
+                    <span>Chat WhatsApp Panitia PMB</span>
+                </span>
+                <i class="fas fa-chevron-right text-xs btn-chev"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- Main Content Wrapper (Slides over Sticky Curtain Footer) -->
+    <main class="relative z-10">
+
+        <!-- 02. Hero Stage -->
+        <section id="beranda" class="relative min-h-[100svh] flex flex-col justify-end overflow-hidden bg-night text-white">
+            <!-- Full-bleed Background Photo -->
+            <div class="absolute inset-0">
+                <img src="assets/upcarasenin.JPG" alt="Kegiatan siswa dan halaman asri SD Patra Dharma 3 Balikpapan"
+                     id="hero-bg-img"
+                     class="w-full h-full object-cover object-center scale-105 transition-transform duration-700 ease-out">
+                <div class="absolute inset-0 bg-[#0B1736]/60"></div>
+            </div>
+
+            <!-- Interactive Floating STEM Preview Card -->
+            <div class="hidden md:block absolute top-28 right-8 lg:right-14 z-20 w-72 rounded-3xl overflow-hidden border-2 border-white/25 bg-night/55 backdrop-blur-md shadow-2xl transform rotate-2 hover:rotate-0 transition-transform duration-500">
+                <img src="assets/stem2425.JPG" alt="Pembelajaran proyek kreatif STEM SD Patra Dharma 3" class="w-full h-40 object-cover">
+                <div class="p-4 flex items-center justify-between gap-3">
+                    <div>
+                        <p class="text-[11px] uppercase tracking-widest text-sky-300 font-extrabold">Kurikulum Merdeka</p>
+                        <p class="font-display font-bold text-sm text-white">Belajar Aktif &amp; Proyek STEM</p>
+                    </div>
+                    <span class="w-9 h-9 rounded-full bg-yellow-400 text-night flex items-center justify-center shrink-0">
+                        <i class="fas fa-lightbulb"></i>
+                    </span>
                 </div>
-                <div class="hidden md:flex space-x-8 items-center">
-                    <a href="#" class="text-gray-600 hover:text-sekolah-birumuda font-semibold transition">Beranda</a>
-                    <a href="#unggulan" class="text-gray-600 hover:text-sekolah-birumuda font-semibold transition">Keunggulan</a>
-                    <a href="#ekskul" class="text-gray-600 hover:text-sekolah-birumuda font-semibold transition">Ekskul</a>
-                    <a href="#blog" class="text-gray-600 hover:text-sekolah-birumuda font-semibold transition">Blog</a>
-                    <a href="https://pmb.sdpd3balikpapan.sch.id" target="_blank" class="bg-sekolah-kuning hover:bg-yellow-400 text-white px-6 py-2.5 rounded-full font-bold shadow-md hover:shadow-lg transform hover:-translate-y-1 transition duration-300">
-                        <i class="fas fa-user-plus mr-2"></i>Daftar Sekarang!
+            </div>
+
+            <!-- Hero Content -->
+            <div class="relative z-10 max-w-[1600px] w-full mx-auto px-5 sm:px-8 lg:px-12 pt-36 pb-10 sm:pb-14">
+                <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-8">
+                    <div class="max-w-3xl">
+                        <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-white/15 backdrop-blur-md border border-white/25 text-xs sm:text-sm font-bold tracking-wider uppercase mb-5">
+                            <span class="w-2 h-2 rounded-full bg-yellow-300 animate-pulse"></span>
+                            <span>Penerimaan Murid Baru Dibuka • Akreditasi Unggul (A)</span>
+                        </div>
+                        <h1 class="font-display t-hero font-bold text-white mb-5">
+                            SD Patra Dharma 3<br>
+                            <span class="text-sky-300">Belajar Bahagia,</span> Tumbuh <span class="text-yellow-300">Bermakna.</span>
+                        </h1>
+                        <p class="text-base sm:text-xl text-slate-200 max-w-xl leading-relaxed mb-7">
+                            Membentuk generasi sekolah dasar yang berakhlak mulia, berilmu, berkarakter, dan berwawasan lingkungan di Kota Balikpapan.
+                        </p>
+                        <div class="flex flex-wrap items-center gap-3.5">
+                            <a href="https://pmb.sdpd3balikpapan.sch.id" target="_blank" rel="noopener noreferrer"
+                               class="btn-pill bg-[#2463A6] hover:bg-[#1B4E85] text-white px-7 py-3.5 text-sm sm:text-base shadow-lg shadow-blue-950/30">
+                                <span class="w-2 h-2 rounded-full bg-yellow-300"></span>
+                                <span>Daftar Murid Baru</span>
+                                <i class="fas fa-chevron-right text-xs btn-chev"></i>
+                            </a>
+                            <a href="#tentang"
+                               class="btn-pill bg-white/15 hover:bg-white/25 backdrop-blur-md border border-white/25 text-white px-6 py-3.5 text-sm sm:text-base">
+                                <span>Kenali Sekolah Kami</span>
+                                <i class="fas fa-chevron-right text-xs btn-chev"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Scroll Cue -->
+                    <a href="#statement" class="hidden sm:inline-flex items-center gap-2.5 text-xs font-extrabold tracking-[0.2em] uppercase text-white/80 hover:text-sky-300 transition pb-2">
+                        <i class="fas fa-star text-yellow-300 text-xs"></i>
+                        <span>Scroll untuk menjelajah</span>
                     </a>
                 </div>
             </div>
-        </div>
-    </nav>
+        </section>
 
-    <!-- Hero Section -->
-    <section class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 bg-gradient-to-br from-sekolah-birumuda to-sekolah-biru text-white overflow-hidden">
-        <div class="absolute top-20 right-10 w-32 h-32 bg-white opacity-10 rounded-full blur-2xl"></div>
-        <div class="absolute bottom-10 left-10 w-48 h-48 bg-sekolah-kuning opacity-20 rounded-full blur-3xl"></div>
-        
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                <div data-aos="fade-right" data-aos-duration="1000">
-                    <span class="inline-block py-1 px-3 rounded-full bg-sekolah-kuning text-white text-sm font-bold tracking-wider mb-4 shadow-sm">TAHUN AJARAN 2026/2027</span>
-                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight mb-6">
-                        <span class="block text-2xl md:text-3xl font-semibold mb-2 text-sekolah-kuning">SD Patra Dharma 3 Balikpapan</span>
-                        Belajar Bahagia, <br>
-                        Tumbuh <span class="text-sekolah-kuning">Bermakna.</span>
-                    </h1>
-                    <p class="text-lg md:text-xl text-blue-100 mb-8 max-w-lg leading-relaxed">
-                        Membentuk generasi yang berakhlak mulia, berilmu, berkarakter, dan berwawasan lingkungan.
-                    </p>
-                    <div class="flex flex-wrap gap-4">
-                        <a href="https://pmb.sdpd3balikpapan.sch.id" target="_blank" class="bg-sekolah-merah hover:bg-red-500 text-white px-8 py-3.5 rounded-full font-bold text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition duration-300">
-                            Info PMB
+        <!-- 03. Editorial Statement + Odometer Stats (With Sparse Shining Stars Canvas) -->
+        <section id="statement" class="relative py-20 sm:py-28 lg:py-32 bg-canvas overflow-hidden">
+            <canvas class="bg-star-canvas absolute inset-0 w-full h-full pointer-events-none" data-theme="light"></canvas>
+
+            <div class="relative z-10 max-w-[1440px] mx-auto px-5 sm:px-8 lg:px-12">
+                <div class="max-w-5xl reveal-up">
+                    <h2 class="font-display t-statement font-semibold text-ink mb-9">
+                        Sekolah dasar swasta terakreditasi <span class="text-patra-royal">Unggul (A)</span> di Balikpapan yang memadukan
+                        <span class="text-patra-red">·</span> Akhlak Mulia, Ilmu Pengetahuan, Karakter, dan Wawasan Lingkungan.
+                    </h2>
+
+                    <div class="flex flex-wrap items-center gap-4 mb-16 sm:mb-20">
+                        <a href="https://pmb.sdpd3balikpapan.sch.id" target="_blank" rel="noopener noreferrer"
+                           class="btn-pill bg-[#2463A6] hover:bg-[#1B4E85] text-white px-7 py-4 text-sm sm:text-base shadow-md shadow-blue-900/15">
+                            <span class="w-2 h-2 rounded-full bg-yellow-300"></span>
+                            <span>Pendaftaran Murid Baru</span>
+                            <i class="fas fa-chevron-right text-xs btn-chev"></i>
                         </a>
-                        <a href="#ekskul" class="bg-white/20 hover:bg-white/30 backdrop-blur-sm text-white px-8 py-3.5 rounded-full font-bold text-lg transition duration-300">
-                            Lihat Kegiatan Kami
+                        <a href="#roadmap"
+                           class="btn-pill bg-white border border-blue-900/15 text-ink hover:border-patra-royal hover:text-patra-royal px-7 py-4 text-sm sm:text-base">
+                            <span>Program &amp; Ekskul</span>
+                            <i class="fas fa-chevron-right text-xs btn-chev"></i>
                         </a>
                     </div>
                 </div>
-                <div class="relative" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
-                    <!-- Path gambar SUDAH DIPERBAIKI sesuai dengan nama di GitHub (upcarasenin.JPG) -->
-                    <img src="assets/upcarasenin.JPG" alt="Kegiatan Siswa SD Patra Dharma 3" class="w-full h-auto aspect-video object-cover rounded-[2rem] shadow-2xl border-4 border-white/20 transform rotate-2 hover:rotate-0 transition duration-500">
-                    
-                    <div class="absolute -bottom-6 -left-6 bg-white p-4 rounded-2xl shadow-xl flex items-center gap-4 animate-bounce" style="animation-duration: 3s;">
-                        <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center text-green-500 text-2xl">
-                            <i class="fas fa-check-circle"></i>
+
+                <!-- 4-Column Rolling Odometer Stats Row -->
+                <div class="grid grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-10 pt-10 border-t border-black/10 reveal-up" id="odo-stats">
+                    <div>
+                        <div class="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-patra-royal mb-2">
+                            <span class="odo-num" data-target="4">4</span>
                         </div>
+                        <p class="text-sm sm:text-base text-ink2 font-medium leading-snug">Pilar karakter &amp; visi sekolah</p>
+                    </div>
+                    <div>
+                        <div class="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-ink mb-2">
+                            <span class="odo-num" data-target="6">6</span>
+                        </div>
+                        <p class="text-sm sm:text-base text-ink2 font-medium leading-snug">Tahun jenjang kelas dasar (Fase A–C)</p>
+                    </div>
+                    <div>
+                        <div class="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-patra-blue mb-2">
+                            <span class="odo-num" data-target="16">16</span>
+                        </div>
+                        <p class="text-sm sm:text-base text-ink2 font-medium leading-snug">Pilihan ekstrakurikuler bakat &amp; minat</p>
+                    </div>
+                    <div>
+                        <div class="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-ink mb-2">
+                            <span class="odo-num" data-target="5">5</span>
+                        </div>
+                        <p class="text-sm sm:text-base text-ink2 font-medium leading-snug">Hari sekolah efektif Kurikulum Merdeka</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 04. 01 — TENTANG & Scroll-Zoom Showcase -->
+        <section id="tentang" class="relative py-20 sm:py-28 bg-canvas overflow-hidden">
+            <canvas class="bg-star-canvas absolute inset-0 w-full h-full pointer-events-none" data-theme="light"></canvas>
+
+            <div class="relative z-10 max-w-[1440px] mx-auto px-5 sm:px-8 lg:px-12">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start mb-16 sm:mb-24">
+                    <div class="lg:col-span-4 reveal-up">
+                        <div class="eyebrow text-ink2 mb-4">
+                            <span class="eyebrow-dot"></span>
+                            <span>01 — Tentang Sekolah</span>
+                        </div>
+                        <p class="text-sm font-bold text-patra-royal bg-blue-50 border border-blue-200/70 inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full">
+                            <i class="fas fa-award text-patra-gold"></i> Yayasan Patra Dharma Mandiri • NPSN 30401527
+                        </p>
+                    </div>
+                    <div class="lg:col-span-8 space-y-6 reveal-up">
+                        <h2 class="font-display t-display font-bold text-ink">
+                            Strategi belajar kami menghadirkan suasana sekolah yang ceria, aman, dan menumbuhkan potensi unik setiap anak.
+                        </h2>
+                        <p class="text-base sm:text-lg text-ink2 leading-relaxed max-w-2xl">
+                            Di bawah naungan Yayasan Patra Dharma Mandiri dengan motto <strong>Mandiri, Unggul, Terpercaya</strong>, SD Patra Dharma 3 Balikpapan mengintegrasikan <strong>Kurikulum Merdeka 5 hari sekolah</strong> bersama pembiasaan akhlak mulia, praktik STEM kreatif, pilihan Kelas Reguler maupun Kelas IT, serta kepedulian terhadap lingkungan hijau.
+                        </p>
                         <div>
-                            <p class="text-sm text-gray-500 font-semibold">Akreditasi</p>
-                            <p class="text-xl font-bold text-gray-800">Unggul (A)</p>
+                            <a href="#pilar" class="btn-pill bg-white border border-blue-900/15 hover:border-patra-royal hover:text-patra-royal text-ink px-6 py-3 text-sm">
+                                <span class="w-2 h-2 rounded-full bg-patra-blue"></span>
+                                <span>Lihat 4 Pilar Pendidikan</span>
+                                <i class="fas fa-chevron-right text-[10px] btn-chev"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Scroll-Zoom Photo Band -->
+                <div class="relative py-8 sm:py-12 flex flex-col items-center">
+                    <div class="w-full flex items-center justify-between gap-4 sm:gap-8 relative z-20 pointer-events-none mb-4 lg:mb-0">
+                        <span class="font-display t-zoom-word font-bold text-ink/90 select-none" id="zoom-word-left">Belajar</span>
+                        <span class="font-display t-zoom-word font-bold text-patra-blue select-none text-right" id="zoom-word-right">Bermakna</span>
+                    </div>
+                    <div id="zoom-photo-wrap" class="w-full max-w-4xl lg:-mt-10 rounded-[28px] sm:rounded-[36px] overflow-hidden shadow-2xl border-4 border-white transition-transform duration-300 will-change-transform">
+                        <img src="assets/upcarasenin.JPG" alt="Suasana upacara dan lingkungan hijau SD Patra Dharma 3 Balikpapan" class="w-full h-64 sm:h-96 lg:h-[460px] object-cover">
+                    </div>
+                    <p class="mt-4 text-xs sm:text-sm font-semibold text-ink3 tracking-wide text-center">
+                        Lingkungan Sekolah Asri — Jl. Sekolah No.1, Balikpapan Kota
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 05. Dark Spotlight Stage (Learning in Action) -->
+        <div class="bg-canvas py-2">
+        <section id="kegiatan-nyata" class="relative py-24 sm:py-32 bg-night text-white overflow-hidden rounded-[var(--r-lg)] mx-2 sm:mx-4 lg:mx-6">
+            <canvas class="bg-star-canvas absolute inset-0 w-full h-full pointer-events-none" data-theme="dark"></canvas>
+
+            <div class="relative z-10 max-w-[1440px] mx-auto px-5 sm:px-8 lg:px-12 text-center">
+                <div class="eyebrow text-slate-300 justify-center mb-8 reveal-up">
+                    <span class="eyebrow-dot" style="background-color:#FACC15;"></span>
+                    <span>Aksi Belajar Nyata</span>
+                </div>
+
+                <div class="relative max-w-5xl mx-auto flex flex-col lg:flex-row items-center justify-center gap-6 lg:gap-8 reveal-up">
+                    <span class="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-white/95 tracking-tight">Karya</span>
+
+                    <!-- Rounded 16:9 Media Stage with Wavy Motion -->
+                    <div class="relative w-full max-w-2xl aspect-video rounded-[26px] sm:rounded-[32px] overflow-hidden border border-white/15 shadow-2xl group cursor-pointer" id="spotlight-trigger">
+                        <img src="assets/stem2425.JPG" alt="Siswa SD Patra Dharma 3 membuat proyek STEM dan kreativitas"
+                             class="w-full h-full object-cover wave-photo">
+                        <div class="absolute inset-0 bg-[#0B1736]/45 flex flex-col items-center justify-center p-6 transition group-hover:bg-[#0B1736]/30">
+                            <button type="button" aria-label="Lihat detail pembelajaran dan kanal video sekolah"
+                                    class="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-white/95 text-patra-royal flex items-center justify-center text-xl sm:text-2xl shadow-2xl group-hover:scale-110 transition-transform duration-300 mb-3">
+                                <i class="fas fa-play ml-1"></i>
+                            </button>
+                            <span class="px-4 py-1.5 rounded-full bg-white/15 backdrop-blur-md border border-white/20 text-xs sm:text-sm font-bold text-white">
+                                Lihat Dokumentasi &amp; Kanal YouTube Sekolah
+                            </span>
+                        </div>
+                    </div>
+
+                    <span class="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-sky-400 tracking-tight">Siswa</span>
+                </div>
+            </div>
+        </section>
+        </div>
+
+        <!-- 06. 02 — EMPAT PILAR PENDIDIKAN (Sticky Horizontal Scroll on Desktop / Swipe Cards on Mobile) -->
+        <section id="pilar" class="relative bg-canvas pt-20 sm:pt-24 pb-8">
+            <div class="hb-stage" id="hb-stage">
+                <div class="hb-sticky">
+                    <div class="max-w-[1600px] w-full mx-auto px-5 sm:px-8 lg:px-12 mb-8">
+                        <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
+                            <div>
+                                <div class="eyebrow text-ink2 mb-3">
+                                    <span class="eyebrow-dot"></span>
+                                    <span>02 — Empat Pilar Pendidikan</span>
+                                </div>
+                                <h2 class="font-display t-display font-bold text-ink">
+                                    Fondasi Tumbuh Anak Hebat
+                                </h2>
+                            </div>
+                            <p class="text-sm font-bold text-ink3 hidden lg:flex items-center gap-2 uppercase tracking-widest">
+                                <span>Scroll untuk menggeser kartu</span>
+                                <i class="fas fa-arrow-right text-patra-blue"></i>
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Horizontal Cards Track -->
+                    <div class="w-full overflow-x-auto lg:overflow-visible no-scrollbar px-5 sm:px-8 lg:px-12">
+                        <div id="hb-track" class="flex gap-5 sm:gap-7 pb-6 lg:pb-0 transition-transform duration-100 ease-out will-change-transform">
+
+                            <!-- Pilar 1: Biru Utama Logo -->
+                            <article class="w-[86vw] sm:w-[460px] lg:w-[680px] shrink-0 rounded-[30px] bg-[#E6F1FC] border border-sky-200/80 p-6 sm:p-8 grid grid-cols-1 lg:grid-cols-12 gap-6 items-center shadow-sm">
+                                <div class="lg:col-span-7 flex flex-col justify-between h-full space-y-5">
+                                    <div>
+                                        <span class="font-mono text-xs font-extrabold text-[#0284C7]">01 / 04</span>
+                                        <h3 class="font-display text-2xl sm:text-3xl font-bold text-ink mt-1">Berilmu &amp; Inovatif</h3>
+                                        <p class="text-sm sm:text-base text-ink2 mt-2 leading-relaxed">Pembelajaran Kurikulum Merdeka berbasis literasi, numerasi, dan proyek praktik nyata (STEM).</p>
+                                    </div>
+                                    <div class="flex flex-wrap gap-1.5">
+                                        <span class="px-3 py-1 rounded-full bg-white/85 text-xs font-bold text-[#1D4ED8]">Kurikulum Merdeka</span>
+                                        <span class="px-3 py-1 rounded-full bg-white/85 text-xs font-bold text-[#1D4ED8]">Proyek STEM</span>
+                                        <span class="px-3 py-1 rounded-full bg-white/85 text-xs font-bold text-[#1D4ED8]">Sains Club</span>
+                                        <span class="px-3 py-1 rounded-full bg-white/85 text-xs font-bold text-[#1D4ED8]">Math Club</span>
+                                        <span class="px-3 py-1 rounded-full bg-white/85 text-xs font-bold text-[#1D4ED8]">English Club</span>
+                                        <span class="px-3 py-1 rounded-full bg-white/85 text-xs font-bold text-[#1D4ED8]">Robotic</span>
+                                    </div>
+                                    <div>
+                                        <a href="#roadmap" data-jump-tab="sains" class="jump-roadmap btn-pill bg-[#0B1736] hover:bg-[#1D4ED8] text-white px-5 py-2.5 text-xs sm:text-sm">
+                                            <span class="w-2 h-2 rounded-full bg-sky-400"></span>
+                                            <span>Lihat 5 program sains &amp; bahasa</span>
+                                            <i class="fas fa-chevron-right text-[10px] btn-chev"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="lg:col-span-5 rounded-2xl overflow-hidden h-48 lg:h-72 shadow-md">
+                                    <img src="assets/stem2425.JPG" alt="Proyek STEM siswa SD Patra Dharma 3" class="w-full h-full object-cover">
+                                </div>
+                            </article>
+
+                            <!-- Pilar 2: Berwawasan Lingkungan (Biru-Hijau Segar) -->
+                            <article class="w-[86vw] sm:w-[460px] lg:w-[680px] shrink-0 rounded-[30px] bg-[#E3F4EA] border border-emerald-200/80 p-6 sm:p-8 grid grid-cols-1 lg:grid-cols-12 gap-6 items-center shadow-sm">
+                                <div class="lg:col-span-7 flex flex-col justify-between h-full space-y-5">
+                                    <div>
+                                        <span class="font-mono text-xs font-extrabold text-[#15803D]">02 / 04</span>
+                                        <h3 class="font-display text-2xl sm:text-3xl font-bold text-ink mt-1">Berwawasan Lingkungan</h3>
+                                        <p class="text-sm sm:text-base text-ink2 mt-2 leading-relaxed">Menumbuhkan kesadaran cinta alam, kebersihan kelas, penghijauan, dan tanggung jawab ekologis.</p>
+                                    </div>
+                                    <div class="flex flex-wrap gap-1.5">
+                                        <span class="px-3 py-1 rounded-full bg-white/85 text-xs font-bold text-[#15803D]">Sekolah Asri</span>
+                                        <span class="px-3 py-1 rounded-full bg-white/85 text-xs font-bold text-[#15803D]">Pilah Sampah</span>
+                                        <span class="px-3 py-1 rounded-full bg-white/85 text-xs font-bold text-[#15803D]">Cinta Tanaman</span>
+                                        <span class="px-3 py-1 rounded-full bg-white/85 text-xs font-bold text-[#15803D]">Budaya Bersih</span>
+                                        <span class="px-3 py-1 rounded-full bg-white/85 text-xs font-bold text-[#15803D]">Hemat Energi</span>
+                                    </div>
+                                    <div>
+                                        <a href="#roadmap" data-jump-tab="fase" class="jump-roadmap btn-pill bg-[#0B1736] hover:bg-[#1D4ED8] text-white px-5 py-2.5 text-xs sm:text-sm">
+                                            <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+                                            <span>Lihat roadmap kelas 1–6</span>
+                                            <i class="fas fa-chevron-right text-[10px] btn-chev"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="lg:col-span-5 rounded-2xl overflow-hidden h-48 lg:h-72 shadow-md">
+                                    <img src="assets/upcarasenin.JPG" alt="Halaman sekolah asri rimbun pepohonan SD Patra Dharma 3" class="w-full h-full object-cover">
+                                </div>
+                            </article>
+
+                            <!-- Pilar 3: Akhlak & Karakter (Sentuhan Merah Logo Lembut) -->
+                            <article class="w-[86vw] sm:w-[460px] lg:w-[680px] shrink-0 rounded-[30px] bg-[#FEECEC] border border-red-200/80 p-6 sm:p-8 grid grid-cols-1 lg:grid-cols-12 gap-6 items-center shadow-sm">
+                                <div class="lg:col-span-7 flex flex-col justify-between h-full space-y-5">
+                                    <div>
+                                        <span class="font-mono text-xs font-extrabold text-[#DC2626]">03 / 04</span>
+                                        <h3 class="font-display text-2xl sm:text-3xl font-bold text-ink mt-1">Akhlak &amp; Karakter</h3>
+                                        <p class="text-sm sm:text-base text-ink2 mt-2 leading-relaxed">Pembiasaan adab, sopan santun, kedisiplinan upacara, dan kepedulian sosial dalam suasana kekeluargaan.</p>
+                                    </div>
+                                    <div class="flex flex-wrap gap-1.5">
+                                        <span class="px-3 py-1 rounded-full bg-white/85 text-xs font-bold text-[#DC2626]">Adab Harian</span>
+                                        <span class="px-3 py-1 rounded-full bg-white/85 text-xs font-bold text-[#DC2626]">LKBB</span>
+                                        <span class="px-3 py-1 rounded-full bg-white/85 text-xs font-bold text-[#DC2626]">Habsyi</span>
+                                        <span class="px-3 py-1 rounded-full bg-white/85 text-xs font-bold text-[#DC2626]">Public Speaking</span>
+                                        <span class="px-3 py-1 rounded-full bg-white/85 text-xs font-bold text-[#DC2626]">Ramah Anak</span>
+                                    </div>
+                                    <div>
+                                        <a href="#roadmap" data-jump-tab="karakter" class="jump-roadmap btn-pill bg-[#0B1736] hover:bg-[#1D4ED8] text-white px-5 py-2.5 text-xs sm:text-sm">
+                                            <span class="w-2 h-2 rounded-full bg-red-400"></span>
+                                            <span>Lihat program karakter</span>
+                                            <i class="fas fa-chevron-right text-[10px] btn-chev"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="lg:col-span-5 rounded-2xl overflow-hidden h-48 lg:h-72 shadow-md bg-white flex flex-col items-center justify-center p-6 text-center">
+                                    <img src="assets/logo%20ypdm.png" alt="Logo Yayasan Patra Dharma Mandiri Balikpapan" class="w-28 h-28 object-contain mb-3">
+                                    <p class="font-display font-bold text-sm text-patra-royal">Mandiri • Unggul • Terpercaya</p>
+                                </div>
+                            </article>
+
+                            <!-- Pilar 4: Bakat & Ekspresi (Sentuhan Kuning Logo Lembut) -->
+                            <article class="w-[86vw] sm:w-[460px] lg:w-[680px] shrink-0 rounded-[30px] bg-[#FEF7D6] border border-yellow-300/80 p-6 sm:p-8 grid grid-cols-1 lg:grid-cols-12 gap-6 items-center shadow-sm">
+                                <div class="lg:col-span-7 flex flex-col justify-between h-full space-y-5">
+                                    <div>
+                                        <span class="font-mono text-xs font-extrabold text-[#A16207]">04 / 04</span>
+                                        <h3 class="font-display text-2xl sm:text-3xl font-bold text-ink mt-1">Bakat &amp; Ekspresi</h3>
+                                        <p class="text-sm sm:text-base text-ink2 mt-2 leading-relaxed">Ruang ekspresi bebas untuk menyalurkan minat olahraga, seni rupa, tari, hingga musik siswa.</p>
+                                    </div>
+                                    <div class="flex flex-wrap gap-1.5">
+                                        <span class="px-3 py-1 rounded-full bg-white/85 text-xs font-bold text-[#A16207]">Sepak Bola</span>
+                                        <span class="px-3 py-1 rounded-full bg-white/85 text-xs font-bold text-[#A16207]">Renang</span>
+                                        <span class="px-3 py-1 rounded-full bg-white/85 text-xs font-bold text-[#A16207]">Pencak Silat</span>
+                                        <span class="px-3 py-1 rounded-full bg-white/85 text-xs font-bold text-[#A16207]">Panahan</span>
+                                        <span class="px-3 py-1 rounded-full bg-white/85 text-xs font-bold text-[#A16207]">Basket</span>
+                                        <span class="px-3 py-1 rounded-full bg-white/85 text-xs font-bold text-[#A16207]">Menari</span>
+                                        <span class="px-3 py-1 rounded-full bg-white/85 text-xs font-bold text-[#A16207]">Paduan Suara</span>
+                                    </div>
+                                    <div>
+                                        <a href="#roadmap" data-jump-tab="olahraga" class="jump-roadmap btn-pill bg-[#0B1736] hover:bg-[#1D4ED8] text-white px-5 py-2.5 text-xs sm:text-sm">
+                                            <span class="w-2 h-2 rounded-full bg-yellow-300"></span>
+                                            <span>Lihat 9 ekskul olahraga &amp; seni</span>
+                                            <i class="fas fa-chevron-right text-[10px] btn-chev"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="lg:col-span-5 rounded-2xl overflow-hidden h-48 lg:h-72 shadow-md">
+                                    <img src="assets/stem2425.JPG" alt="Siswa berkolaborasi mengembangkan kreativitas" class="w-full h-full object-cover object-right">
+                                </div>
+                            </article>
+
+                        </div>
+                    </div>
+
+                    <!-- Desktop Horizontal Scroll Progress Bar -->
+                    <div class="hidden lg:block max-w-[1600px] w-full mx-auto px-12 mt-8">
+                        <div class="h-1 bg-black/10 rounded-full overflow-hidden">
+                            <div id="hb-progress" class="h-full bg-[#2463A6] rounded-full transition-all duration-75" style="width: 15%"></div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-        
-        <div class="absolute bottom-0 left-0 w-full overflow-hidden leading-none transform translate-y-1">
-            <svg class="relative block w-full h-16 md:h-24 lg:h-32" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V95.8C59.71,118,130.95,130,195.4,115.1,239.5,104.9,282.8,80.7,321.39,56.44Z" fill="#f9fafb"></path>
-            </svg>
-        </div>
-    </section>
+        </section>
 
-    <!-- Keunggulan Section -->
-    <section id="unggulan" class="py-20 bg-gray-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16" data-aos="fade-up">
-                <h2 class="text-3xl md:text-4xl font-extrabold text-sekolah-biru mb-4">Mengapa Memilih Kami?</h2>
-                <div class="w-24 h-1.5 bg-sekolah-kuning mx-auto rounded-full"></div>
+        <!-- 07. 03 — ROADMAP 6 TAHUN & EKSKUL (Dynamic Re-Themed Background + Slide-Over Detail Sheet) -->
+        <div class="bg-canvas py-4">
+        <section id="roadmap" class="relative py-20 sm:py-28 rounded-[var(--r-lg)] mx-2 sm:mx-4 lg:mx-6 my-4 overflow-hidden" style="background-color: #E6F1FC;">
+            <!-- Giant Watermark Text -->
+            <div id="roadmap-watermark" class="pointer-events-none select-none font-display font-bold uppercase text-[14vw] leading-none opacity-[0.05] absolute -top-2 right-4 tracking-tight text-ink">
+                FASE 1–6
             </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="bg-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition duration-300 border-b-4 border-sekolah-birumuda" data-aos="zoom-in" data-aos-delay="100">
-                    <div class="w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center text-sekolah-birumuda text-3xl mb-6 transform -rotate-6">
-                        <i class="fas fa-book-reader"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-gray-800 mb-3">Berilmu & Berkarakter</h3>
-                    <p class="text-gray-600">Memadukan kurikulum nasional dengan pembentukan adab dan karakter siswa sejak dini.</p>
-                </div>
-                <div class="bg-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition duration-300 border-b-4 border-sekolah-merah" data-aos="zoom-in" data-aos-delay="200">
-                    <div class="w-16 h-16 bg-red-100 rounded-2xl flex items-center justify-center text-sekolah-merah text-3xl mb-6 transform rotate-6">
-                        <i class="fas fa-leaf"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-gray-800 mb-3">Berwawasan Lingkungan</h3>
-                    <p class="text-gray-600">Mendidik siswa untuk mencintai, menjaga, dan melestarikan lingkungan sekitar sekolah.</p>
-                </div>
-                <div class="bg-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition duration-300 border-b-4 border-sekolah-kuning" data-aos="zoom-in" data-aos-delay="300">
-                    <div class="w-16 h-16 bg-yellow-100 rounded-2xl flex items-center justify-center text-sekolah-kuning text-3xl mb-6 transform -rotate-3">
-                        <i class="fas fa-heart"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-gray-800 mb-3">Akhlak Mulia</h3>
-                    <p class="text-gray-600">Menciptakan suasana kekeluargaan yang aman, saling menghargai, dan mengedepankan sopan santun.</p>
-                </div>
-            </div>
-        </div>
-    </section>
 
-<!-- Ekstrakurikuler Section (Infinite Marquee) -->
-    <section id="ekskul" class="py-20 bg-white overflow-hidden relative">
-        <style>
-            /* Animasi Berjalan Menyamping (Marquee) */
-            @keyframes slide-infinite {
-                0% { transform: translateX(0); }
-                100% { transform: translateX(-50%); } /* Bergeser 50% karena ada 2 set data untuk looping mulus */
-            }
-            .animate-marquee {
-                display: flex;
-                width: max-content;
-                animation: slide-infinite 40s linear infinite; 
-            }
-            /* Jeda saat di-hover (Opsional, hapus baris ini kalau mau tetap jalan terus saat disentuh) */
-            .marquee-container:hover .animate-marquee {
-                animation-play-state: paused;
-            }
-            
-            .marquee-fade-edges {
-                mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
-                -webkit-mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
-            }
-            
-            /* Gaya Khusus Kartu Ekskul */
-            .ekskul-card {
-                width: 250px; /* Lebar seragam setiap kartu */
-                flex-shrink: 0;
-                transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            }
-            /* Simulasi "menyala" saat dilewati kursor */
-            .ekskul-card:hover {
-                transform: scale(1.1) translateY(-10px);
-                z-index: 10;
-            }
-            /* Warna khusus Ikon saat Hover, menyesuaikan tema warna masing-masing */
-            .ekskul-card:hover .icon-public-speaking { background-color: #3b82f6; color: white; }
-            .ekskul-card:hover .icon-sepak-bola { background-color: #ef4444; color: white; }
-            .ekskul-card:hover .icon-renang { background-color: #1e3a8a; color: white; }
-            .ekskul-card:hover .icon-silat { background-color: #f59e0b; color: white; }
-            .ekskul-card:hover .icon-panahan { background-color: #22c55e; color: white; }
-            .ekskul-card:hover .icon-menari { background-color: #ec4899; color: white; }
-            .ekskul-card:hover .icon-mewarnai { background-color: #a855f7; color: white; }
-            .ekskul-card:hover .icon-padus { background-color: #6366f1; color: white; }
-            .ekskul-card:hover .icon-melukis { background-color: #f97316; color: white; }
-            .ekskul-card:hover .icon-sains { background-color: #14b8a6; color: white; }
-            .ekskul-card:hover .icon-math { background-color: #2563eb; color: white; }
-            .ekskul-card:hover .icon-english { background-color: #ef4444; color: white; }
-            .ekskul-card:hover .icon-robotic { background-color: #374151; color: white; }
-            .ekskul-card:hover .icon-basket { background-color: #ea580c; color: white; }
-            .ekskul-card:hover .icon-lkbb { background-color: #1e3a8a; color: white; }
-            .ekskul-card:hover .icon-habsyi { background-color: #059669; color: white; }
-        </style>
+            <div class="relative z-10 max-w-[1560px] mx-auto px-5 sm:px-8 lg:px-12">
+                <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-10">
+                    <div>
+                        <div class="eyebrow text-ink2 mb-3">
+                            <span class="eyebrow-dot" id="roadmap-dot"></span>
+                            <span>03 — Roadmap 6 Tahun &amp; Ekskul</span>
+                        </div>
+                        <h2 class="font-display t-display font-bold text-ink">
+                            Perjalanan Belajar &amp; Pengembangan Bakat
+                        </h2>
+                        <p class="text-sm sm:text-base text-ink2 mt-2 max-w-2xl">
+                            Pilih kategori di bawah untuk melihat perubahan warna tema, lalu <strong>klik kartu mana saja</strong> untuk membaca detail programnya.
+                        </p>
+                    </div>
 
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div class="text-center mb-16" data-aos="fade-up">
-                <h2 class="text-3xl md:text-4xl font-extrabold text-sekolah-biru mb-4">Ekstrakurikuler Pilihan</h2>
-                <div class="w-24 h-1.5 bg-sekolah-kuning mx-auto rounded-full"></div>
-                <p class="mt-4 text-gray-600 max-w-2xl mx-auto">Kembangkan bakat dan minat siswa melalui berbagai pilihan kegiatan ekstrakurikuler yang seru dan edukatif.</p>
+                    <!-- Category Filter Pills -->
+                    <div class="flex flex-wrap gap-2" id="roadmap-tabs" role="tablist">
+                        <button type="button" data-tab="fase" class="rm-tab px-4 py-2.5 rounded-full text-xs sm:text-sm font-bold flex items-center gap-2 transition-all bg-patra-royal text-white shadow-md">
+                            <span>Roadmap Kelas</span>
+                            <span class="px-2 py-0.5 rounded-full text-[11px] bg-white/20">6</span>
+                        </button>
+                        <button type="button" data-tab="sains" class="rm-tab px-4 py-2.5 rounded-full text-xs sm:text-sm font-bold flex items-center gap-2 transition-all bg-white/85 text-ink hover:bg-white">
+                            <span>Sains &amp; Bahasa</span>
+                            <span class="px-2 py-0.5 rounded-full text-[11px] bg-black/10">5</span>
+                        </button>
+                        <button type="button" data-tab="olahraga" class="rm-tab px-4 py-2.5 rounded-full text-xs sm:text-sm font-bold flex items-center gap-2 transition-all bg-white/85 text-ink hover:bg-white">
+                            <span>Olahraga &amp; Bela Diri</span>
+                            <span class="px-2 py-0.5 rounded-full text-[11px] bg-black/10">5</span>
+                        </button>
+                        <button type="button" data-tab="seni" class="rm-tab px-4 py-2.5 rounded-full text-xs sm:text-sm font-bold flex items-center gap-2 transition-all bg-white/85 text-ink hover:bg-white">
+                            <span>Seni &amp; Kreativitas</span>
+                            <span class="px-2 py-0.5 rounded-full text-[11px] bg-black/10">4</span>
+                        </button>
+                        <button type="button" data-tab="karakter" class="rm-tab px-4 py-2.5 rounded-full text-xs sm:text-sm font-bold flex items-center gap-2 transition-all bg-white/85 text-ink hover:bg-white">
+                            <span>Karakter &amp; Religi</span>
+                            <span class="px-2 py-0.5 rounded-full text-[11px] bg-black/10">2</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Interactive Timeline Track Container -->
+                <div class="relative">
+                    <div class="hidden md:block absolute left-0 right-0 top-1/2 -translate-y-1/2 h-[2px] bg-black/10 pointer-events-none"></div>
+                    <div id="roadmap-cards" class="flex gap-5 overflow-x-auto no-scrollbar pb-4 pt-2 snap-x snap-mandatory cursor-grab active:cursor-grabbing">
+                        <!-- Dynamically rendered by JS -->
+                    </div>
+                </div>
+
+                <div class="mt-8 flex flex-col sm:flex-row sm:items-center justify-between gap-4 pt-6 border-t border-black/10 text-xs sm:text-sm text-ink2 font-semibold">
+                    <p>Timeline di atas ditempuh pada jenjang pendidikan dasar 6 tahun (Fase A, B, &amp; C Kurikulum Merdeka).</p>
+                    <span class="inline-flex items-center gap-2 text-ink">
+                        <i class="fas fa-hand-pointer text-patra-blue"></i> Klik kartu untuk buka detail lengkap
+                    </span>
+                </div>
             </div>
+        </section>
         </div>
 
-        <!-- Marquee Container -->
-        <div class="marquee-container w-full relative marquee-fade-edges py-8" data-aos="zoom-in">
-            <!-- Elemen yang Berjalan -->
-            <div class="animate-marquee gap-6 px-4">
-                
-                <!-- KUMPULAN SET 1 (Asli) -->
-                <div class="ekskul-card bg-gray-50 rounded-2xl p-6 text-center shadow-sm border border-gray-100 cursor-pointer">
-                    <div class="icon-public-speaking w-16 h-16 mx-auto bg-white rounded-full flex items-center justify-center text-sekolah-birumuda text-3xl mb-4 transition duration-300 shadow">
-                        <i class="fas fa-microphone-alt"></i>
+        <!-- 08. 04 — GALERI & MARQUEE EKSKUL (Dark Navy Island with Shining Stars) -->
+        <div class="bg-canvas pb-4">
+        <section id="galeri" class="relative py-20 sm:py-28 bg-night text-white rounded-[var(--r-lg)] mx-2 sm:mx-4 lg:mx-6 overflow-hidden">
+            <canvas class="bg-star-canvas absolute inset-0 w-full h-full pointer-events-none" data-theme="dark"></canvas>
+            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[520px] h-[520px] rounded-full bg-sky-500/15 blur-3xl pointer-events-none"></div>
+
+            <div class="relative z-10 max-w-[1440px] mx-auto px-5 sm:px-8 lg:px-12">
+                <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12 reveal-up">
+                    <div>
+                        <div class="eyebrow text-slate-300 mb-3">
+                            <span class="eyebrow-dot" style="background-color:#38BDF8;"></span>
+                            <span>04 — Galeri &amp; Identitas</span>
+                        </div>
+                        <h2 class="font-display t-display font-bold text-white">
+                            Momen Ceria di Sekolah
+                        </h2>
+                        <p class="text-slate-300 mt-2 max-w-xl">
+                            Klik foto untuk memperbesar atau mengunduh dokumentasi kegiatan SD Patra Dharma 3 Balikpapan.
+                        </p>
                     </div>
-                    <h3 class="font-bold text-gray-800 text-lg">Public Speaking</h3>
-                </div>
-                <div class="ekskul-card bg-gray-50 rounded-2xl p-6 text-center shadow-sm border border-gray-100 cursor-pointer">
-                    <div class="icon-sepak-bola w-16 h-16 mx-auto bg-white rounded-full flex items-center justify-center text-sekolah-birumuda text-3xl mb-4 transition duration-300 shadow">
-                        <i class="fas fa-futbol"></i>
-                    </div>
-                    <h3 class="font-bold text-gray-800 text-lg">Sepak Bola</h3>
-                </div>
-                <div class="ekskul-card bg-gray-50 rounded-2xl p-6 text-center shadow-sm border border-gray-100 cursor-pointer">
-                    <div class="icon-renang w-16 h-16 mx-auto bg-white rounded-full flex items-center justify-center text-sekolah-birumuda text-3xl mb-4 transition duration-300 shadow">
-                        <i class="fas fa-swimmer"></i>
-                    </div>
-                    <h3 class="font-bold text-gray-800 text-lg">Renang</h3>
-                </div>
-                <div class="ekskul-card bg-gray-50 rounded-2xl p-6 text-center shadow-sm border border-gray-100 cursor-pointer">
-                    <div class="icon-silat w-16 h-16 mx-auto bg-white rounded-full flex items-center justify-center text-sekolah-birumuda text-3xl mb-4 transition duration-300 shadow">
-                        <i class="fas fa-user-ninja"></i>
-                    </div>
-                    <h3 class="font-bold text-gray-800 text-lg">Pencak Silat</h3>
-                </div>
-                <div class="ekskul-card bg-gray-50 rounded-2xl p-6 text-center shadow-sm border border-gray-100 cursor-pointer">
-                    <div class="icon-panahan w-16 h-16 mx-auto bg-white rounded-full flex items-center justify-center text-sekolah-birumuda text-3xl mb-4 transition duration-300 shadow">
-                        <i class="fas fa-bullseye"></i>
-                    </div>
-                    <h3 class="font-bold text-gray-800 text-lg">Panahan</h3>
-                </div>
-                <div class="ekskul-card bg-gray-50 rounded-2xl p-6 text-center shadow-sm border border-gray-100 cursor-pointer">
-                    <div class="icon-menari w-16 h-16 mx-auto bg-white rounded-full flex items-center justify-center text-sekolah-birumuda text-3xl mb-4 transition duration-300 shadow">
-                        <i class="fas fa-child"></i>
-                    </div>
-                    <h3 class="font-bold text-gray-800 text-lg">Menari</h3>
-                </div>
-                <div class="ekskul-card bg-gray-50 rounded-2xl p-6 text-center shadow-sm border border-gray-100 cursor-pointer">
-                    <div class="icon-mewarnai w-16 h-16 mx-auto bg-white rounded-full flex items-center justify-center text-sekolah-birumuda text-3xl mb-4 transition duration-300 shadow">
-                        <i class="fas fa-palette"></i>
-                    </div>
-                    <h3 class="font-bold text-gray-800 text-lg">Mewarnai</h3>
-                </div>
-                <div class="ekskul-card bg-gray-50 rounded-2xl p-6 text-center shadow-sm border border-gray-100 cursor-pointer">
-                    <div class="icon-padus w-16 h-16 mx-auto bg-white rounded-full flex items-center justify-center text-sekolah-birumuda text-3xl mb-4 transition duration-300 shadow">
-                        <i class="fas fa-users"></i>
-                    </div>
-                    <h3 class="font-bold text-gray-800 text-lg">Paduan Suara</h3>
-                </div>
-                <div class="ekskul-card bg-gray-50 rounded-2xl p-6 text-center shadow-sm border border-gray-100 cursor-pointer">
-                    <div class="icon-melukis w-16 h-16 mx-auto bg-white rounded-full flex items-center justify-center text-sekolah-birumuda text-3xl mb-4 transition duration-300 shadow">
-                        <i class="fas fa-paint-brush"></i>
-                    </div>
-                    <h3 class="font-bold text-gray-800 text-lg">Gambar & Lukis</h3>
-                </div>
-                <div class="ekskul-card bg-gray-50 rounded-2xl p-6 text-center shadow-sm border border-gray-100 cursor-pointer">
-                    <div class="icon-sains w-16 h-16 mx-auto bg-white rounded-full flex items-center justify-center text-sekolah-birumuda text-3xl mb-4 transition duration-300 shadow">
-                        <i class="fas fa-flask"></i>
-                    </div>
-                    <h3 class="font-bold text-gray-800 text-lg">Sains Club</h3>
-                </div>
-                <div class="ekskul-card bg-gray-50 rounded-2xl p-6 text-center shadow-sm border border-gray-100 cursor-pointer">
-                    <div class="icon-math w-16 h-16 mx-auto bg-white rounded-full flex items-center justify-center text-sekolah-birumuda text-3xl mb-4 transition duration-300 shadow">
-                        <i class="fas fa-square-root-variable"></i>
-                    </div>
-                    <h3 class="font-bold text-gray-800 text-lg">Math Club</h3>
-                </div>
-                <div class="ekskul-card bg-gray-50 rounded-2xl p-6 text-center shadow-sm border border-gray-100 cursor-pointer">
-                    <div class="icon-english w-16 h-16 mx-auto bg-white rounded-full flex items-center justify-center text-sekolah-birumuda text-3xl mb-4 transition duration-300 shadow">
-                        <i class="fas fa-language"></i>
-                    </div>
-                    <h3 class="font-bold text-gray-800 text-lg">English Club</h3>
-                </div>
-                <div class="ekskul-card bg-gray-50 rounded-2xl p-6 text-center shadow-sm border border-gray-100 cursor-pointer">
-                    <div class="icon-robotic w-16 h-16 mx-auto bg-white rounded-full flex items-center justify-center text-sekolah-birumuda text-3xl mb-4 transition duration-300 shadow">
-                        <i class="fas fa-robot"></i>
-                    </div>
-                    <h3 class="font-bold text-gray-800 text-lg">Robotic</h3>
-                </div>
-                <div class="ekskul-card bg-gray-50 rounded-2xl p-6 text-center shadow-sm border border-gray-100 cursor-pointer">
-                    <div class="icon-basket w-16 h-16 mx-auto bg-white rounded-full flex items-center justify-center text-sekolah-birumuda text-3xl mb-4 transition duration-300 shadow">
-                        <i class="fas fa-basketball-ball"></i>
-                    </div>
-                    <h3 class="font-bold text-gray-800 text-lg">Basket</h3>
-                </div>
-                <div class="ekskul-card bg-gray-50 rounded-2xl p-6 text-center shadow-sm border border-gray-100 cursor-pointer">
-                    <div class="icon-lkbb w-16 h-16 mx-auto bg-white rounded-full flex items-center justify-center text-sekolah-birumuda text-3xl mb-4 transition duration-300 shadow">
-                        <i class="fas fa-shoe-prints"></i>
-                    </div>
-                    <h3 class="font-bold text-gray-800 text-lg">LKBB</h3>
-                </div>
-                <div class="ekskul-card bg-gray-50 rounded-2xl p-6 text-center shadow-sm border border-gray-100 cursor-pointer">
-                    <div class="icon-habsyi w-16 h-16 mx-auto bg-white rounded-full flex items-center justify-center text-sekolah-birumuda text-3xl mb-4 transition duration-300 shadow">
-                        <i class="fas fa-drum"></i>
-                    </div>
-                    <h3 class="font-bold text-gray-800 text-lg">Habsyi</h3>
+                    <span class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 border border-white/15 text-xs font-bold text-sky-300 self-start md:self-auto">
+                        <i class="fas fa-expand-alt"></i> Klik foto untuk melihat detail
+                    </span>
                 </div>
 
-                <!-- KUMPULAN SET 2 (Duplikat dari Set 1 untuk menciptakan efek Looping/Tidak Pernah Putus) -->
-                <!-- Ini adalah copy-paste persis dari atas -->
-                <div class="ekskul-card bg-gray-50 rounded-2xl p-6 text-center shadow-sm border border-gray-100 cursor-pointer">
-                    <div class="icon-public-speaking w-16 h-16 mx-auto bg-white rounded-full flex items-center justify-center text-sekolah-birumuda text-3xl mb-4 transition duration-300 shadow">
-                        <i class="fas fa-microphone-alt"></i>
-                    </div>
-                    <h3 class="font-bold text-gray-800 text-lg">Public Speaking</h3>
-                </div>
-                <div class="ekskul-card bg-gray-50 rounded-2xl p-6 text-center shadow-sm border border-gray-100 cursor-pointer">
-                    <div class="icon-sepak-bola w-16 h-16 mx-auto bg-white rounded-full flex items-center justify-center text-sekolah-birumuda text-3xl mb-4 transition duration-300 shadow">
-                        <i class="fas fa-futbol"></i>
-                    </div>
-                    <h3 class="font-bold text-gray-800 text-lg">Sepak Bola</h3>
-                </div>
-                <div class="ekskul-card bg-gray-50 rounded-2xl p-6 text-center shadow-sm border border-gray-100 cursor-pointer">
-                    <div class="icon-renang w-16 h-16 mx-auto bg-white rounded-full flex items-center justify-center text-sekolah-birumuda text-3xl mb-4 transition duration-300 shadow">
-                        <i class="fas fa-swimmer"></i>
-                    </div>
-                    <h3 class="font-bold text-gray-800 text-lg">Renang</h3>
-                </div>
-                <div class="ekskul-card bg-gray-50 rounded-2xl p-6 text-center shadow-sm border border-gray-100 cursor-pointer">
-                    <div class="icon-silat w-16 h-16 mx-auto bg-white rounded-full flex items-center justify-center text-sekolah-birumuda text-3xl mb-4 transition duration-300 shadow">
-                        <i class="fas fa-user-ninja"></i>
-                    </div>
-                    <h3 class="font-bold text-gray-800 text-lg">Pencak Silat</h3>
-                </div>
-                <div class="ekskul-card bg-gray-50 rounded-2xl p-6 text-center shadow-sm border border-gray-100 cursor-pointer">
-                    <div class="icon-panahan w-16 h-16 mx-auto bg-white rounded-full flex items-center justify-center text-sekolah-birumuda text-3xl mb-4 transition duration-300 shadow">
-                        <i class="fas fa-bullseye"></i>
-                    </div>
-                    <h3 class="font-bold text-gray-800 text-lg">Panahan</h3>
-                </div>
-                <div class="ekskul-card bg-gray-50 rounded-2xl p-6 text-center shadow-sm border border-gray-100 cursor-pointer">
-                    <div class="icon-menari w-16 h-16 mx-auto bg-white rounded-full flex items-center justify-center text-sekolah-birumuda text-3xl mb-4 transition duration-300 shadow">
-                        <i class="fas fa-child"></i>
-                    </div>
-                    <h3 class="font-bold text-gray-800 text-lg">Menari</h3>
-                </div>
-                <div class="ekskul-card bg-gray-50 rounded-2xl p-6 text-center shadow-sm border border-gray-100 cursor-pointer">
-                    <div class="icon-mewarnai w-16 h-16 mx-auto bg-white rounded-full flex items-center justify-center text-sekolah-birumuda text-3xl mb-4 transition duration-300 shadow">
-                        <i class="fas fa-palette"></i>
-                    </div>
-                    <h3 class="font-bold text-gray-800 text-lg">Mewarnai</h3>
-                </div>
-                <div class="ekskul-card bg-gray-50 rounded-2xl p-6 text-center shadow-sm border border-gray-100 cursor-pointer">
-                    <div class="icon-padus w-16 h-16 mx-auto bg-white rounded-full flex items-center justify-center text-sekolah-birumuda text-3xl mb-4 transition duration-300 shadow">
-                        <i class="fas fa-users"></i>
-                    </div>
-                    <h3 class="font-bold text-gray-800 text-lg">Paduan Suara</h3>
-                </div>
-                <div class="ekskul-card bg-gray-50 rounded-2xl p-6 text-center shadow-sm border border-gray-100 cursor-pointer">
-                    <div class="icon-melukis w-16 h-16 mx-auto bg-white rounded-full flex items-center justify-center text-sekolah-birumuda text-3xl mb-4 transition duration-300 shadow">
-                        <i class="fas fa-paint-brush"></i>
-                    </div>
-                    <h3 class="font-bold text-gray-800 text-lg">Gambar & Lukis</h3>
-                </div>
-                <div class="ekskul-card bg-gray-50 rounded-2xl p-6 text-center shadow-sm border border-gray-100 cursor-pointer">
-                    <div class="icon-sains w-16 h-16 mx-auto bg-white rounded-full flex items-center justify-center text-sekolah-birumuda text-3xl mb-4 transition duration-300 shadow">
-                        <i class="fas fa-flask"></i>
-                    </div>
-                    <h3 class="font-bold text-gray-800 text-lg">Sains Club</h3>
-                </div>
-                <div class="ekskul-card bg-gray-50 rounded-2xl p-6 text-center shadow-sm border border-gray-100 cursor-pointer">
-                    <div class="icon-math w-16 h-16 mx-auto bg-white rounded-full flex items-center justify-center text-sekolah-birumuda text-3xl mb-4 transition duration-300 shadow">
-                        <i class="fas fa-square-root-variable"></i>
-                    </div>
-                    <h3 class="font-bold text-gray-800 text-lg">Math Club</h3>
-                </div>
-                <div class="ekskul-card bg-gray-50 rounded-2xl p-6 text-center shadow-sm border border-gray-100 cursor-pointer">
-                    <div class="icon-english w-16 h-16 mx-auto bg-white rounded-full flex items-center justify-center text-sekolah-birumuda text-3xl mb-4 transition duration-300 shadow">
-                        <i class="fas fa-language"></i>
-                    </div>
-                    <h3 class="font-bold text-gray-800 text-lg">English Club</h3>
-                </div>
-                <div class="ekskul-card bg-gray-50 rounded-2xl p-6 text-center shadow-sm border border-gray-100 cursor-pointer">
-                    <div class="icon-robotic w-16 h-16 mx-auto bg-white rounded-full flex items-center justify-center text-sekolah-birumuda text-3xl mb-4 transition duration-300 shadow">
-                        <i class="fas fa-robot"></i>
-                    </div>
-                    <h3 class="font-bold text-gray-800 text-lg">Robotic</h3>
-                </div>
-                <div class="ekskul-card bg-gray-50 rounded-2xl p-6 text-center shadow-sm border border-gray-100 cursor-pointer">
-                    <div class="icon-basket w-16 h-16 mx-auto bg-white rounded-full flex items-center justify-center text-sekolah-birumuda text-3xl mb-4 transition duration-300 shadow">
-                        <i class="fas fa-basketball-ball"></i>
-                    </div>
-                    <h3 class="font-bold text-gray-800 text-lg">Basket</h3>
-                </div>
-                <div class="ekskul-card bg-gray-50 rounded-2xl p-6 text-center shadow-sm border border-gray-100 cursor-pointer">
-                    <div class="icon-lkbb w-16 h-16 mx-auto bg-white rounded-full flex items-center justify-center text-sekolah-birumuda text-3xl mb-4 transition duration-300 shadow">
-                        <i class="fas fa-shoe-prints"></i>
-                    </div>
-                    <h3 class="font-bold text-gray-800 text-lg">LKBB</h3>
-                </div>
-                <div class="ekskul-card bg-gray-50 rounded-2xl p-6 text-center shadow-sm border border-gray-100 cursor-pointer">
-                    <div class="icon-habsyi w-16 h-16 mx-auto bg-white rounded-full flex items-center justify-center text-sekolah-birumuda text-3xl mb-4 transition duration-300 shadow">
-                        <i class="fas fa-drum"></i>
-                    </div>
-                    <h3 class="font-bold text-gray-800 text-lg">Habsyi</h3>
+                <!-- Interactive Gallery Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-5 mb-14 reveal-up">
+                    <button type="button" class="galeri-item md:col-span-7 group relative rounded-[26px] overflow-hidden border border-white/15 text-left focus:outline-none focus:ring-2 focus:ring-sky-400"
+                            data-src="assets/upcarasenin.JPG"
+                            data-title="Upacara Hari Senin &amp; Lingkungan Asri"
+                            data-caption="Pembiasaan kedisiplinan, cinta tanah air, dan suasana rindang halaman SD Patra Dharma 3 Balikpapan.">
+                        <img src="assets/upcarasenin.JPG" alt="Upacara Hari Senin SD Patra Dharma 3 Balikpapan" class="w-full h-72 sm:h-96 object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-[#0B1736]/20 p-4 sm:p-6 flex flex-col justify-end">
+                            <div class="bg-[#0B1736]/80 backdrop-blur-md border border-white/15 rounded-2xl px-4 py-3 self-start">
+                                <span class="text-[11px] font-bold uppercase tracking-widest text-sky-300 block mb-0.5">01 / Karakter &amp; Kedisiplinan</span>
+                                <p class="font-display text-lg sm:text-xl font-bold text-white">Upacara Senin &amp; Halaman Asri</p>
+                            </div>
+                        </div>
+                    </button>
+
+                    <button type="button" class="galeri-item md:col-span-5 group relative rounded-[26px] overflow-hidden border border-white/15 text-left focus:outline-none focus:ring-2 focus:ring-sky-400"
+                            data-src="assets/stem2425.JPG"
+                            data-title="Praktik Proyek STEM &amp; Kreativitas"
+                            data-caption="Siswa bekerja sama merancang karya sains dan teknologi secara aktif dan menyenangkan.">
+                        <img src="assets/stem2425.JPG" alt="Pembelajaran STEM siswa SD Patra Dharma 3" class="w-full h-72 sm:h-96 object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-[#0B1736]/20 p-4 sm:p-6 flex flex-col justify-end">
+                            <div class="bg-[#0B1736]/80 backdrop-blur-md border border-white/15 rounded-2xl px-4 py-3 self-start">
+                                <span class="text-[11px] font-bold uppercase tracking-widest text-yellow-300 block mb-0.5">02 / Kurikulum Merdeka</span>
+                                <p class="font-display text-lg sm:text-xl font-bold text-white">Pembelajaran Praktik STEM</p>
+                            </div>
+                        </div>
+                    </button>
                 </div>
 
+                <!-- Continuous Marquee Badges -->
+                <div class="pt-8 border-t border-white/10">
+                    <p class="text-xs font-extrabold uppercase tracking-[0.2em] text-slate-400 mb-5 text-center">
+                        Aktivitas Unggulan &amp; Ekstrakurikuler SD Patra Dharma 3
+                    </p>
+                    <div class="marquee-wrap overflow-hidden py-1" style="mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);">
+                        <div class="marquee-track gap-3" id="dark-pill-marquee">
+                            <!-- Populated by JS -->
+                        </div>
+                    </div>
+                </div>
             </div>
+        </section>
         </div>
-    </section>
-    
-    <!-- Blog Embed Section -->
-    <section id="blog" class="py-20 bg-gray-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-10" data-aos="fade-up">
-                <h2 class="text-3xl md:text-4xl font-extrabold text-sekolah-biru mb-4">Kabar & Artikel Sekolah</h2>
-                <div class="w-24 h-1.5 bg-sekolah-kuning mx-auto rounded-full"></div>
-            </div>
-            
-            <!-- Iframe Blog -->
-            <div class="bg-white rounded-[2rem] p-2 md:p-4 shadow-xl border border-gray-100" data-aos="zoom-in" data-aos-delay="100">
-                <iframe src="https://sdpatradharma3.id/blog/" class="w-full h-[600px] rounded-xl border-none" title="Blog SD Patra Dharma 3"></iframe>
-            </div>
-            
-            <div class="text-center mt-8">
-                <a href="https://sdpatradharma3.id/blog/" target="_blank" class="inline-flex items-center text-gray-600 hover:text-sekolah-birumuda font-bold transition duration-300">
-                    Buka Halaman Blog Sepenuhnya <i class="fas fa-external-link-alt ml-2"></i>
-                </a>
-            </div>
-        </div>
-    </section>
 
-    <!-- Banner Info PMB -->
-    <section class="py-16">
-        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="bg-sekolah-biru rounded-[2.5rem] p-10 md:p-16 text-center text-white relative overflow-hidden shadow-2xl" data-aos="flip-up">
-                <div class="absolute top-0 right-0 w-64 h-64 bg-white opacity-5 rounded-full -translate-y-1/2 translate-x-1/4"></div>
-                <div class="absolute bottom-0 left-0 w-32 h-32 bg-sekolah-kuning opacity-20 rounded-full translate-y-1/4 -translate-x-1/4"></div>
-                
-                <h2 class="text-3xl md:text-5xl font-extrabold mb-6 relative z-10">Penerimaan Murid Baru (PMB) <br> Telah Dibuka!</h2>
-                <p class="text-blue-100 text-lg mb-10 max-w-2xl mx-auto relative z-10">Jangan lewatkan kesempatan untuk bergabung menjadi bagian dari keluarga besar SD Patra Dharma 3 Balikpapan. Kuota terbatas!</p>
-                <a href="https://pmb.sdpd3balikpapan.sch.id" target="_blank" class="inline-block bg-sekolah-kuning hover:bg-yellow-400 text-gray-900 px-10 py-4 rounded-full font-extrabold text-xl shadow-lg transform hover:scale-105 transition duration-300 relative z-10">
-                    Menuju Portal PMB <i class="fas fa-arrow-right ml-2"></i>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="bg-gray-900 text-gray-300 pt-16 pb-8">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
-                <div>
-                    <div class="flex items-center gap-3 mb-6">
-                        <img src="assets/logo%20ypdm.png" alt="Logo" class="w-10 h-10 object-contain filter brightness-0 invert">
-                        <h3 class="text-2xl font-bold text-white">SD Patra Dharma 3</h3>
+        <!-- 09. 05 — KABAR & KANAL DIGITAL SEKOLAH -->
+        <section id="blog" class="py-20 sm:py-24 bg-canvas">
+            <div class="max-w-[1440px] mx-auto px-5 sm:px-8 lg:px-12">
+                <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-12 reveal-up">
+                    <div>
+                        <div class="eyebrow text-ink2 mb-3">
+                            <span class="eyebrow-dot"></span>
+                            <span>05 — Kabar &amp; Media Sekolah</span>
+                        </div>
+                        <h2 class="font-display t-display font-bold text-ink">
+                            Ikuti Aktivitas Terbaru Kami
+                        </h2>
+                        <p class="text-ink2 mt-2 max-w-xl">
+                            Akses blog sekolah dan kanal media sosial resmi SD Patra Dharma 3 Balikpapan untuk kabar prestasi, agenda siswa, dan pengumuman terbaru.
+                        </p>
                     </div>
-                    <p class="mb-4">Membentuk generasi yang berakhlak mulia, berilmu, berkarakter, dan berwawasan lingkungan.</p>
-                    <div class="flex space-x-4">
-                        <a href="https://facebook.com/sdpd3bpn" target="_blank" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-blue-600 transition text-white shadow-lg"><i class="fab fa-facebook-f"></i></a>
-                        <a href="https://instagram.com/sdpd3bpn" target="_blank" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-pink-600 transition text-white shadow-lg"><i class="fab fa-instagram"></i></a>
-                        <a href="https://youtube.com/@sdpd3bpn" target="_blank" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-red-600 transition text-white shadow-lg"><i class="fab fa-youtube"></i></a>
-                        <a href="https://tiktok.com/@sdpd3bpn" target="_blank" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-black transition text-white shadow-lg"><i class="fab fa-tiktok"></i></a>
+                    <a href="https://sdpatradharma3.id/blog/" target="_blank" rel="noopener noreferrer"
+                       class="btn-pill bg-white border border-blue-900/15 hover:border-patra-royal hover:text-patra-royal text-ink px-6 py-3 text-sm self-start md:self-auto">
+                        <span>Buka Blog Sekolah</span>
+                        <i class="fas fa-external-link-alt text-xs btn-chev"></i>
+                    </a>
+                </div>
+
+                <!-- Modern Bento Hub for Blog + 4 Official Social Channels -->
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-5 reveal-up">
+                    <!-- Featured Portal & Blog Card -->
+                    <div class="lg:col-span-5 bg-white rounded-[28px] border border-blue-900/10 p-7 sm:p-8 flex flex-col justify-between gap-6 shadow-sm">
+                        <div class="space-y-4">
+                            <div class="flex items-center justify-between">
+                                <span class="px-3.5 py-1 rounded-full bg-sky-50 text-patra-blue text-xs font-extrabold uppercase tracking-wider">Portal Berita</span>
+                                <span class="w-11 h-11 rounded-2xl bg-blue-50 text-patra-royal flex items-center justify-center text-lg">
+                                    <i class="fas fa-newspaper"></i>
+                                </span>
+                            </div>
+                            <h3 class="font-display text-2xl sm:text-3xl font-bold text-ink">Kabar &amp; Artikel SD Patra Dharma 3</h3>
+                            <p class="text-sm sm:text-base text-ink2 leading-relaxed">
+                                Baca berita kegiatan sekolah, cerita pembelajaran Kurikulum Merdeka, serta pengumuman resmi untuk orang tua dan siswa.
+                            </p>
+                        </div>
+                        <div class="flex flex-wrap gap-3 pt-2">
+                            <a href="https://sdpatradharma3.id/blog/" target="_blank" rel="noopener noreferrer"
+                               class="btn-pill bg-[#2463A6] hover:bg-[#1B4E85] text-white px-6 py-3 text-sm shadow-md shadow-blue-900/15">
+                                <span class="w-2 h-2 rounded-full bg-yellow-300"></span>
+                                <span>Kunjungi Blog</span>
+                                <i class="fas fa-chevron-right text-[10px] btn-chev"></i>
+                            </a>
+                            <a href="https://pmb.sdpd3balikpapan.sch.id" target="_blank" rel="noopener noreferrer"
+                               class="btn-pill bg-canvas border border-blue-900/15 hover:border-patra-royal text-ink px-5 py-3 text-sm">
+                                <span>Portal PMB</span>
+                                <i class="fas fa-chevron-right text-[10px] btn-chev"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- 4 Social Channel Cards -->
+                    <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-5">
+                        <a href="https://instagram.com/sdpd3bpn" target="_blank" rel="noopener noreferrer"
+                           class="group bg-white rounded-[26px] border border-blue-900/10 hover:border-pink-300 p-6 flex flex-col justify-between gap-5 shadow-sm hover:-translate-y-1 transition-all duration-300">
+                            <div class="flex items-center justify-between">
+                                <span class="w-12 h-12 rounded-2xl bg-pink-50 text-pink-600 flex items-center justify-center text-xl group-hover:bg-pink-600 group-hover:text-white transition">
+                                    <i class="fab fa-instagram"></i>
+                                </span>
+                                <i class="fas fa-arrow-up-right-from-square text-xs text-ink3 group-hover:text-pink-600 transition"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs font-extrabold uppercase tracking-wider text-pink-600 mb-1">@sdpd3bpn</p>
+                                <h4 class="font-display text-xl font-bold text-ink">Instagram</h4>
+                                <p class="text-sm text-ink2 mt-1">Foto &amp; reels kegiatan harian siswa di kelas maupun lapangan.</p>
+                            </div>
+                        </a>
+
+                        <a href="https://youtube.com/@sdpd3bpn" target="_blank" rel="noopener noreferrer"
+                           class="group bg-white rounded-[26px] border border-blue-900/10 hover:border-red-300 p-6 flex flex-col justify-between gap-5 shadow-sm hover:-translate-y-1 transition-all duration-300">
+                            <div class="flex items-center justify-between">
+                                <span class="w-12 h-12 rounded-2xl bg-red-50 text-red-600 flex items-center justify-center text-xl group-hover:bg-red-600 group-hover:text-white transition">
+                                    <i class="fab fa-youtube"></i>
+                                </span>
+                                <i class="fas fa-arrow-up-right-from-square text-xs text-ink3 group-hover:text-red-600 transition"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs font-extrabold uppercase tracking-wider text-red-600 mb-1">@sdpd3bpn</p>
+                                <h4 class="font-display text-xl font-bold text-ink">YouTube</h4>
+                                <p class="text-sm text-ink2 mt-1">Dokumentasi acara sekolah, pentas seni, dan karya proyek siswa.</p>
+                            </div>
+                        </a>
+
+                        <a href="https://tiktok.com/@sdpd3bpn" target="_blank" rel="noopener noreferrer"
+                           class="group bg-white rounded-[26px] border border-blue-900/10 hover:border-patra-blue p-6 flex flex-col justify-between gap-5 shadow-sm hover:-translate-y-1 transition-all duration-300">
+                            <div class="flex items-center justify-between">
+                                <span class="w-12 h-12 rounded-2xl bg-slate-100 text-ink flex items-center justify-center text-xl group-hover:bg-night group-hover:text-white transition">
+                                    <i class="fab fa-tiktok"></i>
+                                </span>
+                                <i class="fas fa-arrow-up-right-from-square text-xs text-ink3 group-hover:text-ink transition"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs font-extrabold uppercase tracking-wider text-ink2 mb-1">@sdpd3bpn</p>
+                                <h4 class="font-display text-xl font-bold text-ink">TikTok</h4>
+                                <p class="text-sm text-ink2 mt-1">Video pendek keseruan ekstrakurikuler dan momen ceria siswa.</p>
+                            </div>
+                        </a>
+
+                        <a href="https://facebook.com/sdpd3bpn" target="_blank" rel="noopener noreferrer"
+                           class="group bg-white rounded-[26px] border border-blue-900/10 hover:border-blue-400 p-6 flex flex-col justify-between gap-5 shadow-sm hover:-translate-y-1 transition-all duration-300">
+                            <div class="flex items-center justify-between">
+                                <span class="w-12 h-12 rounded-2xl bg-blue-50 text-blue-600 flex items-center justify-center text-xl group-hover:bg-blue-600 group-hover:text-white transition">
+                                    <i class="fab fa-facebook-f"></i>
+                                </span>
+                                <i class="fas fa-arrow-up-right-from-square text-xs text-ink3 group-hover:text-blue-600 transition"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs font-extrabold uppercase tracking-wider text-blue-600 mb-1">sdpd3bpn</p>
+                                <h4 class="font-display text-xl font-bold text-ink">Facebook</h4>
+                                <p class="text-sm text-ink2 mt-1">Informasi resmi dan galeri kegiatan bersama orang tua murid.</p>
+                            </div>
+                        </a>
                     </div>
                 </div>
-                <div>
-                    <h3 class="text-xl font-bold text-white mb-6">Kontak Kami</h3>
-                    <ul class="space-y-4">
-                        <li class="flex items-start gap-3">
-                            <i class="fas fa-map-marker-alt mt-1 text-sekolah-kuning"></i>
-                            <span class="leading-relaxed">Jl. Sekolah No.1, Prapatan, Kec. Balikpapan Kota, Kota Balikpapan, Kalimantan Timur 76111</span>
-                        </li>
-                        <li class="flex items-center gap-3">
-                            <i class="fas fa-phone text-sekolah-kuning"></i>
-                            <span>(0542) 7517662</span>
-                        </li>
-                        <li class="flex items-center gap-3">
-                            <i class="fas fa-envelope text-sekolah-kuning"></i>
-                            <span>info@sdpd3balikpapan.sch.id</span>
-                        </li>
+            </div>
+        </section>
+
+        <!-- 10. 06 — PENDAFTARAN MURID BARU (Tema Biru Utama + Pilihan Kelas & Hotline PMB) -->
+        <section id="pendaftaran" class="py-20 sm:py-28 bg-canvas border-t border-black/5">
+            <div class="max-w-[1440px] mx-auto px-5 sm:px-8 lg:px-12">
+                <div class="mb-14 reveal-up">
+                    <div class="eyebrow text-ink2 mb-4">
+                        <span class="eyebrow-dot" style="background-color:#EF4444;"></span>
+                        <span>06 — Jalur Pendaftaran</span>
+                    </div>
+
+                    <!-- Asymmetric Split Headline -->
+                    <div class="grid grid-cols-1 md:grid-cols-12 items-end gap-4">
+                        <div class="md:col-span-7">
+                            <h2 class="font-display text-5xl sm:text-6xl lg:text-7xl font-bold text-ink tracking-tight leading-none">
+                                Pendaftaran
+                            </h2>
+                        </div>
+                        <div class="md:col-span-5 md:text-right">
+                            <p class="font-display text-5xl sm:text-6xl lg:text-7xl font-bold text-ink tracking-tight leading-none">
+                                Murid <span class="text-patra-blue">Baru</span>
+                            </p>
+                        </div>
+                    </div>
+                    <p class="text-ink2 text-base sm:text-lg mt-5 max-w-2xl">
+                        Pendaftaran Murid Baru (PMB) tersedia melalui portal online resmi dengan pilihan Kelas Reguler, Kelas IT, maupun jalur Umum &amp; Inklusi.
+                    </p>
+                </div>
+
+                <!-- 4 Cards Grid (Dominan Biru + Sentuhan Kuning & Merah Logo) -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 reveal-up">
+                    <!-- Card 1: Biru Sky -->
+                    <div class="rounded-[28px] bg-[#E0F2FE] border border-sky-200 p-6 flex flex-col justify-between gap-6 hover:-translate-y-1.5 transition-transform duration-300">
+                        <div>
+                            <div class="flex items-center justify-between mb-4">
+                                <span class="px-3 py-1 rounded-full bg-white/90 text-xs font-extrabold text-patra-blue">Kelas Reguler</span>
+                                <i class="fas fa-child text-patra-blue text-xl"></i>
+                            </div>
+                            <h3 class="font-display text-2xl font-bold text-ink mb-2">Program Reguler</h3>
+                            <p class="text-sm text-ink2 leading-relaxed">Pendidikan dasar Kurikulum Merdeka dengan keseimbangan akademik, seni, olahraga, dan karakter.</p>
+                        </div>
+                        <div class="space-y-4">
+                            <div class="rounded-2xl overflow-hidden h-36">
+                                <img src="assets/upcarasenin.JPG" alt="Siswa SD Patra Dharma 3" class="w-full h-full object-cover">
+                            </div>
+                            <a href="https://pmb.sdpd3balikpapan.sch.id" target="_blank" rel="noopener noreferrer"
+                               class="btn-pill w-full justify-between bg-[#0B1736] hover:bg-[#1D4ED8] text-white px-5 py-3 text-sm">
+                                <span class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-sky-400"></span>Daftar Sekarang</span>
+                                <i class="fas fa-chevron-right text-[10px] btn-chev"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Card 2: Biru Royal -->
+                    <div class="rounded-[28px] bg-[#E6ECFA] border border-blue-200 p-6 flex flex-col justify-between gap-6 hover:-translate-y-1.5 transition-transform duration-300">
+                        <div>
+                            <div class="flex items-center justify-between mb-4">
+                                <span class="px-3 py-1 rounded-full bg-white/90 text-xs font-extrabold text-patra-royal">Kelas IT</span>
+                                <i class="fas fa-laptop-code text-patra-royal text-xl"></i>
+                            </div>
+                            <h3 class="font-display text-2xl font-bold text-ink mb-2">Islam Terpadu</h3>
+                            <p class="text-sm text-ink2 leading-relaxed">Memadukan pembelajaran kurikulum nasional dengan penguatan nilai keislaman serta praktik kreatif.</p>
+                        </div>
+                        <div class="space-y-4">
+                            <div class="rounded-2xl overflow-hidden h-36">
+                                <img src="assets/stem2425.JPG" alt="Pembelajaran aktif di SD Patra Dharma 3" class="w-full h-full object-cover">
+                            </div>
+                            <a href="https://pmb.sdpd3balikpapan.sch.id" target="_blank" rel="noopener noreferrer"
+                               class="btn-pill w-full justify-between bg-[#0B1736] hover:bg-[#1D4ED8] text-white px-5 py-3 text-sm">
+                                <span class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-yellow-300"></span>Portal PMB</span>
+                                <i class="fas fa-chevron-right text-[10px] btn-chev"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Card 3: Sentuhan Kuning Logo Lembut -->
+                    <div class="rounded-[28px] bg-[#FEF7D6] border border-yellow-300/80 p-6 flex flex-col justify-between gap-6 hover:-translate-y-1.5 transition-transform duration-300">
+                        <div>
+                            <div class="flex items-center justify-between mb-4">
+                                <span class="px-3 py-1 rounded-full bg-white/90 text-xs font-extrabold text-[#A16207]">Umum &amp; Inklusi</span>
+                                <i class="fas fa-heart text-patra-red text-xl"></i>
+                            </div>
+                            <h3 class="font-display text-2xl font-bold text-ink mb-2">Ramah Semua Anak</h3>
+                            <p class="text-sm text-ink2 leading-relaxed">Membuka jalur pendaftaran Umum dan kuota Inklusi untuk mendampingi potensi setiap anak.</p>
+                        </div>
+                        <div class="space-y-4">
+                            <div class="rounded-2xl bg-white/80 p-4 h-36 flex flex-col justify-center gap-2 border border-yellow-300/60">
+                                <div class="flex items-center gap-2 text-xs font-bold text-ink"><i class="fas fa-check-circle text-patra-blue"></i> Alur Pendaftaran Online</div>
+                                <div class="flex items-center gap-2 text-xs font-bold text-ink"><i class="fas fa-check-circle text-patra-blue"></i> Cek Kuota Kelas Real-Time</div>
+                                <div class="flex items-center gap-2 text-xs font-bold text-ink"><i class="fas fa-check-circle text-patra-blue"></i> Cek Status Hasil Seleksi</div>
+                            </div>
+                            <a href="https://pmb.sdpd3balikpapan.sch.id/#jalur" target="_blank" rel="noopener noreferrer"
+                               class="btn-pill w-full justify-between bg-[#0B1736] hover:bg-[#1D4ED8] text-white px-5 py-3 text-sm">
+                                <span class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-yellow-300"></span>Lihat Jalur PMB</span>
+                                <i class="fas fa-chevron-right text-[10px] btn-chev"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Card 4: Sentuhan Merah Logo Lembut -> Konsultasi Panitia PMB -->
+                    <div class="rounded-[28px] bg-[#FEECEC] border border-red-200/80 p-6 flex flex-col justify-between gap-6 hover:-translate-y-1.5 transition-transform duration-300">
+                        <div>
+                            <div class="flex items-center justify-between mb-4">
+                                <span class="px-3 py-1 rounded-full bg-white/90 text-xs font-extrabold text-patra-crimson">Tanya Panitia</span>
+                                <i class="fab fa-whatsapp text-emerald-600 text-xl"></i>
+                            </div>
+                            <h3 class="font-display text-2xl font-bold text-ink mb-2">Hotline PMB</h3>
+                            <p class="text-sm text-ink2 leading-relaxed">Konsultasi langsung seputar gelombang, syarat pendaftaran, biaya, atau jadwal observasi.</p>
+                        </div>
+                        <div class="space-y-4">
+                            <div class="rounded-2xl bg-white/85 p-4 h-36 flex flex-col justify-center gap-1.5 text-xs font-bold text-ink border border-red-200/60">
+                                <div class="flex items-center justify-between"><span>Bu Radiah</span><span class="text-patra-royal">0821-1115-6179</span></div>
+                                <div class="flex items-center justify-between"><span>Bu Nurin</span><span class="text-patra-royal">0813-5088-9571</span></div>
+                                <div class="flex items-center justify-between"><span>Bu Lenny</span><span class="text-patra-royal">0853-8777-5357</span></div>
+                            </div>
+                            <button type="button" id="card-hotline-trigger"
+                                    class="btn-pill w-full justify-between bg-[#0B1736] hover:bg-[#1D4ED8] text-white px-5 py-3 text-sm">
+                                <span class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-red-400"></span>Hubungi Panitia</span>
+                                <i class="fas fa-chevron-right text-[10px] btn-chev"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 11. 07 — KONTAK PANITIA PMB & SEKOLAH -->
+        <section id="kontak" class="relative z-20 py-20 sm:py-28 bg-canvas rounded-b-[var(--r-lg)] shadow-[0_30px_60px_-15px_rgba(11,23,54,0.28)] border-t border-black/5">
+            <div class="max-w-[1440px] mx-auto px-5 sm:px-8 lg:px-12">
+                <div class="mb-12 reveal-up">
+                    <div class="eyebrow text-ink2 mb-3">
+                        <span class="eyebrow-dot"></span>
+                        <span>07 — Kontak Panitia PMB &amp; Sekolah</span>
+                    </div>
+                    <h2 class="font-display t-display font-bold text-ink mb-2">Hubungi Panitia PMB</h2>
+                    <p class="text-ink2 text-base sm:text-lg">Terhubung langsung dengan WhatsApp Panitia PMB SD Patra Dharma 3 Balikpapan atau kunjungi sekretariat sekolah.</p>
+                </div>
+
+                <!-- 3-Column Info Grid (Alamat | Hotline Panitia PMB | Sekretariat Email & Telepon) -->
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 py-8 border-y border-black/10 mb-12 reveal-up">
+                    <div>
+                        <p class="text-xs font-extrabold uppercase tracking-widest text-ink3 mb-2.5">Alamat Sekretariat</p>
+                        <p class="font-semibold text-ink leading-relaxed mb-3">
+                            Jl. Sekolah No.1, Kel. Prapatan, Kec. Balikpapan Kota, Kota Balikpapan, Kalimantan Timur 76111
+                        </p>
+                        <a href="https://maps.google.com/?q=SD+Patra+Dharma+3+Balikpapan" target="_blank" rel="noopener noreferrer"
+                           class="inline-flex items-center gap-2 text-sm font-bold text-patra-blue hover:underline">
+                            <span>Lihat lokasi di Google Maps</span>
+                            <i class="fas fa-external-link-alt text-xs"></i>
+                        </a>
+                    </div>
+
+                    <div>
+                        <p class="text-xs font-extrabold uppercase tracking-widest text-ink3 mb-2.5">WhatsApp Panitia PMB</p>
+                        <div class="space-y-2.5">
+                            <a href="https://wa.me/6282111156179" target="_blank" rel="noopener noreferrer"
+                               class="flex items-center justify-between px-4 py-2.5 rounded-2xl bg-white border border-blue-900/10 hover:border-emerald-500 transition group">
+                                <span class="font-bold text-sm text-ink group-hover:text-emerald-700"><i class="fab fa-whatsapp text-emerald-600 mr-2"></i>Bu Radiah</span>
+                                <span class="font-mono text-sm font-bold text-patra-royal">0821-1115-6179</span>
+                            </a>
+                            <a href="https://wa.me/6281350889571" target="_blank" rel="noopener noreferrer"
+                               class="flex items-center justify-between px-4 py-2.5 rounded-2xl bg-white border border-blue-900/10 hover:border-emerald-500 transition group">
+                                <span class="font-bold text-sm text-ink group-hover:text-emerald-700"><i class="fab fa-whatsapp text-emerald-600 mr-2"></i>Bu Nurin</span>
+                                <span class="font-mono text-sm font-bold text-patra-royal">0813-5088-9571</span>
+                            </a>
+                            <a href="https://wa.me/6285387775357" target="_blank" rel="noopener noreferrer"
+                               class="flex items-center justify-between px-4 py-2.5 rounded-2xl bg-white border border-blue-900/10 hover:border-emerald-500 transition group">
+                                <span class="font-bold text-sm text-ink group-hover:text-emerald-700"><i class="fab fa-whatsapp text-emerald-600 mr-2"></i>Bu Lenny</span>
+                                <span class="font-mono text-sm font-bold text-patra-royal">0853-8777-5357</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div>
+                        <p class="text-xs font-extrabold uppercase tracking-widest text-ink3 mb-2.5">Email &amp; Telepon Sekolah</p>
+                        <div class="space-y-3">
+                            <div>
+                                <p class="text-xs font-bold text-ink3">Email Sekretariat PMB</p>
+                                <a href="mailto:sdpd3bpn@gmail.com" class="font-display text-xl font-bold text-ink hover:text-patra-blue transition break-all block">
+                                    sdpd3bpn@gmail.com
+                                </a>
+                            </div>
+                            <div>
+                                <p class="text-xs font-bold text-ink3">Telepon Kantor Sekolah</p>
+                                <a href="tel:05427517662" class="font-display text-xl font-bold text-ink hover:text-patra-blue transition block">
+                                    (0542) 7517662
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Campus Showcase Banner -->
+                <div class="relative rounded-[30px] overflow-hidden min-h-[300px] sm:min-h-[340px] shadow-xl reveal-up">
+                    <img src="assets/upcarasenin.JPG" alt="Halaman SD Patra Dharma 3 Balikpapan" class="w-full h-72 sm:h-80 lg:h-96 object-cover">
+                    <div class="absolute inset-0 bg-[#0B1736]/65 p-6 sm:p-10 lg:p-12 flex flex-col justify-end sm:justify-center">
+                        <div class="max-w-xl space-y-4">
+                            <span class="inline-flex items-center gap-2 bg-white/15 backdrop-blur-md border border-white/20 text-white px-4 py-1.5 rounded-full text-xs font-bold">
+                                <i class="fas fa-school text-yellow-300"></i> NPSN: 30401527 • Akreditasi A
+                            </span>
+                            <h3 class="font-display text-2xl sm:text-4xl font-bold text-white leading-tight">
+                                SD Patra Dharma 3 Balikpapan
+                            </h3>
+                            <p class="text-sm sm:text-base text-slate-200">
+                                Yayasan Patra Dharma Mandiri Balikpapan • Mandiri, Unggul, Terpercaya.
+                            </p>
+                            <div class="flex flex-wrap gap-3 pt-1">
+                                <a href="https://pmb.sdpd3balikpapan.sch.id" target="_blank" rel="noopener noreferrer"
+                                   class="btn-pill bg-[#2463A6] hover:bg-[#1B4E85] text-white px-6 py-3 text-sm shadow-lg shadow-blue-950/30">
+                                    <span class="w-2 h-2 rounded-full bg-yellow-300"></span>
+                                    <span>Menuju Portal PMB</span>
+                                    <i class="fas fa-chevron-right text-[10px] btn-chev"></i>
+                                </a>
+                                <button type="button" id="banner-hotline-trigger"
+                                        class="btn-pill bg-white/15 hover:bg-white/25 backdrop-blur-md border border-white/25 text-white px-6 py-3 text-sm">
+                                    <i class="fab fa-whatsapp text-emerald-400"></i>
+                                    <span>Tanya Panitia PMB</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 12. Dark Sticky Curtain-Reveal Footer + Tipografi Handwriting Visi Sekolah -->
+    <footer class="lg:sticky lg:bottom-0 z-0 bg-night text-slate-300 pt-16 sm:pt-20 pb-8 -mt-6">
+        <div class="max-w-[1440px] mx-auto px-5 sm:px-8 lg:px-12">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-10 pb-12 border-b border-white/10">
+                <!-- Col 1: Brand & Socials -->
+                <div class="md:col-span-5 space-y-5">
+                    <div class="flex items-center gap-3.5">
+                        <img src="assets/logo%20ypdm.png" alt="Logo SD Patra Dharma 3" class="w-12 h-12 object-contain bg-white rounded-full p-1">
+                        <div>
+                            <h3 class="font-display text-xl font-bold text-white">SD Patra Dharma 3 Balikpapan</h3>
+                            <p class="text-xs font-bold uppercase tracking-widest text-yellow-300">Mandiri • Unggul • Terpercaya</p>
+                        </div>
+                    </div>
+                    <p class="text-sm sm:text-base text-slate-400 max-w-md leading-relaxed">
+                        Membentuk generasi yang berakhlak mulia, berilmu, berkarakter, dan berwawasan lingkungan di Kota Balikpapan.
+                    </p>
+                    <div class="flex items-center gap-3 pt-1">
+                        <a href="https://facebook.com/sdpd3bpn" target="_blank" rel="noopener noreferrer" aria-label="Facebook"
+                           class="w-10 h-10 rounded-full border border-white/15 hover:bg-blue-600 hover:border-blue-600 text-white flex items-center justify-center transition">
+                            <i class="fab fa-facebook-f text-sm"></i>
+                        </a>
+                        <a href="https://instagram.com/sdpd3bpn" target="_blank" rel="noopener noreferrer" aria-label="Instagram"
+                           class="w-10 h-10 rounded-full border border-white/15 hover:bg-pink-600 hover:border-pink-600 text-white flex items-center justify-center transition">
+                            <i class="fab fa-instagram text-sm"></i>
+                        </a>
+                        <a href="https://youtube.com/@sdpd3bpn" target="_blank" rel="noopener noreferrer" aria-label="YouTube"
+                           class="w-10 h-10 rounded-full border border-white/15 hover:bg-red-600 hover:border-red-600 text-white flex items-center justify-center transition">
+                            <i class="fab fa-youtube text-sm"></i>
+                        </a>
+                        <a href="https://tiktok.com/@sdpd3bpn" target="_blank" rel="noopener noreferrer" aria-label="TikTok"
+                           class="w-10 h-10 rounded-full border border-white/15 hover:bg-white hover:text-night text-white flex items-center justify-center transition">
+                            <i class="fab fa-tiktok text-sm"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Col 2: Tautan Cepat -->
+                <div class="md:col-span-3">
+                    <p class="text-xs font-extrabold uppercase tracking-[0.2em] text-slate-400 mb-4">Tautan Cepat</p>
+                    <ul class="space-y-2.5 text-sm sm:text-base font-semibold">
+                        <li><a href="#beranda" class="text-white hover:text-sky-400 transition">Beranda</a></li>
+                        <li><a href="#tentang" class="text-white hover:text-sky-400 transition">Tentang Sekolah</a></li>
+                        <li><a href="#pilar" class="text-white hover:text-sky-400 transition">Empat Pilar</a></li>
+                        <li><a href="#roadmap" class="text-white hover:text-sky-400 transition">Roadmap &amp; Ekskul</a></li>
+                        <li><a href="#galeri" class="text-white hover:text-sky-400 transition">Galeri &amp; Kabar</a></li>
+                        <li><a href="https://pmb.sdpd3balikpapan.sch.id" target="_blank" rel="noopener noreferrer" class="text-sky-300 hover:text-yellow-300 transition">Portal PMB</a></li>
                     </ul>
                 </div>
-                <div>
-                    <h3 class="text-xl font-bold text-white mb-6">Lokasi</h3>
-                    <!-- Google Maps Iframe -->
-                    <div class="w-full h-48 md:h-full min-h-[200px] bg-gray-800 rounded-2xl overflow-hidden shadow-inner border border-gray-700">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.857635677573!2d116.8379476!3d-1.2721669!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2df1476db7831fa5%3A0x5fc66d5c205174d1!2sSD%20Patra%20Dharma%203!5e0!3m2!1sen!2sid!4v1694751433623!5m2!1sen!2sid" 
-                            class="w-full h-full border-0" 
-                            allowfullscreen="" 
-                            loading="lazy" 
+
+                <!-- Col 3: Lokasi Map Card -->
+                <div class="md:col-span-4">
+                    <p class="text-xs font-extrabold uppercase tracking-[0.2em] text-slate-400 mb-4">Lokasi</p>
+                    <div class="w-full h-44 bg-night2 rounded-2xl overflow-hidden border border-white/10">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.857635677573!2d116.8379476!3d-1.2721669!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2df1476db7831fa5%3A0x5fc66d5c205174d1!2sSD%20Patra%20Dharma%203!5e0!3m2!1sen!2sid!4v1694751433623!5m2!1sen!2sid"
+                            class="w-full h-full border-0"
+                            allowfullscreen=""
+                            loading="lazy"
+                            title="Peta Lokasi SD Patra Dharma 3 Balikpapan"
                             referrerpolicy="no-referrer-when-downgrade">
                         </iframe>
                     </div>
                 </div>
             </div>
-            <div class="border-t border-gray-800 pt-8 text-center text-sm">
+
+            <!-- Tipografi Visi Sekolah -->
+            <div class="py-10 sm:py-12 text-center">
+                <p class="text-[11px] font-extrabold uppercase tracking-[0.28em] text-sky-300/80 mb-3">Visi Sekolah</p>
+                <p class="font-hand text-3xl sm:text-5xl lg:text-[3.5rem] font-bold leading-snug text-white tracking-wide">
+                    <span class="text-white">Berakhlak Mulia,</span>
+                    <span class="text-sky-300">Berilmu,</span>
+                    <span class="text-yellow-300">Berkarakter,</span>
+                    <span class="text-white/90">dan</span>
+                    <span class="text-sky-200">Berwawasan Lingkungan</span>
+                </p>
+            </div>
+
+            <!-- Bottom Copyright Bar -->
+            <div class="pt-5 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs sm:text-sm text-slate-400">
                 <p>&copy; 2026 SD Patra Dharma 3 Balikpapan. All rights reserved.</p>
+                <a href="#beranda" class="inline-flex items-center gap-2 text-white hover:text-sky-300 font-bold transition">
+                    <span>Kembali ke atas</span>
+                    <i class="fas fa-arrow-up"></i>
+                </a>
             </div>
         </div>
     </footer>
 
-    <!-- AOS Initialization -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Slide-Over Detail Sheet (Untuk Roadmap Kelas & Ekskul) -->
+    <div id="detail-sheet" class="sheet-backdrop fixed inset-0 z-50 bg-night/55 backdrop-blur-sm flex justify-end p-2 sm:p-4" aria-hidden="true" role="dialog" aria-modal="true">
+        <div class="sheet-panel w-full max-w-lg bg-white rounded-[28px] shadow-2xl overflow-hidden flex flex-col h-full">
+            <div class="relative h-52 sm:h-60 p-6 flex flex-col justify-between text-white shrink-0" id="sheet-hero">
+                <div class="flex items-center justify-between">
+                    <span id="sheet-badge" class="px-3.5 py-1 rounded-full bg-white/20 backdrop-blur-md text-xs font-extrabold uppercase tracking-wider"></span>
+                    <button type="button" id="sheet-close" aria-label="Tutup detail"
+                            class="w-10 h-10 rounded-full bg-white/20 hover:bg-white/30 backdrop-blur-md flex items-center justify-center text-white transition">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                <div class="flex items-end justify-between gap-4">
+                    <div>
+                        <p id="sheet-eyebrow" class="text-xs font-extrabold uppercase tracking-[0.18em] text-white/80 mb-1"></p>
+                        <h3 id="sheet-title" class="font-display text-3xl sm:text-4xl font-bold leading-tight"></h3>
+                    </div>
+                    <span id="sheet-big-num" class="font-display text-5xl sm:text-6xl font-bold text-white/35 leading-none"></span>
+                </div>
+            </div>
+
+            <div class="px-6 pt-5">
+                <div id="sheet-segments" class="flex gap-1.5"></div>
+            </div>
+
+            <div class="p-6 flex-1 overflow-y-auto space-y-5">
+                <div>
+                    <p class="text-xs font-extrabold uppercase tracking-widest text-ink3 mb-2">Deskripsi Program</p>
+                    <p id="sheet-desc" class="text-ink2 text-base leading-relaxed"></p>
+                </div>
+                <div class="bg-canvas rounded-2xl p-4 border border-black/5">
+                    <p class="text-xs font-extrabold uppercase tracking-widest text-ink3 mb-2">Fokus Pengembangan Siswa</p>
+                    <div id="sheet-points" class="flex flex-wrap gap-2"></div>
+                </div>
+            </div>
+
+            <div class="p-5 border-t border-black/10 bg-canvas flex items-center justify-between gap-3 shrink-0">
+                <button type="button" id="sheet-prev" class="px-4 py-2.5 rounded-full bg-white border border-black/10 hover:border-patra-royal text-xs sm:text-sm font-bold text-ink transition">
+                    <i class="fas fa-arrow-left mr-1.5"></i> Sebelumnya
+                </button>
+                <button type="button" id="sheet-next" class="px-4 py-2.5 rounded-full bg-patra-royal hover:bg-patra-blue text-xs sm:text-sm font-bold text-white transition">
+                    Berikutnya <i class="fas fa-arrow-right ml-1.5"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Gallery Lightbox Modal -->
+    <div id="galeri-lightbox" class="fixed inset-0 z-50 bg-night/90 backdrop-blur-xl hidden items-center justify-center p-4 sm:p-8" role="dialog" aria-modal="true">
+        <div class="max-w-5xl w-full flex flex-col gap-4">
+            <div class="flex items-center justify-between text-white">
+                <div>
+                    <span id="lb-counter" class="text-xs font-mono text-sky-300">1 / 2</span>
+                    <h3 id="lb-title" class="font-display text-lg sm:text-2xl font-bold"></h3>
+                </div>
+                <div class="flex items-center gap-2.5">
+                    <a id="lb-download" href="#" download class="px-4 py-2 rounded-full bg-white/10 hover:bg-white/20 text-xs sm:text-sm font-bold text-white inline-flex items-center gap-2 transition">
+                        <i class="fas fa-download"></i>
+                        <span class="hidden sm:inline">Unduh foto</span>
+                    </a>
+                    <button type="button" id="lb-close" aria-label="Tutup galeri" class="w-10 h-10 rounded-full bg-white/10 hover:bg-white/25 text-white flex items-center justify-center transition">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="relative rounded-3xl overflow-hidden bg-black/40 border border-white/15">
+                <img id="lb-img" src="" alt="" class="w-full max-h-[70vh] object-contain mx-auto">
+            </div>
+            <div class="flex items-center justify-between gap-4 text-slate-300 text-sm">
+                <p id="lb-caption"></p>
+                <div class="flex items-center gap-2 shrink-0">
+                    <button type="button" id="lb-prev" aria-label="Foto sebelumnya" class="w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center transition">
+                        <i class="fas fa-arrow-left"></i>
+                    </button>
+                    <button type="button" id="lb-next" aria-label="Foto berikutnya" class="w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center transition">
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Spotlight Modal (Aksi Belajar Nyata / YouTube Sekolah) -->
+    <div id="spotlight-modal" class="fixed inset-0 z-50 bg-night/85 backdrop-blur-xl hidden items-center justify-center p-4" role="dialog" aria-modal="true">
+        <div class="bg-night2 border border-white/15 rounded-[28px] max-w-2xl w-full p-6 sm:p-8 text-white shadow-2xl space-y-5">
+            <div class="flex items-center justify-between">
+                <span class="eyebrow text-sky-300"><span class="eyebrow-dot" style="background-color:#FACC15;"></span>Dokumentasi &amp; Kanal Resmi</span>
+                <button type="button" id="spotlight-close" aria-label="Tutup modal" class="w-9 h-9 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="rounded-2xl overflow-hidden border border-white/10">
+                <img src="assets/stem2425.JPG" alt="Proyek STEM SD Patra Dharma 3" class="w-full h-64 object-cover">
+            </div>
+            <div>
+                <h3 class="font-display text-2xl font-bold mb-2">Belajar Aktif Lewat Proyek &amp; Karya Nyata</h3>
+                <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+                    Saksikan beragam dokumentasi kegiatan pembelajaran, upacara, lomba, hingga kreativitas siswa di kanal media sosial resmi SD Patra Dharma 3 Balikpapan.
+                </p>
+            </div>
+            <div class="flex flex-wrap gap-3 pt-1">
+                <a href="https://youtube.com/@sdpd3bpn" target="_blank" rel="noopener noreferrer"
+                   class="btn-pill bg-red-600 hover:bg-red-500 text-white px-6 py-3 text-sm">
+                    <i class="fab fa-youtube"></i>
+                    <span>Buka YouTube @sdpd3bpn</span>
+                    <i class="fas fa-chevron-right text-[10px] btn-chev"></i>
+                </a>
+                <a href="https://instagram.com/sdpd3bpn" target="_blank" rel="noopener noreferrer"
+                   class="btn-pill bg-white/10 hover:bg-white/20 text-white px-6 py-3 text-sm">
+                    <i class="fab fa-instagram"></i>
+                    <span>Instagram Sekolah</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hotline Panitia PMB WhatsApp Modal -->
+    <div id="hotline-modal" class="fixed inset-0 z-50 bg-night/75 backdrop-blur-md hidden items-center justify-center p-4" role="dialog" aria-modal="true">
+        <div class="bg-white rounded-[28px] max-w-md w-full p-6 sm:p-7 shadow-2xl border border-blue-100 space-y-5">
+            <div class="flex items-start justify-between gap-3">
+                <div class="flex items-center gap-3">
+                    <div class="w-11 h-11 rounded-2xl bg-emerald-100 text-emerald-600 flex items-center justify-center text-xl">
+                        <i class="fab fa-whatsapp"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-display text-xl font-bold text-ink">Hotline WhatsApp PMB</h3>
+                        <p class="text-xs font-bold text-emerald-600 flex items-center gap-1.5">
+                            <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span> Online • Panitia PMB Siap Membantu
+                        </p>
+                    </div>
+                </div>
+                <button type="button" id="hotline-close" aria-label="Tutup hotline" class="w-9 h-9 rounded-full bg-slate-100 hover:bg-slate-200 flex items-center justify-center text-ink">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+
+            <p class="text-sm text-ink2">Silakan pilih salah satu panitia PMB untuk konsultasi &amp; tanya jawab pendaftaran murid baru:</p>
+
+            <div class="space-y-2.5">
+                <a href="https://wa.me/6282111156179" target="_blank" rel="noopener noreferrer"
+                   class="flex items-center justify-between p-4 rounded-2xl bg-sky-50/70 hover:bg-sky-100 border border-sky-200/80 transition group">
+                    <div class="flex items-center gap-3">
+                        <span class="w-10 h-10 rounded-full bg-patra-blue text-white font-display font-bold flex items-center justify-center">R</span>
+                        <div>
+                            <p class="font-bold text-ink text-sm">Bu Radiah</p>
+                            <p class="text-xs text-ink2 font-mono">0821-1115-6179</p>
+                        </div>
+                    </div>
+                    <span class="px-3 py-1.5 rounded-full bg-emerald-600 text-white text-xs font-bold group-hover:bg-emerald-500">Chat WA</span>
+                </a>
+
+                <a href="https://wa.me/6281350889571" target="_blank" rel="noopener noreferrer"
+                   class="flex items-center justify-between p-4 rounded-2xl bg-sky-50/70 hover:bg-sky-100 border border-sky-200/80 transition group">
+                    <div class="flex items-center gap-3">
+                        <span class="w-10 h-10 rounded-full bg-patra-royal text-white font-display font-bold flex items-center justify-center">N</span>
+                        <div>
+                            <p class="font-bold text-ink text-sm">Bu Nurin</p>
+                            <p class="text-xs text-ink2 font-mono">0813-5088-9571</p>
+                        </div>
+                    </div>
+                    <span class="px-3 py-1.5 rounded-full bg-emerald-600 text-white text-xs font-bold group-hover:bg-emerald-500">Chat WA</span>
+                </a>
+
+                <a href="https://wa.me/6285387775357" target="_blank" rel="noopener noreferrer"
+                   class="flex items-center justify-between p-4 rounded-2xl bg-sky-50/70 hover:bg-sky-100 border border-sky-200/80 transition group">
+                    <div class="flex items-center gap-3">
+                        <span class="w-10 h-10 rounded-full bg-patra-deep text-white font-display font-bold flex items-center justify-center">L</span>
+                        <div>
+                            <p class="font-bold text-ink text-sm">Bu Lenny</p>
+                            <p class="text-xs text-ink2 font-mono">0853-8777-5357</p>
+                        </div>
+                    </div>
+                    <span class="px-3 py-1.5 rounded-full bg-emerald-600 text-white text-xs font-bold group-hover:bg-emerald-500">Chat WA</span>
+                </a>
+            </div>
+
+            <div class="pt-2 border-t border-black/5 flex items-center justify-between text-xs text-ink2">
+                <span>Telepon Kantor: <a href="tel:05427517662" class="font-bold text-patra-royal hover:underline">(0542) 7517662</a></span>
+                <a href="https://pmb.sdpd3balikpapan.sch.id" target="_blank" rel="noopener noreferrer" class="font-bold text-patra-blue hover:underline">Buka Portal PMB &rarr;</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Vanilla JavaScript Engine -->
     <script>
-        AOS.init({
-            once: true,
-            offset: 100,
-        });
+        (() => {
+            const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+            // 1. Preloader
+            const preloader = document.getElementById('preloader');
+            const preloadPct = document.getElementById('preload-pct');
+            let pct = 1;
+            const finishPreload = () => {
+                if (preloadPct) preloadPct.textContent = '100%';
+                preloader.classList.add('done');
+            };
+            if (prefersReduced) {
+                finishPreload();
+            } else {
+                const tick = setInterval(() => {
+                    pct = Math.min(100, pct + Math.floor(Math.random() * 24) + 14);
+                    if (preloadPct) preloadPct.textContent = String(pct).padStart(2, '0') + '%';
+                    if (pct >= 100) {
+                        clearInterval(tick);
+                        setTimeout(finishPreload, 120);
+                    }
+                }, 45);
+                setTimeout(() => { clearInterval(tick); finishPreload(); }, 800);
+            }
+
+            // 2. Mobile Menu Drawer
+            const drawerBtn = document.getElementById('mobile-drawer-btn');
+            const drawer = document.getElementById('mobile-drawer');
+            const drawerIcon = document.getElementById('mobile-drawer-icon');
+            const toggleDrawer = (forceClose = false) => {
+                const isOpen = forceClose ? true : !drawer.classList.contains('hidden');
+                if (isOpen) {
+                    drawer.classList.add('hidden');
+                    drawer.classList.remove('flex');
+                    drawerIcon.className = 'fas fa-equals text-sm sm:text-base';
+                } else {
+                    drawer.classList.remove('hidden');
+                    drawer.classList.add('flex');
+                    drawerIcon.className = 'fas fa-times text-sm sm:text-base';
+                }
+            };
+            drawerBtn.addEventListener('click', () => toggleDrawer(false));
+            document.querySelectorAll('.mob-link').forEach((el) => el.addEventListener('click', () => toggleDrawer(true)));
+
+            // 3. Scroll-Spy Floating Nav Pill
+            const spyLinks = document.querySelectorAll('[data-spy]');
+            const spySections = [...spyLinks].map((a) => document.getElementById(a.dataset.spy)).filter(Boolean);
+            const updateSpy = () => {
+                const y = window.scrollY + window.innerHeight * 0.35;
+                let activeId = '';
+                for (const sec of spySections) {
+                    if (sec.offsetTop <= y) activeId = sec.id;
+                }
+                spyLinks.forEach((a) => {
+                    a.classList.toggle('is-active', a.dataset.spy === activeId);
+                });
+            };
+            window.addEventListener('scroll', updateSpy, { passive: true });
+            updateSpy();
+
+            // 4. Reveal on Scroll
+            const revealEls = document.querySelectorAll('.reveal-up');
+            const revealObs = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('in-view');
+                        revealObs.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.12 });
+            revealEls.forEach((el) => revealObs.observe(el));
+
+            // 5. Rolling Odometer Digit Counters
+            const initOdometer = (el) => {
+                const raw = el.dataset.target || el.textContent.trim();
+                const chars = raw.split('');
+                el.innerHTML = '';
+                const reels = [];
+                chars.forEach((ch) => {
+                    if (/\d/.test(ch)) {
+                        const wrap = document.createElement('span');
+                        wrap.className = 'odo-digit';
+                        const reel = document.createElement('span');
+                        reel.className = 'odo-reel';
+                        for (let d = 0; d <= 9; d++) {
+                            const s = document.createElement('span');
+                            s.textContent = d;
+                            reel.appendChild(s);
+                        }
+                        wrap.appendChild(reel);
+                        el.appendChild(wrap);
+                        reels.push({ reel, digit: parseInt(ch, 10) });
+                    } else {
+                        const s = document.createElement('span');
+                        s.textContent = ch;
+                        el.appendChild(s);
+                    }
+                });
+                requestAnimationFrame(() => {
+                    reels.forEach(({ reel, digit }, idx) => {
+                        reel.style.transitionDelay = (idx * 90) + 'ms';
+                        reel.style.transform = `translateY(-${digit * 10}%)`;
+                    });
+                });
+            };
+            const odoContainer = document.getElementById('odo-stats');
+            if (odoContainer && !prefersReduced) {
+                const odoObs = new IntersectionObserver((entries) => {
+                    if (entries[0].isIntersecting) {
+                        document.querySelectorAll('.odo-num').forEach(initOdometer);
+                        odoObs.disconnect();
+                    }
+                }, { threshold: 0.25 });
+                odoObs.observe(odoContainer);
+            }
+
+            // 6. Scroll-Zoom Showcase & Sticky Horizontal Pilar Track
+            const zoomWrap = document.getElementById('zoom-photo-wrap');
+            const zoomLeft = document.getElementById('zoom-word-left');
+            const zoomRight = document.getElementById('zoom-word-right');
+            const hbStage = document.getElementById('hb-stage');
+            const hbTrack = document.getElementById('hb-track');
+            const hbProgress = document.getElementById('hb-progress');
+
+            const handleScrollEffects = () => {
+                if (prefersReduced) return;
+
+                if (zoomWrap) {
+                    const rect = zoomWrap.getBoundingClientRect();
+                    const progress = Math.min(1, Math.max(0, 1 - (rect.top - window.innerHeight * 0.2) / (window.innerHeight * 0.85)));
+                    const scale = 0.92 + progress * 0.1;
+                    zoomWrap.style.transform = `scale(${scale.toFixed(3)})`;
+                    if (zoomLeft && zoomRight && window.innerWidth >= 1024) {
+                        const spread = progress * 24;
+                        zoomLeft.style.transform = `translateX(-${spread}px)`;
+                        zoomRight.style.transform = `translateX(${spread}px)`;
+                    }
+                }
+
+                if (hbStage && hbTrack && window.innerWidth >= 1024) {
+                    const rect = hbStage.getBoundingClientRect();
+                    const totalScrollable = hbStage.offsetHeight - window.innerHeight;
+                    const scrolled = Math.min(totalScrollable, Math.max(0, -rect.top));
+                    const ratio = totalScrollable > 0 ? scrolled / totalScrollable : 0;
+                    const maxShift = Math.max(0, hbTrack.scrollWidth - window.innerWidth + 96);
+                    hbTrack.style.transform = `translateX(-${ratio * maxShift}px)`;
+                    if (hbProgress) {
+                        hbProgress.style.width = `${15 + ratio * 85}%`;
+                    }
+                } else if (hbTrack) {
+                    hbTrack.style.transform = '';
+                }
+            };
+            window.addEventListener('scroll', handleScrollEffects, { passive: true });
+            window.addEventListener('resize', handleScrollEffects);
+
+            // 7. Sparse Shining 4-Point Stars Around Cursor (Jarak Lebih Renggang + Bintang Bersinar)
+            let pointer = { x: -999, y: -999 };
+            window.addEventListener('mousemove', (e) => { pointer.x = e.clientX; pointer.y = e.clientY; }, { passive: true });
+            const starCanvases = [...document.querySelectorAll('.bg-star-canvas')].map((canvas) => {
+                const ctx = canvas.getContext('2d');
+                const isDark = canvas.dataset.theme === 'dark';
+                const resize = () => {
+                    canvas.width = canvas.offsetWidth;
+                    canvas.height = canvas.offsetHeight;
+                };
+                resize();
+                window.addEventListener('resize', resize);
+                return { canvas, ctx, isDark };
+            });
+
+            const drawFourPointStar = (ctx, cx, cy, outerR, innerR, rot) => {
+                ctx.save();
+                ctx.translate(cx, cy);
+                ctx.rotate(rot);
+                ctx.beginPath();
+                for (let i = 0; i < 8; i++) {
+                    const r = i % 2 === 0 ? outerR : innerR;
+                    const angle = (i * Math.PI) / 4;
+                    const px = Math.cos(angle) * r;
+                    const py = Math.sin(angle) * r;
+                    if (i === 0) ctx.moveTo(px, py);
+                    else ctx.lineTo(px, py);
+                }
+                ctx.closePath();
+                ctx.fill();
+                ctx.restore();
+            };
+
+            let starTime = 0;
+            const drawStarFields = (force = false) => {
+                starTime += 0.035;
+                starCanvases.forEach(({ canvas, ctx, isDark }) => {
+                    const rect = canvas.getBoundingClientRect();
+                    if (!force && (rect.bottom < 0 || rect.top > window.innerHeight)) return;
+                    const w = canvas.width;
+                    const h = canvas.height;
+                    ctx.clearRect(0, 0, w, h);
+
+                    const gap = 115; // Jarak jauh lebih renggang dan lapang
+                    let col = 0;
+                    for (let x = 58; x < w; x += gap) {
+                        col++;
+                        let row = 0;
+                        const yOffset = (col % 2) * (gap * 0.45); // staggered organic layout
+                        for (let y = 52 + yOffset; y < h; y += gap) {
+                            row++;
+                            const dx = (rect.left + x) - pointer.x;
+                            const dy = (rect.top + y) - pointer.y;
+                            const dist = Math.hypot(dx, dy);
+                            const hot = dist < 175 ? 1 - dist / 175 : 0;
+                            const twinkle = 0.65 + 0.35 * Math.sin(starTime + col * 1.3 + row * 2.1);
+
+                            if (hot > 0.05) {
+                                // Glow halo around shining star near cursor
+                                const glowR = 14 + hot * 22;
+                                const grad = ctx.createRadialGradient(x, y, 0, x, y, glowR);
+                                const isYellowStar = (col + row) % 3 === 0;
+                                if (isYellowStar) {
+                                    grad.addColorStop(0, `rgba(250, 204, 21, ${(0.55 * hot).toFixed(2)})`);
+                                    grad.addColorStop(1, 'rgba(250, 204, 21, 0)');
+                                    ctx.fillStyle = grad;
+                                    ctx.beginPath();
+                                    ctx.arc(x, y, glowR, 0, Math.PI * 2);
+                                    ctx.fill();
+                                    ctx.fillStyle = `rgba(250, 204, 21, ${(0.35 + hot * 0.65).toFixed(2)})`;
+                                } else {
+                                    grad.addColorStop(0, `rgba(56, 189, 248, ${(0.55 * hot).toFixed(2)})`);
+                                    grad.addColorStop(1, 'rgba(56, 189, 248, 0)');
+                                    ctx.fillStyle = grad;
+                                    ctx.beginPath();
+                                    ctx.arc(x, y, glowR, 0, Math.PI * 2);
+                                    ctx.fill();
+                                    ctx.fillStyle = isDark
+                                        ? `rgba(56, 189, 248, ${(0.4 + hot * 0.6).toFixed(2)})`
+                                        : `rgba(2, 132, 199, ${(0.35 + hot * 0.65).toFixed(2)})`;
+                                }
+                                const outerR = 6 + hot * 7.5;
+                                drawFourPointStar(ctx, x, y, outerR, outerR * 0.24, hot * 0.45);
+                            } else {
+                                ctx.fillStyle = isDark
+                                    ? `rgba(255, 255, 255, ${(0.12 * twinkle).toFixed(2)})`
+                                    : `rgba(2, 132, 199, ${(0.14 * twinkle).toFixed(2)})`;
+                                const outerR = 4.2 * (0.85 + twinkle * 0.2);
+                                drawFourPointStar(ctx, x, y, outerR, outerR * 0.25, 0);
+                            }
+                        }
+                    }
+                });
+                if (!prefersReduced) requestAnimationFrame(() => drawStarFields(false));
+            };
+            drawStarFields(true);
+
+            // 8. Roadmap & Ekskul Data
+            const themeConfig = {
+                fase:     { bg: '#E6F1FC', accent: '#1F5CA9', solid: '#2463A6', watermark: 'FASE 1–6', label: 'Roadmap Kelas 1–6' },
+                sains:    { bg: '#E6ECFA', accent: '#1D4ED8', solid: '#2E5AAC', watermark: 'SAINS & BAHASA', label: 'Sains, Teknologi & Bahasa' },
+                olahraga: { bg: '#FEECEC', accent: '#DC2626', solid: '#D64545', watermark: 'OLAHRAGA', label: 'Olahraga & Bela Diri' },
+                seni:     { bg: '#FEF7D6', accent: '#A16207', solid: '#C89818', watermark: 'SENI KREATIF', label: 'Seni & Kreativitas' },
+                karakter: { bg: '#E3F4EA', accent: '#15803D', solid: '#1F7A4D', watermark: 'KARAKTER', label: 'Karakter & Religi' }
+            };
+
+            const roadmapData = {
+                fase: [
+                    { code: 'Kelas 1', sub: 'Fase A • Fondasi Ceria', icon: 'fa-seedling', desc: 'Masa adaptasi yang hangat dari TK ke SD. Fokus pada kesiapan bersekolah, literasi dasar, numerasi awal, serta pembiasaan adab dan kemandirian.', points: ['Literasi & Numerasi Awal', 'Adab Harian', 'Motorik & Seni'] },
+                    { code: 'Kelas 2', sub: 'Fase A • Penguatan Dasar', icon: 'fa-book-open', desc: 'Memperkuat kemampuan membaca pemahaman, berhitung logis, dan keberanian berekspresi di depan teman serta guru.', points: ['Membaca Pemahaman', 'Berhitung Logis', 'Kerja Kelompok'] },
+                    { code: 'Kelas 3', sub: 'Fase B • Eksplorasi Awal', icon: 'fa-compass', desc: 'Mulai aktif mengenal sains lingkungan, proyek kolaboratif kelas, dan pengembangan minat melalui beragam ekstrakurikuler.', points: ['Sains Lingkungan', 'Proyek P5', 'Eksplorasi Ekskul'] },
+                    { code: 'Kelas 4', sub: 'Fase B • Berpikir Kritis', icon: 'fa-flask', desc: 'Mengasah nalar kritis, eksperimen STEM sederhana, kepemimpinan kelompok, serta kepedulian terhadap lingkungan sekolah.', points: ['Eksperimen STEM', 'Nalar Kritis', 'Kepedulian Alam'] },
+                    { code: 'Kelas 5', sub: 'Fase C • Kepemimpinan', icon: 'fa-lightbulb', desc: 'Pembinaan tanggung jawab sosial, presentasi karya ilmiah atau proyek kreatif, dan peran teladan bagi adik kelas.', points: ['Presentasi Karya', 'Keteladanan', 'Proyek Kreatif'] },
+                    { code: 'Kelas 6', sub: 'Fase C • Siap Lanjut', icon: 'fa-graduation-cap', desc: 'Pemantapan kompetensi akademik, karakter unggul, serta kesiapan mental dan akademik menuju jenjang SMP terbaik.', points: ['Pemantapan Akademik', 'Karakter Unggul', 'Kesiapan SMP'] }
+                ],
+                sains: [
+                    { code: 'Public Speaking', sub: 'Komunikasi Percaya Diri', icon: 'fa-microphone-alt', desc: 'Melatih keberanian berbicara di depan umum, artikulasi yang jelas, bercerita, dan membawakan acara sekolah.', points: ['Keberanian Tampil', 'Intonasi & Artikulasi', 'MC & Pidato Anak'] },
+                    { code: 'Sains Club', sub: 'Eksperimen & Observasi', icon: 'fa-flask', desc: 'Mengajak siswa bereksperimen langsung dengan fenomena alam sehari-hari untuk menumbuhkan rasa ingin tahu ilmiah.', points: ['Eksperimen Seru', 'Observasi Alam', 'Berpikir Ilmiah'] },
+                    { code: 'Math Club', sub: 'Logika & Pemecahan Masalah', icon: 'fa-square-root-variable', desc: 'Membuat matematika terasa menyenangkan melalui permainan angka, teka-teki logika, dan latihan soal olimpiade.', points: ['Permainan Logika', 'Numerasi Cepat', 'Pemecahan Masalah'] },
+                    { code: 'English Club', sub: 'Bahasa Inggris Aktif', icon: 'fa-language', desc: 'Membiasakan kosakata, percakapan ringan, permainan bahasa, dan lagu edukatif dalam bahasa Inggris.', points: ['Percakapan Harian', 'Kosakata Aktif', 'Fun Games'] },
+                    { code: 'Robotic', sub: 'Teknologi & Kreativitas', icon: 'fa-robot', desc: 'Mengenalkan dasar mekanika, logika konstruksi, dan pemikiran komputasional sejak usia sekolah dasar.', points: ['Dasar Mekanika', 'Logika Konstruksi', 'Karya Teknologi'] }
+                ],
+                olahraga: [
+                    { code: 'Sepak Bola', sub: 'Kerja Sama Tim', icon: 'fa-futbol', desc: 'Melatih kebugaran fisik, teknik menggiring dan mengoper bola, sportivitas, serta kekompakan dalam tim.', points: ['Kebugaran Fisik', 'Kerja Sama Tim', 'Sportivitas'] },
+                    { code: 'Renang', sub: 'Olahraga Air & Ketahanan', icon: 'fa-swimmer', desc: 'Mengajarkan teknik dasar berenang, pernapasan yang aman, serta melatih keberanian dan stamina anak.', points: ['Teknik Dasar Renang', 'Pernapasan & Stamina', 'Kepercayaan Diri'] },
+                    { code: 'Pencak Silat', sub: 'Bela Diri Tradisional', icon: 'fa-user-ninja', desc: 'Membentuk ketangkasan tubuh, kedisiplinan, pengendalian diri, dan pelestarian seni bela diri warisan budaya.', points: ['Ketangkasan', 'Disiplin Diri', 'Warisan Budaya'] },
+                    { code: 'Panahan', sub: 'Fokus & Konsentrasi', icon: 'fa-bullseye', desc: 'Melatih ketenangan pikiran, fokus penglihatan, kestabilan postur tubuh, dan kesabaran siswa.', points: ['Konsentrasi Tinggi', 'Ketenangan', 'Akurasi Gerak'] },
+                    { code: 'Basket', sub: 'Kelincahan & Strategi', icon: 'fa-basketball-ball', desc: 'Mengembangkan koordinasi tangan-mata, kelincahan berlari, serta strategi permainan tim yang dinamis.', points: ['Koordinasi Gerak', 'Kelincahan', 'Strategi Tim'] }
+                ],
+                seni: [
+                    { code: 'Menari', sub: 'Seni Tari Nusantara', icon: 'fa-child', desc: 'Mengenalkan ragam tari daerah dan kreasi anak untuk melatih keluwesan gerak, irama, serta cinta budaya.', points: ['Keluwesan Gerak', 'Rasa Irama', 'Budaya Nusantara'] },
+                    { code: 'Mewarnai', sub: 'Eksplorasi Warna', icon: 'fa-palette', desc: 'Mengembangkan imajinasi, kesabaran, motorik halus, dan kepekaan terhadap perpaduan warna yang harmonis.', points: ['Motorik Halus', 'Harmoni Warna', 'Imajinasi Bebas'] },
+                    { code: 'Paduan Suara', sub: 'Vokal & Harmoni', icon: 'fa-users', desc: 'Melatih teknik vokal, kepekaan nada, kekompakan bernyanyi bersama, dan tampil percaya diri di acara sekolah.', points: ['Teknik Vokal', 'Kekompakan Nada', 'Penampilan Panggung'] },
+                    { code: 'Gambar & Lukis', sub: 'Seni Rupa Kreatif', icon: 'fa-paint-brush', desc: 'Mengasah keterampilan membuat sketsa, perspektif sederhana, dan menuangkan ide visual di atas media gambar.', points: ['Teknik Sketsa', 'Ekspresi Visual', 'Kreativitas'] }
+                ],
+                karakter: [
+                    { code: 'LKBB', sub: 'Baris-Berbaris & Disiplin', icon: 'fa-shoe-prints', desc: 'Menumbuhkan jiwa kepemimpinan, kekompakan langkah, kerapian barisan, dan kepatuhan terhadap aba-aba.', points: ['Kedisiplinan', 'Kekompakan Tim', 'Jiwa Pemimpin'] },
+                    { code: 'Habsyi', sub: 'Seni Musik Islami', icon: 'fa-drum', desc: 'Memadukan lantunan sholawat dan ketukan rebana yang harmonis untuk menumbuhkan kecintaan pada nilai spiritual.', points: ['Nilai Spiritual', 'Irama Rebana', 'Kebersamaan'] }
+                ]
+            };
+
+            const roadmapSec = document.getElementById('roadmap');
+            const roadmapWatermark = document.getElementById('roadmap-watermark');
+            const roadmapDot = document.getElementById('roadmap-dot');
+            const roadmapCards = document.getElementById('roadmap-cards');
+            const tabButtons = document.querySelectorAll('.rm-tab');
+            let activeTab = 'fase';
+            let activeSheetIdx = 0;
+
+            const renderRoadmapTab = (tabKey) => {
+                activeTab = tabKey;
+                const cfg = themeConfig[tabKey];
+                const items = roadmapData[tabKey];
+
+                roadmapSec.style.backgroundColor = cfg.bg;
+                roadmapWatermark.textContent = cfg.watermark;
+                roadmapDot.style.backgroundColor = cfg.accent;
+
+                tabButtons.forEach((btn) => {
+                    const isAct = btn.dataset.tab === tabKey;
+                    btn.className = isAct
+                        ? 'rm-tab px-4 py-2.5 rounded-full text-xs sm:text-sm font-bold flex items-center gap-2 transition-all bg-patra-royal text-white shadow-md'
+                        : 'rm-tab px-4 py-2.5 rounded-full text-xs sm:text-sm font-bold flex items-center gap-2 transition-all bg-white/85 text-ink hover:bg-white';
+                });
+
+                roadmapCards.innerHTML = items.map((item, idx) => {
+                    const numStr = String(idx + 1).padStart(2, '0');
+                    const staggerClass = idx % 2 === 0 ? 'md:-translate-y-3' : 'md:translate-y-3';
+                    return `
+                        <button type="button" data-idx="${idx}"
+                                class="rm-card snap-start w-[78vw] sm:w-72 shrink-0 text-left bg-white/95 hover:bg-white rounded-[26px] p-6 border border-black/10 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between gap-5 ${staggerClass}">
+                            <div class="flex items-start justify-between gap-3">
+                                <div class="w-12 h-12 rounded-2xl flex items-center justify-center text-white text-lg shadow-sm" style="background:${cfg.solid}">
+                                    <i class="fas ${item.icon}"></i>
+                                </div>
+                                <span class="font-mono text-2xl font-bold opacity-20 text-ink">${numStr}</span>
+                            </div>
+                            <div>
+                                <p class="text-[11px] font-extrabold uppercase tracking-wider mb-1" style="color:${cfg.accent}">${item.sub}</p>
+                                <h3 class="font-display text-2xl font-bold text-ink mb-2">${item.code}</h3>
+                                <p class="text-sm text-ink2 line-clamp-3 leading-relaxed">${item.desc}</p>
+                            </div>
+                            <div class="pt-3 border-t border-black/5 flex items-center justify-between text-xs font-extrabold" style="color:${cfg.accent}">
+                                <span>Lihat detail program</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </div>
+                        </button>
+                    `;
+                }).join('');
+
+                roadmapCards.querySelectorAll('.rm-card').forEach((card) => {
+                    card.addEventListener('click', () => openSheet(parseInt(card.dataset.idx, 10)));
+                });
+            };
+
+            tabButtons.forEach((btn) => {
+                btn.addEventListener('click', () => renderRoadmapTab(btn.dataset.tab));
+            });
+
+            document.querySelectorAll('.jump-roadmap').forEach((link) => {
+                link.addEventListener('click', () => {
+                    const targetTab = link.dataset.jumpTab;
+                    if (targetTab && roadmapData[targetTab]) {
+                        renderRoadmapTab(targetTab);
+                    }
+                });
+            });
+
+            let isDown = false, startX = 0, scrollLeft = 0;
+            roadmapCards.addEventListener('mousedown', (e) => {
+                isDown = true;
+                startX = e.pageX - roadmapCards.offsetLeft;
+                scrollLeft = roadmapCards.scrollLeft;
+            });
+            window.addEventListener('mouseup', () => { isDown = false; });
+            roadmapCards.addEventListener('mousemove', (e) => {
+                if (!isDown) return;
+                e.preventDefault();
+                const x = e.pageX - roadmapCards.offsetLeft;
+                roadmapCards.scrollLeft = scrollLeft - (x - startX) * 1.4;
+            });
+
+            // 9. Slide-Over Detail Sheet Controller
+            const sheetBackdrop = document.getElementById('detail-sheet');
+            const sheetHero = document.getElementById('sheet-hero');
+            const sheetBadge = document.getElementById('sheet-badge');
+            const sheetEyebrow = document.getElementById('sheet-eyebrow');
+            const sheetTitle = document.getElementById('sheet-title');
+            const sheetBigNum = document.getElementById('sheet-big-num');
+            const sheetSegments = document.getElementById('sheet-segments');
+            const sheetDesc = document.getElementById('sheet-desc');
+            const sheetPoints = document.getElementById('sheet-points');
+            const sheetPrev = document.getElementById('sheet-prev');
+            const sheetNext = document.getElementById('sheet-next');
+
+            const populateSheet = (idx) => {
+                const cfg = themeConfig[activeTab];
+                const items = roadmapData[activeTab];
+                activeSheetIdx = (idx + items.length) % items.length;
+                const item = items[activeSheetIdx];
+
+                sheetHero.style.background = cfg.solid;
+                sheetBadge.textContent = item.sub;
+                sheetEyebrow.textContent = `${cfg.label} • ${activeSheetIdx + 1} dari ${items.length}`;
+                sheetTitle.textContent = item.code;
+                sheetBigNum.textContent = String(activeSheetIdx + 1).padStart(2, '0');
+                sheetDesc.textContent = item.desc;
+                sheetPoints.innerHTML = item.points.map((pt) =>
+                    `<span class="px-3.5 py-1.5 rounded-full bg-white border border-black/10 text-xs font-bold text-ink"><i class="fas fa-check text-emerald-600 mr-1.5"></i>${pt}</span>`
+                ).join('');
+                sheetSegments.innerHTML = items.map((_, i) =>
+                    `<span class="h-1.5 flex-1 rounded-full transition-all" style="background:${i === activeSheetIdx ? cfg.accent : 'rgba(22,32,50,0.12)'}"></span>`
+                ).join('');
+            };
+
+            const openSheet = (idx) => {
+                populateSheet(idx);
+                sheetBackdrop.classList.add('open');
+                sheetBackdrop.setAttribute('aria-hidden', 'false');
+            };
+            const closeSheet = () => {
+                sheetBackdrop.classList.remove('open');
+                sheetBackdrop.setAttribute('aria-hidden', 'true');
+            };
+            document.getElementById('sheet-close').addEventListener('click', closeSheet);
+            sheetBackdrop.addEventListener('click', (e) => { if (e.target === sheetBackdrop) closeSheet(); });
+            sheetPrev.addEventListener('click', () => populateSheet(activeSheetIdx - 1));
+            sheetNext.addEventListener('click', () => populateSheet(activeSheetIdx + 1));
+
+            renderRoadmapTab('fase');
+
+            // 10. Dark Pill Marquee (16 Ekskul)
+            const pillList = [
+                'Public Speaking', 'Sepak Bola', 'Renang', 'Pencak Silat', 'Panahan',
+                'Menari', 'Mewarnai', 'Paduan Suara', 'Gambar & Lukis', 'Sains Club',
+                'Math Club', 'English Club', 'Robotic', 'Basket', 'LKBB', 'Habsyi'
+            ];
+            const darkMarquee = document.getElementById('dark-pill-marquee');
+            darkMarquee.innerHTML = [...pillList, ...pillList].map((name, idx) => {
+                const dotColor = idx % 6 === 0 ? 'bg-yellow-300' : (idx % 6 === 3 ? 'bg-red-400' : 'bg-sky-400');
+                return `<span class="px-5 py-2.5 rounded-full bg-white/5 border border-white/10 text-sm font-bold text-slate-200 whitespace-nowrap flex items-center gap-2">
+                    <span class="w-1.5 h-1.5 rounded-full ${dotColor}"></span>${name}
+                </span>`;
+            }).join('');
+
+            // 11. Gallery Lightbox
+            const galeriItems = [...document.querySelectorAll('.galeri-item')];
+            const lightbox = document.getElementById('galeri-lightbox');
+            const lbImg = document.getElementById('lb-img');
+            const lbTitle = document.getElementById('lb-title');
+            const lbCaption = document.getElementById('lb-caption');
+            const lbCounter = document.getElementById('lb-counter');
+            const lbDownload = document.getElementById('lb-download');
+            let lbIndex = 0;
+
+            const showLightbox = (idx) => {
+                lbIndex = (idx + galeriItems.length) % galeriItems.length;
+                const el = galeriItems[lbIndex];
+                lbImg.src = el.dataset.src;
+                lbImg.alt = el.dataset.title;
+                lbTitle.textContent = el.dataset.title;
+                lbCaption.textContent = el.dataset.caption;
+                lbCounter.textContent = `${lbIndex + 1} / ${galeriItems.length}`;
+                lbDownload.href = el.dataset.src;
+                lightbox.classList.remove('hidden');
+                lightbox.classList.add('flex');
+            };
+            galeriItems.forEach((item, idx) => item.addEventListener('click', () => showLightbox(idx)));
+            document.getElementById('lb-close').addEventListener('click', () => {
+                lightbox.classList.add('hidden');
+                lightbox.classList.remove('flex');
+            });
+            document.getElementById('lb-prev').addEventListener('click', () => showLightbox(lbIndex - 1));
+            document.getElementById('lb-next').addEventListener('click', () => showLightbox(lbIndex + 1));
+
+            // 12. Spotlight Modal
+            const spModal = document.getElementById('spotlight-modal');
+            document.getElementById('spotlight-trigger').addEventListener('click', () => {
+                spModal.classList.remove('hidden');
+                spModal.classList.add('flex');
+            });
+            document.getElementById('spotlight-close').addEventListener('click', () => {
+                spModal.classList.add('hidden');
+                spModal.classList.remove('flex');
+            });
+            spModal.addEventListener('click', (e) => {
+                if (e.target === spModal) {
+                    spModal.classList.add('hidden');
+                    spModal.classList.remove('flex');
+                }
+            });
+
+            // 13. Hotline Panitia PMB Modal
+            const hlModal = document.getElementById('hotline-modal');
+            const openHotline = () => {
+                toggleDrawer(true);
+                hlModal.classList.remove('hidden');
+                hlModal.classList.add('flex');
+            };
+            const closeHotline = () => {
+                hlModal.classList.add('hidden');
+                hlModal.classList.remove('flex');
+            };
+            ['open-hotline-btn', 'mob-hotline-trigger', 'card-hotline-trigger', 'banner-hotline-trigger'].forEach((id) => {
+                const el = document.getElementById(id);
+                if (el) el.addEventListener('click', openHotline);
+            });
+            document.getElementById('hotline-close').addEventListener('click', closeHotline);
+            hlModal.addEventListener('click', (e) => { if (e.target === hlModal) closeHotline(); });
+
+            // 14. Escape key closes any open modal/drawer
+            window.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape') {
+                    closeSheet();
+                    closeHotline();
+                    lightbox.classList.add('hidden'); lightbox.classList.remove('flex');
+                    spModal.classList.add('hidden'); spModal.classList.remove('flex');
+                }
+            });
+        })();
     </script>
 </body>
 </html>
