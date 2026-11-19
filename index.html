@@ -394,18 +394,29 @@
                 <div class="absolute inset-0 bg-[#0B1736]/60"></div>
             </div>
 
-            <!-- Interactive Floating Showcase Card (Siap untuk koleksi foto siswa & guru berprestasi) -->
-            <div id="hero-prestasi-card" class="hidden md:block absolute top-28 right-8 lg:right-14 z-20 w-72 rounded-3xl overflow-hidden border-2 border-white/25 bg-night/60 backdrop-blur-md shadow-2xl transform rotate-2 hover:rotate-0 transition-transform duration-500">
-                <div class="relative h-40 overflow-hidden">
-                    <img id="hero-card-img" src="assets/stem2425.JPG" alt="Pembelajaran proyek kreatif STEM SD Patra Dharma 3" class="w-full h-full object-cover transition-opacity duration-500">
+            <!-- Floating Showcase Card: Siswa & Guru Berprestasi -->
+            <div id="hero-prestasi-card" class="hidden md:block absolute top-24 right-8 lg:right-14 z-20 w-64 lg:w-72 rounded-3xl overflow-hidden border-2 border-white/25 bg-night/75 backdrop-blur-md shadow-2xl transform rotate-2 hover:rotate-0 transition-transform duration-500">
+                <div class="relative h-64 overflow-hidden">
+                    <img id="hero-card-img" src="assets/3%20Emas%20Kaltim%20Open%20Nusantara%20Cup%201%202026.JPG" alt="Siswa Berprestasi SD Patra Dharma 3" class="w-full h-full object-cover object-[50%_20%] transition-opacity duration-300">
+                    <div class="absolute top-3 left-3 right-3 flex items-center justify-between">
+                        <span id="hero-card-counter" class="px-2.5 py-1 rounded-full bg-night/75 backdrop-blur-sm text-[10px] font-mono font-bold text-white border border-white/15">1 / 6</span>
+                        <div class="flex items-center gap-1">
+                            <button type="button" id="hero-card-prev" aria-label="Foto prestasi sebelumnya" class="w-7 h-7 rounded-full bg-night/75 hover:bg-[#2463A6] text-white text-[10px] flex items-center justify-center border border-white/15 transition">
+                                <i class="fas fa-chevron-left"></i>
+                            </button>
+                            <button type="button" id="hero-card-next" aria-label="Foto prestasi berikutnya" class="w-7 h-7 rounded-full bg-night/75 hover:bg-[#2463A6] text-white text-[10px] flex items-center justify-center border border-white/15 transition">
+                                <i class="fas fa-chevron-right"></i>
+                            </button>
+                        </div>
+                    </div>
                 </div>
                 <div class="p-4 flex items-center justify-between gap-3">
-                    <div>
-                        <p id="hero-card-tag" class="text-[11px] uppercase tracking-widest text-sky-300 font-extrabold">Kurikulum Merdeka</p>
-                        <p id="hero-card-title" class="font-display font-bold text-sm text-white">Belajar Aktif &amp; Proyek STEM</p>
+                    <div class="min-w-0">
+                        <p id="hero-card-tag" class="text-[11px] uppercase tracking-widest text-sky-300 font-extrabold truncate">Prestasi Siswa</p>
+                        <p id="hero-card-title" class="font-display font-bold text-[13px] text-white leading-snug">3 Emas Kaltim Open Nusantara Cup 1 2026</p>
                     </div>
                     <span class="w-9 h-9 rounded-full bg-yellow-400 text-night flex items-center justify-center shrink-0">
-                        <i id="hero-card-icon" class="fas fa-award"></i>
+                        <i id="hero-card-icon" class="fas fa-medal"></i>
                     </span>
                 </div>
             </div>
@@ -834,8 +845,8 @@
                     </span>
                 </div>
 
-                <!-- Interactive Gallery Grid -->
-                <div class="grid grid-cols-1 md:grid-cols-12 gap-5 mb-14 reveal-up">
+                <!-- Interactive Gallery Grid: Kegiatan Utama -->
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-5 mb-10 reveal-up">
                     <button type="button" class="galeri-item md:col-span-7 group relative rounded-[26px] overflow-hidden border border-white/15 text-left focus:outline-none focus:ring-2 focus:ring-sky-400"
                             data-src="assets/upcarasenin.JPG"
                             data-title="Upacara Hari Senin &amp; Lingkungan Asri"
@@ -861,6 +872,19 @@
                             </div>
                         </div>
                     </button>
+                </div>
+
+                <!-- Galeri Prestasi Siswa & Guru (Portrait Cards) -->
+                <div class="mb-14 reveal-up">
+                    <div class="flex items-center justify-between gap-4 mb-5">
+                        <div>
+                            <span class="text-xs font-extrabold uppercase tracking-[0.2em] text-yellow-300 block mb-1">Kebanggaan Sekolah</span>
+                            <h3 class="font-display text-2xl sm:text-3xl font-bold text-white">Siswa &amp; Guru Berprestasi</h3>
+                        </div>
+                    </div>
+                    <div id="galeri-prestasi-grid" class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
+                        <!-- Rendered dynamically from prestasiSlides -->
+                    </div>
                 </div>
 
                 <!-- Continuous Marquee Badges -->
@@ -1240,14 +1264,23 @@
                 <!-- Col 3: Lokasi Map Card -->
                 <div class="md:col-span-4">
                     <p class="text-xs font-extrabold uppercase tracking-[0.2em] text-slate-400 mb-4">Lokasi</p>
-                    <div class="w-full h-44 bg-night2 rounded-2xl overflow-hidden border border-white/10">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.857635677573!2d116.8379476!3d-1.2721669!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2df1476db7831fa5%3A0x5fc66d5c205174d1!2sSD%20Patra%20Dharma%203!5e0!3m2!1sen!2sid!4v1694751433623!5m2!1sen!2sid"
-                            class="w-full h-full border-0"
-                            allowfullscreen=""
-                            loading="lazy"
-                            title="Peta Lokasi SD Patra Dharma 3 Balikpapan"
-                            referrerpolicy="no-referrer-when-downgrade">
-                        </iframe>
+                    <div id="footer-map-box" class="w-full h-44 bg-night2 rounded-2xl overflow-hidden border border-white/10 flex flex-col items-center justify-center p-5 text-center gap-3">
+                        <div class="flex items-center gap-2 text-xs font-semibold text-slate-300">
+                            <i class="fas fa-map-marker-alt text-yellow-300"></i>
+                            <span>Jl. Sekolah No.1, Balikpapan Kota</span>
+                        </div>
+                        <div class="flex flex-wrap items-center justify-center gap-2">
+                            <button type="button" id="load-footer-map"
+                                    class="px-4 py-2 rounded-full bg-[#2463A6] hover:bg-[#1B4E85] text-white text-xs font-bold inline-flex items-center gap-1.5 transition">
+                                <i class="fas fa-map"></i>
+                                <span>Tampilkan Peta</span>
+                            </button>
+                            <a href="https://maps.google.com/?q=SD+Patra+Dharma+3+Balikpapan" target="_blank" rel="noopener noreferrer"
+                               class="px-4 py-2 rounded-full bg-white/10 hover:bg-white/20 text-white text-xs font-bold inline-flex items-center gap-1.5 transition">
+                                <span>Google Maps</span>
+                                <i class="fas fa-external-link-alt text-[10px]"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -1905,7 +1938,73 @@
                 </span>`;
             }).join('');
 
-            // 11. Gallery Lightbox
+            // 11. Prestasi Siswa & Guru (Single Source of Truth for Hero Showcase & Gallery)
+            const prestasiSlides = [
+                {
+                    src: 'assets/3%20Emas%20Kaltim%20Open%20Nusantara%20Cup%201%202026.JPG',
+                    tag: 'Prestasi Siswa',
+                    title: '3 Emas Kaltim Open Nusantara Cup 1 2026',
+                    caption: 'Siswa SD Patra Dharma 3 Balikpapan berhasil meraih 3 medali emas pada ajang Kaltim Open Nusantara Cup 1 Tahun 2026.',
+                    icon: 'fa-medal'
+                },
+                {
+                    src: 'assets/Juara%203%20Coding%20Cerita%20Bank%20Indonesia.jpg',
+                    tag: 'Prestasi Siswa',
+                    title: 'Juara 3 Lomba Koding Cerita Bank Indonesia',
+                    caption: 'Juara 3 Lomba Koding Cerita CBP Rupiah 2026 yang diselenggarakan oleh Bank Indonesia.',
+                    icon: 'fa-laptop-code'
+                },
+                {
+                    src: 'assets/Juara%20Rugby.jpg',
+                    tag: 'Prestasi Guru',
+                    title: 'Juara Rugby',
+                    caption: 'Guru berprestasi SD Patra Dharma 3 Balikpapan meraih medali juara pada kejuaraan Rugby.',
+                    icon: 'fa-trophy'
+                },
+                {
+                    src: 'assets/Top%205%20Winner%20English%20Quiz%20Competition.jpg',
+                    tag: 'Prestasi Siswa',
+                    title: 'Top 5 Winner English Quiz Competition',
+                    caption: 'Prestasi siswa SD Patra Dharma 3 dalam ajang English Quiz Competition tingkat Sekolah Dasar.',
+                    icon: 'fa-award'
+                },
+                {
+                    src: 'assets/Juara%20Renang.jpg',
+                    tag: 'Prestasi Siswa',
+                    title: 'Juara Lomba Renang',
+                    caption: 'Deretan medali prestasi cabang olahraga renang oleh siswa SD Patra Dharma 3 Balikpapan.',
+                    icon: 'fa-swimmer'
+                },
+                {
+                    src: 'assets/Juara%203%20Lomba%20Bertutur.jpg',
+                    tag: 'Prestasi Siswa',
+                    title: 'Juara 3 Lomba Bertutur',
+                    caption: 'Penampilan penuh kreativitas meraih Juara 3 pada ajang Lomba Bertutur.',
+                    icon: 'fa-microphone-alt'
+                }
+            ];
+
+            const prestasiGrid = document.getElementById('galeri-prestasi-grid');
+            if (prestasiGrid) {
+                prestasiGrid.innerHTML = prestasiSlides.map((item) => `
+                    <button type="button"
+                            class="galeri-item group rounded-[22px] overflow-hidden bg-white/5 hover:bg-white/10 border border-white/15 hover:border-sky-400/60 text-left flex flex-col transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-sky-400"
+                            data-src="${item.src}"
+                            data-title="${item.title}"
+                            data-caption="${item.caption}">
+                        <div class="w-full aspect-[3/4] overflow-hidden bg-night2">
+                            <img src="${item.src}" alt="${item.title}" loading="lazy"
+                                 class="w-full h-full object-cover object-[50%_20%] group-hover:scale-105 transition-transform duration-500">
+                        </div>
+                        <div class="p-3.5 flex-1 flex flex-col justify-start gap-1.5">
+                            <span class="text-[10px] font-extrabold uppercase tracking-wider ${item.tag.includes('Guru') ? 'text-yellow-300' : 'text-sky-300'}">${item.tag}</span>
+                            <p class="font-display text-xs sm:text-[13px] font-bold text-white leading-snug">${item.title}</p>
+                        </div>
+                    </button>
+                `).join('');
+            }
+
+            // 12. Gallery Lightbox
             const galeriItems = [...document.querySelectorAll('.galeri-item')];
             const lightbox = document.getElementById('galeri-lightbox');
             const lbImg = document.getElementById('lb-img');
@@ -1935,7 +2034,7 @@
             document.getElementById('lb-prev').addEventListener('click', () => showLightbox(lbIndex - 1));
             document.getElementById('lb-next').addEventListener('click', () => showLightbox(lbIndex + 1));
 
-            // 12. Spotlight Modal
+            // 13. Spotlight Modal
             const spModal = document.getElementById('spotlight-modal');
             document.getElementById('spotlight-trigger').addEventListener('click', () => {
                 spModal.classList.remove('hidden');
@@ -1952,7 +2051,7 @@
                 }
             });
 
-            // 13. Hotline Panitia PMB Modal
+            // 14. Hotline Panitia PMB Modal
             const hlModal = document.getElementById('hotline-modal');
             const openHotline = () => {
                 toggleDrawer(true);
@@ -1970,7 +2069,7 @@
             document.getElementById('hotline-close').addEventListener('click', closeHotline);
             hlModal.addEventListener('click', (e) => { if (e.target === hlModal) closeHotline(); });
 
-            // 14. Escape key closes any open modal/drawer
+            // 15. Escape key closes any open modal/drawer
             window.addEventListener('keydown', (e) => {
                 if (e.key === 'Escape') {
                     closeSheet();
@@ -1980,29 +2079,53 @@
                 }
             });
 
-            // 15. Hero Showcase Slider (Siap diisi foto siswa & guru berprestasi)
-            const prestasiSlides = [
-                { src: 'assets/stem2425.JPG', tag: 'Kurikulum Merdeka', title: 'Belajar Aktif & Proyek STEM', icon: 'fa-award' },
-                { src: 'assets/upcarasenin.JPG', tag: 'Karakter & Kedisiplinan', title: 'Lingkungan Asri & Berkarakter', icon: 'fa-star' }
-            ];
+            // 16. Hero Prestasi Showcase Slider Controls
             const heroCardImg = document.getElementById('hero-card-img');
             const heroCardTag = document.getElementById('hero-card-tag');
             const heroCardTitle = document.getElementById('hero-card-title');
             const heroCardIcon = document.getElementById('hero-card-icon');
-            if (heroCardImg && prestasiSlides.length > 1 && !prefersReduced) {
+            const heroCardCounter = document.getElementById('hero-card-counter');
+            const heroPrevBtn = document.getElementById('hero-card-prev');
+            const heroNextBtn = document.getElementById('hero-card-next');
+
+            if (heroCardImg && prestasiSlides.length > 0) {
                 let slideIdx = 0;
-                setInterval(() => {
-                    slideIdx = (slideIdx + 1) % prestasiSlides.length;
+                const setHeroSlide = (nextIdx, instant = false) => {
+                    slideIdx = (nextIdx + prestasiSlides.length) % prestasiSlides.length;
                     const item = prestasiSlides[slideIdx];
-                    heroCardImg.style.opacity = '0.25';
-                    setTimeout(() => {
+                    const applySlide = () => {
                         heroCardImg.src = item.src;
+                        heroCardImg.alt = item.title;
                         heroCardTag.textContent = item.tag;
+                        heroCardTag.className = `text-[11px] uppercase tracking-widest font-extrabold truncate ${item.tag.includes('Guru') ? 'text-yellow-300' : 'text-sky-300'}`;
                         heroCardTitle.textContent = item.title;
                         heroCardIcon.className = `fas ${item.icon}`;
+                        if (heroCardCounter) heroCardCounter.textContent = `${slideIdx + 1} / ${prestasiSlides.length}`;
                         heroCardImg.style.opacity = '1';
-                    }, 260);
-                }, 4200);
+                    };
+                    if (instant) {
+                        applySlide();
+                    } else {
+                        heroCardImg.style.opacity = '0.25';
+                        setTimeout(applySlide, 220);
+                    }
+                };
+                setHeroSlide(0, true);
+                if (heroPrevBtn) heroPrevBtn.addEventListener('click', () => setHeroSlide(slideIdx - 1));
+                if (heroNextBtn) heroNextBtn.addEventListener('click', () => setHeroSlide(slideIdx + 1));
+                if (prestasiSlides.length > 1 && !prefersReduced) {
+                    setInterval(() => setHeroSlide(slideIdx + 1), 4000);
+                }
+            }
+
+            // 17. Click-to-Load Footer Map
+            const loadMapBtn = document.getElementById('load-footer-map');
+            const mapBox = document.getElementById('footer-map-box');
+            if (loadMapBtn && mapBox) {
+                loadMapBtn.addEventListener('click', () => {
+                    mapBox.className = 'w-full h-44 bg-night2 rounded-2xl overflow-hidden border border-white/10';
+                    mapBox.innerHTML = `<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.857635677573!2d116.8379476!3d-1.2721669!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2df1476db7831fa5%3A0x5fc66d5c205174d1!2sSD%20Patra%20Dharma%203!5e0!3m2!1sen!2sid!4v1694751433623!5m2!1sen!2sid" class="w-full h-full border-0" allowfullscreen="" loading="lazy" title="Peta Lokasi SD Patra Dharma 3 Balikpapan" referrerpolicy="no-referrer-when-downgrade"></iframe>`;
+                });
             }
         })();
     </script>
