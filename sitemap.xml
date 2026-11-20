@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://sdpd3balikpapan.sch.id/</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://sdpd3balikpapan.sch.id/assets/upcarasenin.JPG</image:loc>
+      <image:title>SD Patra Dharma 3 Balikpapan (SD PD 3) - Upacara dan Lingkungan Sekolah</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://sdpd3balikpapan.sch.id/assets/Peringkat%201%20TKA%20Kota%20Balikpapan.png</image:loc>
+      <image:title>Peringkat 1 TKA Kota Balikpapan - SD Patra Dharma 3 Balikpapan</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://sdpd3balikpapan.sch.id/assets/3%20Emas%20Kaltim%20Open%20Nusantara%20Cup%201%202026.JPG</image:loc>
+      <image:title>Prestasi Siswa SD Patra Dharma 3 Balikpapan - 3 Emas Kaltim Open Nusantara Cup 1 2026</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://sdpd3balikpapan.sch.id/assets/stem2425.JPG</image:loc>
+      <image:title>Pembelajaran Proyek STEM SD Patra Dharma 3 Balikpapan</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://sdpd3balikpapan.sch.id/assets/Juara%20Trofeo%20Futsal.JPG</image:loc>
+      <image:title>Juara Trofeo Futsal SD Patra Dharma 3 Balikpapan</image:title>
+    </image:image>
+  </url>
+</urlset>
