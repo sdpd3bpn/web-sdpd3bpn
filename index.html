@@ -362,6 +362,135 @@
             transform: translateX(0);
         }
 
+        /* 3D Tilted Alternating Gallery Wall & Thumbnails */
+        .wall {
+            position: relative;
+            height: clamp(460px, 76vh, 760px);
+            overflow: hidden;
+        }
+        .wall::before,
+        .wall::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            right: 0;
+            z-index: 2;
+            height: 20%;
+            pointer-events: none;
+        }
+        .wall::before {
+            top: 0;
+            background: linear-gradient(to bottom, var(--night), rgba(11, 23, 54, 0));
+        }
+        .wall::after {
+            bottom: 0;
+            background: linear-gradient(to top, var(--night), rgba(11, 23, 54, 0));
+        }
+        .wall__stage {
+            position: absolute;
+            inset: 0;
+            perspective: 1400px;
+        }
+        .wall__grid {
+            --gw: min(155vw, 2300px);
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            display: grid;
+            grid-template-columns: repeat(5, minmax(0, 1fr));
+            align-items: start;
+            gap: clamp(12px, 1.4vw, 22px);
+            width: var(--gw);
+            height: 250vh;
+            margin: -125vh 0 0 calc(var(--gw) / -2);
+            overflow: hidden;
+            transform: rotateX(52deg) rotate(38deg) scale(0.92);
+            will-change: transform;
+        }
+        @media (max-width: 639px) {
+            .wall {
+                height: clamp(420px, 62vh, 540px);
+            }
+            .wall__grid {
+                --gw: min(210vw, 1100px);
+                grid-template-columns: repeat(3, minmax(0, 1fr));
+                transform: rotateX(48deg) rotate(36deg) scale(0.92);
+            }
+            .wall__col:nth-child(n+4) {
+                display: none;
+            }
+        }
+        .wall__col {
+            display: flex;
+            flex-direction: column;
+            gap: clamp(12px, 1.4vw, 22px);
+            animation: wallUp var(--d, 46s) linear infinite;
+            will-change: transform;
+        }
+        .wall__col[data-dir="-1"] {
+            animation-direction: reverse;
+        }
+        .wall__col:hover {
+            animation-play-state: paused;
+        }
+        .wall__set {
+            display: grid;
+            gap: clamp(12px, 1.4vw, 22px);
+        }
+        .wall__tile {
+            aspect-ratio: 4 / 3;
+            overflow: hidden;
+            border-radius: clamp(10px, 1vw, 16px);
+            background: var(--night-2);
+            border: 1px solid rgba(255, 255, 255, 0.14);
+            box-shadow: 0 26px 46px -22px rgba(0, 0, 0, 0.65);
+            padding: 0;
+            cursor: pointer;
+            transition: transform 0.28s cubic-bezier(0.22, 1, 0.36, 1), border-color 0.25s ease;
+        }
+        .wall__tile:hover {
+            transform: translateY(-4px) scale(1.03);
+            border-color: rgba(56, 189, 248, 0.9);
+        }
+        .wall__tile img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: 50% 20%;
+            display: block;
+        }
+        @keyframes wallUp {
+            to {
+                transform: translate3d(0, calc(-50% - clamp(6px, 0.7vw, 11px)), 0);
+            }
+        }
+        .lb-thumb {
+            flex: none;
+            width: 52px;
+            height: 52px;
+            border-radius: 10px;
+            overflow: hidden;
+            opacity: 0.48;
+            border: 2px solid transparent;
+            transition: opacity 0.25s ease, border-color 0.25s ease, transform 0.25s ease;
+            cursor: pointer;
+            padding: 0;
+        }
+        @media (min-width: 640px) {
+            .lb-thumb {
+                width: 60px;
+                height: 60px;
+            }
+        }
+        .lb-thumb:hover {
+            opacity: 0.85;
+        }
+        .lb-thumb.is-on {
+            opacity: 1;
+            border-color: #FACC15;
+            transform: scale(1.06);
+        }
+
         /* Subtle Canvas Wave / Float */
         @keyframes gentleWave {
             0%, 100% { transform: scale(1.03) translateY(0px); }
@@ -372,7 +501,7 @@
         }
 
         @media (prefers-reduced-motion: reduce) {
-            .wave-photo, .marquee-track { animation: none !important; }
+            .wave-photo, .marquee-track, .wall__col { animation: none !important; }
             .reveal-up { opacity: 1; transform: none; transition: none; }
         }
     </style>
@@ -932,24 +1061,30 @@
                 </div>
 
                 <!-- Filter Tabs Galeri -->
-                <div class="flex flex-wrap gap-2 mb-10 reveal-up" id="galeri-tabs" role="tablist">
-                    <button type="button" data-gcat="all" class="gal-tab px-4 py-2 rounded-full text-xs sm:text-sm font-bold bg-[#2463A6] text-white shadow transition">
+                <div class="flex flex-wrap gap-2 mb-6 reveal-up" id="galeri-tabs" role="tablist">
+                    <button type="button" data-gcat="all" class="gal-tab px-4 py-2 rounded-full text-xs sm:text-sm font-semibold bg-[#2463A6] text-white shadow transition">
                         Semua <span class="ml-1 opacity-80">27</span>
                     </button>
-                    <button type="button" data-gcat="prestasi" class="gal-tab px-4 py-2 rounded-full text-xs sm:text-sm font-bold bg-white/10 hover:bg-white/20 text-slate-200 transition">
+                    <button type="button" data-gcat="prestasi" class="gal-tab px-4 py-2 rounded-full text-xs sm:text-sm font-semibold bg-white/10 hover:bg-white/20 text-slate-200 transition">
                         Prestasi <span class="ml-1 opacity-75">10</span>
                     </button>
-                    <button type="button" data-gcat="khotmul" class="gal-tab px-4 py-2 rounded-full text-xs sm:text-sm font-bold bg-white/10 hover:bg-white/20 text-slate-200 transition">
+                    <button type="button" data-gcat="khotmul" class="gal-tab px-4 py-2 rounded-full text-xs sm:text-sm font-semibold bg-white/10 hover:bg-white/20 text-slate-200 transition">
                         Khatmul Qur’an &amp; Imtihan <span class="ml-1 opacity-75">10</span>
                     </button>
-                    <button type="button" data-gcat="kegiatan" class="gal-tab px-4 py-2 rounded-full text-xs sm:text-sm font-bold bg-white/10 hover:bg-white/20 text-slate-200 transition">
+                    <button type="button" data-gcat="kegiatan" class="gal-tab px-4 py-2 rounded-full text-xs sm:text-sm font-semibold bg-white/10 hover:bg-white/20 text-slate-200 transition">
                         Kegiatan &amp; Budaya <span class="ml-1 opacity-75">7</span>
                     </button>
                 </div>
+            </div>
 
-                <!-- Dynamic Gallery Stage -->
-                <div id="galeri-stage" class="space-y-12 mb-14"></div>
+            <!-- Flowing 3D Tilted Gallery Wall -->
+            <div class="wall relative z-10 mb-10" id="galeri-wall">
+                <div class="wall__stage">
+                    <div class="wall__grid" id="galeri-stage"></div>
+                </div>
+            </div>
 
+            <div class="relative z-10 max-w-[1440px] mx-auto px-5 sm:px-8 lg:px-12">
                 <!-- Continuous Marquee Badges -->
                 <div class="pt-8 border-t border-white/10">
                     <p class="text-xs font-extrabold uppercase tracking-[0.2em] text-slate-400 mb-5 text-center">
@@ -1415,36 +1550,44 @@
     </div>
 
     <!-- Gallery Lightbox Modal -->
-    <div id="galeri-lightbox" class="fixed inset-0 z-50 bg-night/90 backdrop-blur-xl hidden items-center justify-center p-4 sm:p-8" role="dialog" aria-modal="true">
-        <div class="max-w-5xl w-full flex flex-col gap-4">
-            <div class="flex items-center justify-between text-white">
-                <div>
-                    <span id="lb-counter" class="text-xs font-mono text-sky-300">1 / 2</span>
-                    <h3 id="lb-title" class="font-display text-lg sm:text-2xl font-medium tracking-tight"></h3>
-                </div>
-                <div class="flex items-center gap-2.5">
-                    <a id="lb-download" href="#" download class="px-4 py-2 rounded-full bg-white/10 hover:bg-white/20 text-xs sm:text-sm font-bold text-white inline-flex items-center gap-2 transition">
-                        <i class="fas fa-download"></i>
-                        <span class="hidden sm:inline">Unduh foto</span>
-                    </a>
-                    <button type="button" id="lb-close" aria-label="Tutup galeri" class="w-10 h-10 rounded-full bg-white/10 hover:bg-white/25 text-white flex items-center justify-center transition">
-                        <i class="fas fa-times"></i>
-                    </button>
-                </div>
+    <div id="galeri-lightbox" class="fixed inset-0 z-[90] bg-[#070E22]/95 backdrop-blur-xl hidden flex-col justify-between h-[100dvh]" role="dialog" aria-modal="true">
+        <!-- Top Header Bar -->
+        <div class="flex items-center justify-between gap-4 px-4 sm:px-8 pt-4 pb-2 shrink-0 text-white">
+            <div class="min-w-0">
+                <span id="lb-counter" class="text-xs font-mono text-sky-300">1 / 27</span>
+                <h3 id="lb-title" class="font-display text-base sm:text-2xl font-medium tracking-tight truncate"></h3>
             </div>
-            <div class="relative rounded-3xl overflow-hidden bg-black/40 border border-white/15">
-                <img id="lb-img" src="" alt="" class="w-full max-h-[70vh] object-contain mx-auto">
+            <div class="flex items-center gap-2.5 shrink-0">
+                <a id="lb-download" href="#" download class="px-4 py-2 rounded-full bg-white/10 hover:bg-[#2463A6] border border-white/15 text-xs sm:text-sm font-semibold text-white inline-flex items-center gap-2 transition">
+                    <i class="fas fa-download"></i>
+                    <span class="hidden sm:inline">Unduh foto</span>
+                </a>
+                <button type="button" id="lb-close" aria-label="Tutup galeri" class="w-10 h-10 rounded-full bg-white/10 hover:bg-white/25 border border-white/15 text-white flex items-center justify-center transition">
+                    <i class="fas fa-times"></i>
+                </button>
             </div>
-            <div class="flex items-center justify-between gap-4 text-slate-300 text-sm">
-                <p id="lb-caption"></p>
-                <div class="flex items-center gap-2 shrink-0">
-                    <button type="button" id="lb-prev" aria-label="Foto sebelumnya" class="w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center transition">
-                        <i class="fas fa-arrow-left"></i>
-                    </button>
-                    <button type="button" id="lb-next" aria-label="Foto berikutnya" class="w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center transition">
-                        <i class="fas fa-arrow-right"></i>
-                    </button>
-                </div>
+        </div>
+
+        <!-- Center Image Stage with Left & Right Nav Arrows -->
+        <div id="lb-stage" class="relative flex-1 min-h-0 flex items-center justify-center px-14 sm:px-24 py-2">
+            <button type="button" id="lb-prev" aria-label="Foto sebelumnya"
+                    class="absolute left-2.5 sm:left-6 top-1/2 -translate-y-1/2 z-20 w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-white/10 hover:bg-[#2463A6] backdrop-blur-md border border-white/20 text-white flex items-center justify-center shadow-lg transition hover:scale-105">
+                <i class="fas fa-arrow-left text-sm"></i>
+            </button>
+
+            <img id="lb-img" src="" alt="" class="max-w-full max-h-full w-auto h-auto rounded-2xl object-contain shadow-2xl border border-white/15">
+
+            <button type="button" id="lb-next" aria-label="Foto berikutnya"
+                    class="absolute right-2.5 sm:right-6 top-1/2 -translate-y-1/2 z-20 w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-white/10 hover:bg-[#2463A6] backdrop-blur-md border border-white/20 text-white flex items-center justify-center shadow-lg transition hover:scale-105">
+                <i class="fas fa-arrow-right text-sm"></i>
+            </button>
+        </div>
+
+        <!-- Bottom Caption & Scrollable Thumbnail Strip -->
+        <div class="shrink-0 pt-1 pb-3 sm:pb-4 bg-black/25 border-t border-white/10">
+            <p id="lb-caption" class="text-xs sm:text-sm text-slate-300 text-center px-4 pb-2 truncate max-w-3xl mx-auto"></p>
+            <div id="lb-thumbs" class="px-4 sm:px-8 overflow-x-auto no-scrollbar">
+                <div id="lb-thumbs-track" class="flex items-center gap-2 w-max mx-auto py-1"></div>
             </div>
         </div>
     </div>
@@ -2107,47 +2250,59 @@
                 { src: 'assets/semarak17agustus%20(3).jpg', tag: 'Semarak 17 Agustus', title: 'Harmoni Keragaman Budaya', caption: 'Kebersamaan siswa mengenakan ragam pakaian tradisional Indonesia saat Semarak 17 Agustus.', portrait: true }
             ];
 
-            const buildCardHtml = (item, aspectClass) => `
-                <button type="button"
-                        class="galeri-item group rounded-[22px] overflow-hidden bg-white/5 hover:bg-white/10 border border-white/15 hover:border-sky-400/60 text-left flex flex-col transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-sky-400"
-                        data-src="${item.src}"
-                        data-title="${item.title}"
-                        data-caption="${item.caption}">
-                    <div class="w-full ${aspectClass} overflow-hidden bg-night2">
-                        <img src="${item.src}" alt="${item.title}" loading="lazy"
-                             class="w-full h-full object-cover object-[50%_20%] group-hover:scale-105 transition-transform duration-500">
-                    </div>
-                    <div class="p-3.5 flex-1 flex flex-col justify-start gap-1">
-                        <span class="text-[10px] font-semibold uppercase tracking-wider ${item.tag.includes('Guru') ? 'text-yellow-300' : 'text-sky-300'}">${item.tag}</span>
-                        <p class="font-display text-xs sm:text-[13px] font-medium text-white leading-snug">${item.title}</p>
-                    </div>
-                </button>
-            `;
+            const getPhotosByCat = (cat) => {
+                if (cat === 'prestasi') return [...prestasiSlides];
+                if (cat === 'khotmul') return [...khotmulPhotos];
+                if (cat === 'kegiatan') return [...kegiatanPhotos];
+                return [...prestasiSlides, ...khotmulPhotos, ...kegiatanPhotos];
+            };
 
             const galeriStage = document.getElementById('galeri-stage');
             const galTabs = document.querySelectorAll('.gal-tab');
             const lightbox = document.getElementById('galeri-lightbox');
+            const lbStage = document.getElementById('lb-stage');
             const lbImg = document.getElementById('lb-img');
             const lbTitle = document.getElementById('lb-title');
             const lbCaption = document.getElementById('lb-caption');
             const lbCounter = document.getElementById('lb-counter');
             const lbDownload = document.getElementById('lb-download');
-            let galeriItems = [];
+            const lbThumbsTrack = document.getElementById('lb-thumbs-track');
+            let galeriPhotos = [];
+            let lbThumbBtns = [];
             let lbIndex = 0;
 
+            const closeLightbox = () => {
+                lightbox.classList.add('hidden');
+                lightbox.classList.remove('flex');
+                document.body.style.overflowY = '';
+            };
+
             const showLightbox = (idx) => {
-                if (!galeriItems.length) return;
-                lbIndex = (idx + galeriItems.length) % galeriItems.length;
-                const el = galeriItems[lbIndex];
-                lbImg.src = el.dataset.src;
-                lbImg.alt = el.dataset.title;
-                lbTitle.textContent = el.dataset.title;
-                lbCaption.textContent = el.dataset.caption;
-                lbCounter.textContent = `${lbIndex + 1} / ${galeriItems.length}`;
-                lbDownload.href = el.dataset.src;
+                if (!galeriPhotos.length) return;
+                lbIndex = (idx + galeriPhotos.length) % galeriPhotos.length;
+                const item = galeriPhotos[lbIndex];
+                lbImg.src = item.src;
+                lbImg.alt = item.title;
+                lbTitle.textContent = item.title;
+                lbCaption.textContent = item.caption;
+                lbCounter.textContent = `${lbIndex + 1} / ${galeriPhotos.length}`;
+                lbDownload.href = item.src;
                 lightbox.classList.remove('hidden');
                 lightbox.classList.add('flex');
+                document.body.style.overflowY = 'hidden';
+
+                lbThumbBtns.forEach((btn, i) => btn.classList.toggle('is-on', i === lbIndex));
+                const activeThumb = lbThumbBtns[lbIndex];
+                if (activeThumb) {
+                    activeThumb.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+                }
             };
+
+            const buildWallTileHtml = (item, idx) => `
+                <button type="button" class="wall__tile" data-idx="${idx}" aria-label="Lihat foto ${item.title}">
+                    <img src="${item.src}" alt="${item.title}" decoding="async">
+                </button>
+            `;
 
             const renderGaleri = (cat) => {
                 galTabs.forEach((t) => {
@@ -2157,73 +2312,56 @@
                         : 'gal-tab px-4 py-2 rounded-full text-xs sm:text-sm font-semibold bg-white/10 hover:bg-white/20 text-slate-200 transition';
                 });
 
-                let html = '';
-                if (cat === 'all' || cat === 'prestasi') {
-                    const pWide = prestasiSlides.filter((i) => !i.portrait);
-                    const pTall = prestasiSlides.filter((i) => i.portrait);
-                    html += `
-                        <div class="space-y-5">
-                            <div>
-                                <span class="text-xs font-semibold uppercase tracking-[0.2em] text-yellow-300 block mb-1">Kebanggaan Sekolah</span>
-                                <h3 class="font-display text-2xl sm:text-3xl font-medium tracking-[-0.025em] text-white">Siswa &amp; Guru Berprestasi</h3>
-                            </div>
-                            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-                                ${pWide.map((i) => buildCardHtml(i, 'aspect-[16/10]')).join('')}
-                            </div>
-                            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
-                                ${pTall.map((i) => buildCardHtml(i, 'aspect-[3/4]')).join('')}
-                            </div>
+                galeriPhotos = getPhotosByCat(cat);
+                const colsCount = 5;
+                const rowsPerSet = 6;
+                const colDurations = [42, 48, 40, 50, 44];
+                let colsHtml = '';
+
+                for (let c = 0; c < colsCount; c++) {
+                    let setHtml = '';
+                    for (let r = 0; r < rowsPerSet; r++) {
+                        const photoIdx = (r * colsCount + c) % galeriPhotos.length;
+                        setHtml += buildWallTileHtml(galeriPhotos[photoIdx], photoIdx);
+                    }
+                    const dir = c % 2 === 0 ? '1' : '-1';
+                    colsHtml += `
+                        <div class="wall__col" style="--d:${colDurations[c]}s" data-dir="${dir}">
+                            <div class="wall__set">${setHtml}</div>
+                            <div class="wall__set" aria-hidden="true">${setHtml}</div>
                         </div>
                     `;
                 }
 
-                if (cat === 'all' || cat === 'khotmul') {
-                    html += `
-                        <div class="space-y-5">
-                            <div>
-                                <span class="text-xs font-semibold uppercase tracking-[0.2em] text-sky-300 block mb-1">Akhlak Mulia &amp; Al-Qur’an</span>
-                                <h3 class="font-display text-2xl sm:text-3xl font-medium tracking-[-0.025em] text-white">Khatmul Qur’an &amp; Imtihan Metode Ummi</h3>
-                            </div>
-                            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
-                                ${khotmulPhotos.map((i) => buildCardHtml(i, 'aspect-[3/2]')).join('')}
-                            </div>
-                        </div>
-                    `;
-                }
+                galeriStage.innerHTML = colsHtml;
+                galeriStage.querySelectorAll('.wall__tile').forEach((tile) => {
+                    tile.addEventListener('click', () => showLightbox(parseInt(tile.dataset.idx, 10)));
+                });
 
-                if (cat === 'all' || cat === 'kegiatan') {
-                    const kWide = kegiatanPhotos.filter((i) => !i.portrait);
-                    const kTall = kegiatanPhotos.filter((i) => i.portrait);
-                    html += `
-                        <div class="space-y-5">
-                            <div>
-                                <span class="text-xs font-semibold uppercase tracking-[0.2em] text-sky-300 block mb-1">Aktivitas &amp; Budaya</span>
-                                <h3 class="font-display text-2xl sm:text-3xl font-medium tracking-[-0.025em] text-white">Kegiatan Sekolah &amp; Semarak 17 Agustus</h3>
-                            </div>
-                            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-                                ${kWide.map((i) => buildCardHtml(i, 'aspect-[16/10]')).join('')}
-                            </div>
-                            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-4xl">
-                                ${kTall.map((i) => buildCardHtml(i, 'aspect-[3/4]')).join('')}
-                            </div>
-                        </div>
-                    `;
+                if (lbThumbsTrack) {
+                    lbThumbsTrack.innerHTML = galeriPhotos.map((item, i) => `
+                        <button type="button" class="lb-thumb${i === 0 ? ' is-on' : ''}" data-idx="${i}" aria-label="Pilih foto ${i + 1}: ${item.title}">
+                            <img src="${item.src}" alt="${item.title}" loading="lazy" class="w-full h-full object-cover object-[50%_20%]">
+                        </button>
+                    `).join('');
+                    lbThumbBtns = [...lbThumbsTrack.querySelectorAll('.lb-thumb')];
+                    lbThumbBtns.forEach((btn) => {
+                        btn.addEventListener('click', () => showLightbox(parseInt(btn.dataset.idx, 10)));
+                    });
                 }
-
-                galeriStage.innerHTML = html;
-                galeriItems = [...document.querySelectorAll('#galeri-stage .galeri-item')];
-                galeriItems.forEach((item, idx) => item.addEventListener('click', () => showLightbox(idx)));
             };
 
             galTabs.forEach((tab) => tab.addEventListener('click', () => renderGaleri(tab.dataset.gcat)));
             renderGaleri('all');
 
-            document.getElementById('lb-close').addEventListener('click', () => {
-                lightbox.classList.add('hidden');
-                lightbox.classList.remove('flex');
-            });
+            document.getElementById('lb-close').addEventListener('click', closeLightbox);
             document.getElementById('lb-prev').addEventListener('click', () => showLightbox(lbIndex - 1));
             document.getElementById('lb-next').addEventListener('click', () => showLightbox(lbIndex + 1));
+            if (lbStage) {
+                lbStage.addEventListener('click', (e) => {
+                    if (e.target === lbStage) closeLightbox();
+                });
+            }
 
             // 13. Spotlight Modal
             const spModal = document.getElementById('spotlight-modal');
@@ -2260,13 +2398,16 @@
             document.getElementById('hotline-close').addEventListener('click', closeHotline);
             hlModal.addEventListener('click', (e) => { if (e.target === hlModal) closeHotline(); });
 
-            // 15. Escape key closes any open modal/drawer
+            // 15. Keyboard shortcuts for modals & lightbox
             window.addEventListener('keydown', (e) => {
                 if (e.key === 'Escape') {
                     closeSheet();
                     closeHotline();
-                    lightbox.classList.add('hidden'); lightbox.classList.remove('flex');
+                    closeLightbox();
                     spModal.classList.add('hidden'); spModal.classList.remove('flex');
+                } else if (!lightbox.classList.contains('hidden')) {
+                    if (e.key === 'ArrowLeft') showLightbox(lbIndex - 1);
+                    if (e.key === 'ArrowRight') showLightbox(lbIndex + 1);
                 }
             });
 
