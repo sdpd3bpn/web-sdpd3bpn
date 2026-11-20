@@ -170,6 +170,92 @@
             transition: transform 0.25s ease;
         }
 
+        /* Orbiting Luminous Glow CTA */
+        @keyframes glowOrbitSpin {
+            0% { transform: translate(-50%, -50%) rotate(0deg); }
+            100% { transform: translate(-50%, -50%) rotate(360deg); }
+        }
+        .btn-glow-orbit {
+            position: relative;
+            display: inline-flex;
+            align-items: center;
+            border-radius: 9999px;
+            padding: 2px;
+            isolation: isolate;
+            transition: transform 0.28s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+        .btn-glow-orbit:hover {
+            transform: translateY(-2px);
+        }
+        .btn-glow-orbit:hover .btn-chev {
+            transform: translateX(3px);
+        }
+        .btn-glow-halo {
+            position: absolute;
+            inset: -2px;
+            z-index: 0;
+            filter: blur(11px);
+            opacity: 0.8;
+            pointer-events: none;
+            transition: opacity 0.25s ease;
+        }
+        .btn-glow-orbit:hover .btn-glow-halo {
+            opacity: 1;
+        }
+        .btn-glow-clip,
+        .btn-glow-ring {
+            position: absolute;
+            inset: 0;
+            border-radius: 9999px;
+            overflow: hidden;
+            pointer-events: none;
+        }
+        .btn-glow-ring {
+            z-index: 1;
+            background: rgba(147, 197, 253, 0.24);
+        }
+        .btn-glow-clip::before,
+        .btn-glow-ring::before {
+            content: "";
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            width: max(280px, 165%);
+            aspect-ratio: 1 / 1;
+            background: conic-gradient(
+                from 0deg,
+                transparent 0deg 230deg,
+                rgba(56, 189, 248, 0.8) 275deg,
+                #FACC15 322deg,
+                #FFFFFF 346deg,
+                transparent 360deg
+            );
+            animation: glowOrbitSpin 3.2s linear infinite;
+            will-change: transform;
+        }
+        .btn-glow-face {
+            position: relative;
+            z-index: 2;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.65rem;
+            border-radius: 9999px;
+            background-color: #2463A6;
+            color: #FFFFFF;
+            font-weight: 600;
+            transition: background-color 0.25s ease;
+        }
+        .btn-glow-orbit:hover .btn-glow-face {
+            background-color: #1B4E85;
+        }
+        @media (prefers-reduced-motion: reduce) {
+            .btn-glow-clip::before,
+            .btn-glow-ring::before {
+                animation: none;
+                transform: translate(-50%, -50%) rotate(45deg);
+            }
+        }
+
         /* Numbered Editorial Eyebrow */
         .eyebrow {
             display: inline-flex;
@@ -440,10 +526,14 @@
                         </p>
                         <div class="flex flex-wrap items-center gap-3.5">
                             <a href="https://pmb.sdpd3balikpapan.sch.id" target="_blank" rel="noopener noreferrer"
-                               class="btn-pill bg-[#2463A6] hover:bg-[#1B4E85] text-white px-7 py-3.5 text-sm sm:text-base shadow-lg shadow-blue-950/30">
-                                <span class="w-2 h-2 rounded-full bg-yellow-300"></span>
-                                <span>Daftar Murid Baru</span>
-                                <i class="fas fa-chevron-right text-xs btn-chev"></i>
+                               class="btn-glow-orbit shadow-lg shadow-blue-950/35">
+                                <span class="btn-glow-halo" aria-hidden="true"><span class="btn-glow-clip"></span></span>
+                                <span class="btn-glow-ring" aria-hidden="true"></span>
+                                <span class="btn-glow-face px-7 py-3.5 text-sm sm:text-base">
+                                    <span class="w-2 h-2 rounded-full bg-yellow-300"></span>
+                                    <span>Daftar Sekarang</span>
+                                    <i class="fas fa-chevron-right text-xs btn-chev"></i>
+                                </span>
                             </a>
                             <a href="#tentang"
                                class="btn-pill bg-white/15 hover:bg-white/25 backdrop-blur-md border border-white/25 text-white px-6 py-3.5 text-sm sm:text-base">
