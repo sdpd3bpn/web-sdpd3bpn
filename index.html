@@ -55,10 +55,10 @@
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="assets/logo%20ypdm.png">
 
-    <!-- Google Fonts: Plus Jakarta Sans, Fredoka & Caveat (Handwriting) -->
+    <!-- Google Fonts: Plus Jakarta Sans & Caveat (Handwriting) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Fredoka:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
     <!-- FontAwesome Icons (6.4.0 Free) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -70,8 +70,8 @@
             theme: {
                 extend: {
                     fontFamily: {
-                        sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
-                        display: ['"Fredoka"', '"Plus Jakarta Sans"', 'sans-serif'],
+                        sans: ['"Plus Jakarta Sans"', 'system-ui', '-apple-system', 'sans-serif'],
+                        display: ['"Plus Jakarta Sans"', 'system-ui', '-apple-system', 'sans-serif'],
                         hand: ['"Caveat"', 'cursive'],
                     },
                     colors: {
@@ -117,13 +117,15 @@
         html, body {
             background-color: var(--bg);
             color: var(--ink);
+            font-family: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+            line-height: 1.6;
             overflow-x: clip;
         }
 
         /* Editorial Fluid Typography */
-        .t-hero { font-size: clamp(2.4rem, 5.4vw, 5.1rem); line-height: 1.04; letter-spacing: -0.03em; }
+        .t-hero { font-size: clamp(2.4rem, 5.4vw, 5.1rem); line-height: 1.04; letter-spacing: -0.04em; }
         .t-statement { font-size: clamp(1.65rem, 3.2vw, 3.3rem); line-height: 1.18; letter-spacing: -0.025em; }
-        .t-display { font-size: clamp(1.9rem, 3.6vw, 3.7rem); line-height: 1.1; letter-spacing: -0.025em; }
+        .t-display { font-size: clamp(1.9rem, 3.6vw, 3.7rem); line-height: 1.08; letter-spacing: -0.035em; }
         .t-zoom-word { font-size: clamp(2.6rem, 7vw, 6.8rem); line-height: 0.95; letter-spacing: -0.04em; }
 
         /* Preloader */
@@ -155,7 +157,7 @@
             align-items: center;
             gap: 0.65rem;
             border-radius: 9999px;
-            font-weight: 700;
+            font-weight: 600;
             transition: transform 0.28s cubic-bezier(0.34, 1.56, 0.64, 1), background-color 0.25s, box-shadow 0.25s;
         }
         .btn-pill:hover {
@@ -174,7 +176,7 @@
             align-items: center;
             gap: 0.6rem;
             font-size: 0.78rem;
-            font-weight: 800;
+            font-weight: 600;
             letter-spacing: 0.14em;
             text-transform: uppercase;
         }
@@ -296,11 +298,11 @@
         <div class="flex items-center gap-3.5">
             <img src="assets/logo%20ypdm.png" alt="Logo SD Patra Dharma 3" class="w-12 h-12 object-contain">
             <div>
-                <p class="font-display font-bold text-xl text-ink leading-tight">SD Patra Dharma 3</p>
-                <p class="text-xs font-bold uppercase tracking-[0.2em] text-patra-blue">Balikpapan</p>
+                <p class="font-display font-medium tracking-tight text-xl text-ink leading-tight">SD Patra Dharma 3</p>
+                <p class="text-xs font-semibold uppercase tracking-[0.2em] text-patra-blue">Balikpapan</p>
             </div>
         </div>
-        <div class="flex items-center gap-3 text-xs font-extrabold tracking-[0.22em] text-ink2 uppercase">
+        <div class="flex items-center gap-3 text-xs font-semibold tracking-[0.22em] text-ink2 uppercase">
             <span>MEMUAT</span>
             <span id="preload-pct" class="font-mono text-patra-royal">01%</span>
         </div>
@@ -312,17 +314,17 @@
             <!-- Left Pill: Brand -->
             <a href="#beranda" class="pointer-events-auto shrink-0 pill-glass rounded-full pl-2 pr-3.5 sm:pl-2.5 sm:pr-4 py-1.5 flex items-center gap-2 sm:gap-2.5 hover:scale-[1.02] transition-transform">
                 <img src="assets/logo%20ypdm.png" alt="Logo SD Patra Dharma 3" class="w-7 h-7 sm:w-8 sm:h-8 object-contain shrink-0">
-                <span class="font-display font-bold text-[13px] sm:text-base text-ink whitespace-nowrap leading-none">SD Patra Dharma 3</span>
+                <span class="font-display font-medium tracking-tight text-[13px] sm:text-base text-ink whitespace-nowrap leading-none">SD Patra Dharma 3</span>
             </a>
 
             <!-- Nav Links (Desktop) -->
             <nav aria-label="Navigasi utama" class="hidden lg:flex pointer-events-auto pill-glass rounded-full p-1.5 items-center gap-1">
-                <a href="#tentang" data-spy="tentang" class="nav-link px-4 py-1.5 rounded-full text-sm font-semibold text-ink2 hover:text-ink transition-colors">Tentang</a>
-                <a href="#pilar" data-spy="pilar" class="nav-link px-4 py-1.5 rounded-full text-sm font-semibold text-ink2 hover:text-ink transition-colors">Pilar</a>
-                <a href="#roadmap" data-spy="roadmap" class="nav-link px-4 py-1.5 rounded-full text-sm font-semibold text-ink2 hover:text-ink transition-colors">Program</a>
-                <a href="#galeri" data-spy="galeri" class="nav-link px-4 py-1.5 rounded-full text-sm font-semibold text-ink2 hover:text-ink transition-colors">Galeri</a>
-                <a href="#pendaftaran" data-spy="pendaftaran" class="nav-link px-4 py-1.5 rounded-full text-sm font-semibold text-ink2 hover:text-ink transition-colors">Pendaftaran</a>
-                <a href="#kontak" data-spy="kontak" class="nav-link px-4 py-1.5 rounded-full text-sm font-semibold text-ink2 hover:text-ink transition-colors">Kontak</a>
+                <a href="#tentang" data-spy="tentang" class="nav-link px-4 py-1.5 rounded-full text-sm font-medium text-ink2 hover:text-ink transition-colors">Tentang</a>
+                <a href="#pilar" data-spy="pilar" class="nav-link px-4 py-1.5 rounded-full text-sm font-medium text-ink2 hover:text-ink transition-colors">Pilar</a>
+                <a href="#roadmap" data-spy="roadmap" class="nav-link px-4 py-1.5 rounded-full text-sm font-medium text-ink2 hover:text-ink transition-colors">Program</a>
+                <a href="#galeri" data-spy="galeri" class="nav-link px-4 py-1.5 rounded-full text-sm font-medium text-ink2 hover:text-ink transition-colors">Galeri</a>
+                <a href="#pendaftaran" data-spy="pendaftaran" class="nav-link px-4 py-1.5 rounded-full text-sm font-medium text-ink2 hover:text-ink transition-colors">Pendaftaran</a>
+                <a href="#kontak" data-spy="kontak" class="nav-link px-4 py-1.5 rounded-full text-sm font-medium text-ink2 hover:text-ink transition-colors">Kontak</a>
             </nav>
 
             <!-- Mobile Menu Toggle -->
@@ -412,8 +414,8 @@
                 </div>
                 <div class="p-4 flex items-center justify-between gap-3">
                     <div class="min-w-0">
-                        <p id="hero-card-tag" class="text-[11px] uppercase tracking-widest text-sky-300 font-extrabold truncate">Prestasi Siswa</p>
-                        <p id="hero-card-title" class="font-display font-bold text-[13px] text-white leading-snug">3 Emas Kaltim Open Nusantara Cup 1 2026</p>
+                        <p id="hero-card-tag" class="text-[11px] uppercase tracking-widest text-sky-300 font-semibold truncate">Prestasi Siswa</p>
+                        <p id="hero-card-title" class="font-display font-medium text-[13px] text-white leading-snug">3 Emas Kaltim Open Nusantara Cup 1 2026</p>
                     </div>
                     <span class="w-9 h-9 rounded-full bg-yellow-400 text-night flex items-center justify-center shrink-0">
                         <i id="hero-card-icon" class="fas fa-medal"></i>
@@ -425,11 +427,11 @@
             <div class="relative z-10 max-w-[1600px] w-full mx-auto px-5 sm:px-8 lg:px-12 pt-36 pb-10 sm:pb-14">
                 <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-8">
                     <div class="max-w-3xl">
-                        <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-white/15 backdrop-blur-md border border-white/25 text-xs sm:text-sm font-bold tracking-wider uppercase mb-5">
+                        <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-white/15 backdrop-blur-md border border-white/25 text-xs sm:text-sm font-medium tracking-wider uppercase mb-5">
                             <span class="w-2 h-2 rounded-full bg-yellow-300 animate-pulse"></span>
                             <span>Penerimaan Murid Baru Dibuka • Akreditasi Unggul (A)</span>
                         </div>
-                        <h1 class="font-display t-hero font-bold text-white mb-5">
+                        <h1 class="font-display t-hero font-medium text-white mb-5">
                             SD Patra Dharma 3<br>
                             <span class="text-sky-300">Belajar Bahagia,</span> Tumbuh <span class="text-yellow-300">Bermakna.</span>
                         </h1>
@@ -452,7 +454,7 @@
                     </div>
 
                     <!-- Scroll Cue -->
-                    <a href="#statement" class="hidden sm:inline-flex items-center gap-2.5 text-xs font-extrabold tracking-[0.2em] uppercase text-white/80 hover:text-sky-300 transition pb-2">
+                    <a href="#statement" class="hidden sm:inline-flex items-center gap-2.5 text-xs font-semibold tracking-[0.2em] uppercase text-white/80 hover:text-sky-300 transition pb-2">
                         <i class="fas fa-star text-yellow-300 text-xs"></i>
                         <span>Scroll untuk menjelajah</span>
                     </a>
@@ -466,7 +468,7 @@
 
             <div class="relative z-10 max-w-[1440px] mx-auto px-5 sm:px-8 lg:px-12">
                 <div class="max-w-5xl reveal-up">
-                    <h2 class="font-display t-statement font-semibold text-ink mb-9">
+                    <h2 class="font-display t-statement font-medium text-ink mb-9">
                         Sekolah dasar swasta terakreditasi <span class="text-patra-royal">Unggul (A)</span> di Balikpapan yang memadukan
                         <span class="text-patra-red">·</span> Akhlak Mulia, Ilmu Pengetahuan, Karakter, dan Wawasan Lingkungan.
                     </h2>
@@ -489,25 +491,25 @@
                 <!-- 4-Column Rolling Odometer Stats Row -->
                 <div class="grid grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-10 pt-10 border-t border-black/10 reveal-up" id="odo-stats">
                     <div>
-                        <div class="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-patra-royal mb-2">
+                        <div class="font-display text-4xl sm:text-5xl lg:text-6xl font-normal tracking-[-0.04em] text-patra-royal mb-2">
                             <span class="odo-num" data-target="4">4</span>
                         </div>
                         <p class="text-sm sm:text-base text-ink2 font-medium leading-snug">Pilar karakter &amp; visi sekolah</p>
                     </div>
                     <div>
-                        <div class="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-ink mb-2">
+                        <div class="font-display text-4xl sm:text-5xl lg:text-6xl font-normal tracking-[-0.04em] text-ink mb-2">
                             <span class="odo-num" data-target="6">6</span>
                         </div>
                         <p class="text-sm sm:text-base text-ink2 font-medium leading-snug">Tahun jenjang kelas dasar (Fase A–C)</p>
                     </div>
                     <div>
-                        <div class="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-patra-blue mb-2">
+                        <div class="font-display text-4xl sm:text-5xl lg:text-6xl font-normal tracking-[-0.04em] text-patra-blue mb-2">
                             <span class="odo-num" data-target="16">16</span>
                         </div>
                         <p class="text-sm sm:text-base text-ink2 font-medium leading-snug">Pilihan ekstrakurikuler bakat &amp; minat</p>
                     </div>
                     <div>
-                        <div class="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-ink mb-2">
+                        <div class="font-display text-4xl sm:text-5xl lg:text-6xl font-normal tracking-[-0.04em] text-ink mb-2">
                             <span class="odo-num" data-target="5">5</span>
                         </div>
                         <p class="text-sm sm:text-base text-ink2 font-medium leading-snug">Hari sekolah efektif Kurikulum Merdeka</p>
@@ -532,7 +534,7 @@
                         </p>
                     </div>
                     <div class="lg:col-span-8 space-y-6 reveal-up">
-                        <h2 class="font-display t-display font-bold text-ink">
+                        <h2 class="font-display t-display font-medium text-ink">
                             Strategi belajar kami menghadirkan suasana sekolah yang ceria, aman, dan menumbuhkan potensi unik setiap anak.
                         </h2>
                         <p class="text-base sm:text-lg text-ink2 leading-relaxed max-w-2xl">
@@ -551,13 +553,13 @@
                 <!-- Scroll-Zoom Photo Band -->
                 <div class="relative py-8 sm:py-12 flex flex-col items-center">
                     <div class="w-full flex items-center justify-between gap-4 sm:gap-8 relative z-20 pointer-events-none mb-4 lg:mb-0">
-                        <span class="font-display t-zoom-word font-bold text-ink/90 select-none" id="zoom-word-left">Belajar</span>
-                        <span class="font-display t-zoom-word font-bold text-patra-blue select-none text-right" id="zoom-word-right">Bermakna</span>
+                        <span class="font-display t-zoom-word font-medium text-ink/90 select-none" id="zoom-word-left">Belajar</span>
+                        <span class="font-display t-zoom-word font-medium text-patra-blue select-none text-right" id="zoom-word-right">Bermakna</span>
                     </div>
                     <div id="zoom-photo-wrap" class="w-full max-w-4xl lg:-mt-10 rounded-[28px] sm:rounded-[36px] overflow-hidden shadow-2xl border-4 border-white transition-transform duration-300 will-change-transform">
                         <img src="assets/upcarasenin.JPG" alt="Suasana upacara dan lingkungan hijau SD Patra Dharma 3 Balikpapan" class="w-full h-64 sm:h-96 lg:h-[460px] object-cover">
                     </div>
-                    <p class="mt-4 text-xs sm:text-sm font-semibold text-ink3 tracking-wide text-center">
+                    <p class="mt-4 text-xs sm:text-sm font-medium text-ink3 tracking-wide text-center">
                         Lingkungan Sekolah Asri — Jl. Sekolah No.1, Balikpapan Kota
                     </p>
                 </div>
@@ -576,7 +578,7 @@
                 </div>
 
                 <div class="relative max-w-5xl mx-auto flex flex-col lg:flex-row items-center justify-center gap-6 lg:gap-8 reveal-up">
-                    <span class="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-white/95 tracking-tight">Karya</span>
+                    <span class="font-display text-4xl sm:text-5xl lg:text-6xl font-medium text-white/95 tracking-[-0.035em]">Karya</span>
 
                     <!-- Rounded 16:9 Media Stage with Wavy Motion -->
                     <div class="relative w-full max-w-2xl aspect-video rounded-[26px] sm:rounded-[32px] overflow-hidden border border-white/15 shadow-2xl group cursor-pointer" id="spotlight-trigger">
@@ -587,13 +589,13 @@
                                     class="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-white/95 text-patra-royal flex items-center justify-center text-xl sm:text-2xl shadow-2xl group-hover:scale-110 transition-transform duration-300 mb-3">
                                 <i class="fas fa-play ml-1"></i>
                             </button>
-                            <span class="px-4 py-1.5 rounded-full bg-white/15 backdrop-blur-md border border-white/20 text-xs sm:text-sm font-bold text-white">
+                            <span class="px-4 py-1.5 rounded-full bg-white/15 backdrop-blur-md border border-white/20 text-xs sm:text-sm font-medium text-white">
                                 Lihat Dokumentasi &amp; Kanal YouTube Sekolah
                             </span>
                         </div>
                     </div>
 
-                    <span class="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-sky-400 tracking-tight">Siswa</span>
+                    <span class="font-display text-4xl sm:text-5xl lg:text-6xl font-medium text-sky-400 tracking-[-0.035em]">Siswa</span>
                 </div>
             </div>
         </section>
@@ -610,11 +612,11 @@
                                     <span class="eyebrow-dot"></span>
                                     <span>02 — Empat Pilar Pendidikan</span>
                                 </div>
-                                <h2 class="font-display t-display font-bold text-ink">
+                                <h2 class="font-display t-display font-medium text-ink">
                                     Fondasi Tumbuh Anak Hebat
                                 </h2>
                             </div>
-                            <p class="text-sm font-bold text-ink3 hidden lg:flex items-center gap-2 uppercase tracking-widest">
+                            <p class="text-sm font-medium text-ink3 hidden lg:flex items-center gap-2 uppercase tracking-widest">
                                 <span>Scroll untuk menggeser kartu</span>
                                 <i class="fas fa-arrow-right text-patra-blue"></i>
                             </p>
@@ -629,17 +631,17 @@
                             <article class="w-[86vw] sm:w-[460px] lg:w-[680px] shrink-0 rounded-[30px] bg-[#E6F1FC] border border-sky-200/80 p-6 sm:p-8 grid grid-cols-1 lg:grid-cols-12 gap-6 items-center shadow-sm">
                                 <div class="lg:col-span-7 flex flex-col justify-between h-full space-y-5">
                                     <div>
-                                        <span class="font-mono text-xs font-extrabold text-[#0284C7]">01 / 04</span>
-                                        <h3 class="font-display text-2xl sm:text-3xl font-bold text-ink mt-1">Berilmu &amp; Inovatif</h3>
+                                        <span class="font-mono text-xs font-semibold text-[#0284C7]">01 / 04</span>
+                                        <h3 class="font-display text-2xl sm:text-3xl font-medium tracking-[-0.025em] text-ink mt-1">Berilmu &amp; Inovatif</h3>
                                         <p class="text-sm sm:text-base text-ink2 mt-2 leading-relaxed">Pembelajaran Kurikulum Merdeka berbasis literasi, numerasi, dan proyek praktik nyata (STEM).</p>
                                     </div>
                                     <div class="flex flex-wrap gap-1.5">
-                                        <span class="px-3 py-1 rounded-full bg-white/85 text-xs font-bold text-[#1D4ED8]">Kurikulum Merdeka</span>
-                                        <span class="px-3 py-1 rounded-full bg-white/85 text-xs font-bold text-[#1D4ED8]">Proyek STEM</span>
-                                        <span class="px-3 py-1 rounded-full bg-white/85 text-xs font-bold text-[#1D4ED8]">Sains Club</span>
-                                        <span class="px-3 py-1 rounded-full bg-white/85 text-xs font-bold text-[#1D4ED8]">Math Club</span>
-                                        <span class="px-3 py-1 rounded-full bg-white/85 text-xs font-bold text-[#1D4ED8]">English Club</span>
-                                        <span class="px-3 py-1 rounded-full bg-white/85 text-xs font-bold text-[#1D4ED8]">Robotic</span>
+                                        <span class="px-3 py-1 rounded-full bg-white/85 text-xs font-medium text-[#1D4ED8]">Kurikulum Merdeka</span>
+                                        <span class="px-3 py-1 rounded-full bg-white/85 text-xs font-medium text-[#1D4ED8]">Proyek STEM</span>
+                                        <span class="px-3 py-1 rounded-full bg-white/85 text-xs font-medium text-[#1D4ED8]">Sains Club</span>
+                                        <span class="px-3 py-1 rounded-full bg-white/85 text-xs font-medium text-[#1D4ED8]">Math Club</span>
+                                        <span class="px-3 py-1 rounded-full bg-white/85 text-xs font-medium text-[#1D4ED8]">English Club</span>
+                                        <span class="px-3 py-1 rounded-full bg-white/85 text-xs font-medium text-[#1D4ED8]">Robotic</span>
                                     </div>
                                     <div>
                                         <a href="#roadmap" data-jump-tab="sains" class="jump-roadmap btn-pill bg-[#0B1736] hover:bg-[#1D4ED8] text-white px-5 py-2.5 text-xs sm:text-sm">
@@ -658,16 +660,16 @@
                             <article class="w-[86vw] sm:w-[460px] lg:w-[680px] shrink-0 rounded-[30px] bg-[#E3F4EA] border border-emerald-200/80 p-6 sm:p-8 grid grid-cols-1 lg:grid-cols-12 gap-6 items-center shadow-sm">
                                 <div class="lg:col-span-7 flex flex-col justify-between h-full space-y-5">
                                     <div>
-                                        <span class="font-mono text-xs font-extrabold text-[#15803D]">02 / 04</span>
-                                        <h3 class="font-display text-2xl sm:text-3xl font-bold text-ink mt-1">Berwawasan Lingkungan</h3>
+                                        <span class="font-mono text-xs font-semibold text-[#15803D]">02 / 04</span>
+                                        <h3 class="font-display text-2xl sm:text-3xl font-medium tracking-[-0.025em] text-ink mt-1">Berwawasan Lingkungan</h3>
                                         <p class="text-sm sm:text-base text-ink2 mt-2 leading-relaxed">Menumbuhkan kesadaran cinta alam, kebersihan kelas, penghijauan, dan tanggung jawab ekologis.</p>
                                     </div>
                                     <div class="flex flex-wrap gap-1.5">
-                                        <span class="px-3 py-1 rounded-full bg-white/85 text-xs font-bold text-[#15803D]">Sekolah Asri</span>
-                                        <span class="px-3 py-1 rounded-full bg-white/85 text-xs font-bold text-[#15803D]">Pilah Sampah</span>
-                                        <span class="px-3 py-1 rounded-full bg-white/85 text-xs font-bold text-[#15803D]">Cinta Tanaman</span>
-                                        <span class="px-3 py-1 rounded-full bg-white/85 text-xs font-bold text-[#15803D]">Budaya Bersih</span>
-                                        <span class="px-3 py-1 rounded-full bg-white/85 text-xs font-bold text-[#15803D]">Hemat Energi</span>
+                                        <span class="px-3 py-1 rounded-full bg-white/85 text-xs font-medium text-[#15803D]">Sekolah Asri</span>
+                                        <span class="px-3 py-1 rounded-full bg-white/85 text-xs font-medium text-[#15803D]">Pilah Sampah</span>
+                                        <span class="px-3 py-1 rounded-full bg-white/85 text-xs font-medium text-[#15803D]">Cinta Tanaman</span>
+                                        <span class="px-3 py-1 rounded-full bg-white/85 text-xs font-medium text-[#15803D]">Budaya Bersih</span>
+                                        <span class="px-3 py-1 rounded-full bg-white/85 text-xs font-medium text-[#15803D]">Hemat Energi</span>
                                     </div>
                                     <div>
                                         <a href="#roadmap" data-jump-tab="fase" class="jump-roadmap btn-pill bg-[#0B1736] hover:bg-[#1D4ED8] text-white px-5 py-2.5 text-xs sm:text-sm">
@@ -686,16 +688,16 @@
                             <article class="w-[86vw] sm:w-[460px] lg:w-[680px] shrink-0 rounded-[30px] bg-[#FEECEC] border border-red-200/80 p-6 sm:p-8 grid grid-cols-1 lg:grid-cols-12 gap-6 items-center shadow-sm">
                                 <div class="lg:col-span-7 flex flex-col justify-between h-full space-y-5">
                                     <div>
-                                        <span class="font-mono text-xs font-extrabold text-[#DC2626]">03 / 04</span>
-                                        <h3 class="font-display text-2xl sm:text-3xl font-bold text-ink mt-1">Akhlak &amp; Karakter</h3>
+                                        <span class="font-mono text-xs font-semibold text-[#DC2626]">03 / 04</span>
+                                        <h3 class="font-display text-2xl sm:text-3xl font-medium tracking-[-0.025em] text-ink mt-1">Akhlak &amp; Karakter</h3>
                                         <p class="text-sm sm:text-base text-ink2 mt-2 leading-relaxed">Pembiasaan adab, sopan santun, kedisiplinan upacara, dan kepedulian sosial dalam suasana kekeluargaan.</p>
                                     </div>
                                     <div class="flex flex-wrap gap-1.5">
-                                        <span class="px-3 py-1 rounded-full bg-white/85 text-xs font-bold text-[#DC2626]">Adab Harian</span>
-                                        <span class="px-3 py-1 rounded-full bg-white/85 text-xs font-bold text-[#DC2626]">LKBB</span>
-                                        <span class="px-3 py-1 rounded-full bg-white/85 text-xs font-bold text-[#DC2626]">Habsyi</span>
-                                        <span class="px-3 py-1 rounded-full bg-white/85 text-xs font-bold text-[#DC2626]">Public Speaking</span>
-                                        <span class="px-3 py-1 rounded-full bg-white/85 text-xs font-bold text-[#DC2626]">Ramah Anak</span>
+                                        <span class="px-3 py-1 rounded-full bg-white/85 text-xs font-medium text-[#DC2626]">Adab Harian</span>
+                                        <span class="px-3 py-1 rounded-full bg-white/85 text-xs font-medium text-[#DC2626]">LKBB</span>
+                                        <span class="px-3 py-1 rounded-full bg-white/85 text-xs font-medium text-[#DC2626]">Habsyi</span>
+                                        <span class="px-3 py-1 rounded-full bg-white/85 text-xs font-medium text-[#DC2626]">Public Speaking</span>
+                                        <span class="px-3 py-1 rounded-full bg-white/85 text-xs font-medium text-[#DC2626]">Ramah Anak</span>
                                     </div>
                                     <div>
                                         <a href="#roadmap" data-jump-tab="karakter" class="jump-roadmap btn-pill bg-[#0B1736] hover:bg-[#1D4ED8] text-white px-5 py-2.5 text-xs sm:text-sm">
@@ -707,7 +709,7 @@
                                 </div>
                                 <div class="lg:col-span-5 rounded-2xl overflow-hidden h-48 lg:h-72 shadow-md bg-white flex flex-col items-center justify-center p-6 text-center">
                                     <img src="assets/logo%20ypdm.png" alt="Logo Yayasan Patra Dharma Mandiri Balikpapan" class="w-28 h-28 object-contain mb-3">
-                                    <p class="font-display font-bold text-sm text-patra-royal">Mandiri • Unggul • Terpercaya</p>
+                                    <p class="font-display font-medium tracking-tight text-sm text-patra-royal">Mandiri • Unggul • Terpercaya</p>
                                 </div>
                             </article>
 
@@ -715,8 +717,8 @@
                             <article class="w-[86vw] sm:w-[460px] lg:w-[680px] shrink-0 rounded-[30px] bg-[#FEF7D6] border border-yellow-300/80 p-6 sm:p-8 grid grid-cols-1 lg:grid-cols-12 gap-6 items-center shadow-sm">
                                 <div class="lg:col-span-7 flex flex-col justify-between h-full space-y-5">
                                     <div>
-                                        <span class="font-mono text-xs font-extrabold text-[#A16207]">04 / 04</span>
-                                        <h3 class="font-display text-2xl sm:text-3xl font-bold text-ink mt-1">Bakat &amp; Ekspresi</h3>
+                                        <span class="font-mono text-xs font-semibold text-[#A16207]">04 / 04</span>
+                                        <h3 class="font-display text-2xl sm:text-3xl font-medium tracking-[-0.025em] text-ink mt-1">Bakat &amp; Ekspresi</h3>
                                         <p class="text-sm sm:text-base text-ink2 mt-2 leading-relaxed">Ruang ekspresi bebas untuk menyalurkan minat olahraga, seni rupa, tari, hingga musik siswa.</p>
                                     </div>
                                     <div class="flex flex-wrap gap-1.5">
@@ -758,7 +760,7 @@
         <div class="bg-canvas py-4">
         <section id="roadmap" class="relative py-20 sm:py-28 rounded-[var(--r-lg)] mx-2 sm:mx-4 lg:mx-6 my-4 overflow-hidden" style="background-color: #E6F1FC;">
             <!-- Giant Watermark Text -->
-            <div id="roadmap-watermark" class="pointer-events-none select-none font-display font-bold uppercase text-[14vw] leading-none opacity-[0.05] absolute -top-2 right-4 tracking-tight text-ink">
+            <div id="roadmap-watermark" class="pointer-events-none select-none font-display font-medium uppercase text-[14vw] leading-none opacity-[0.05] absolute -top-2 right-4 tracking-[-0.04em] text-ink">
                 FASE 1–6
             </div>
 
@@ -769,7 +771,7 @@
                             <span class="eyebrow-dot" id="roadmap-dot"></span>
                             <span>03 — Roadmap 6 Tahun &amp; Ekskul</span>
                         </div>
-                        <h2 class="font-display t-display font-bold text-ink">
+                        <h2 class="font-display t-display font-medium text-ink">
                             Perjalanan Belajar &amp; Pengembangan Bakat
                         </h2>
                         <p class="text-sm sm:text-base text-ink2 mt-2 max-w-2xl">
@@ -833,7 +835,7 @@
                             <span class="eyebrow-dot" style="background-color:#38BDF8;"></span>
                             <span>04 — Galeri &amp; Identitas</span>
                         </div>
-                        <h2 class="font-display t-display font-bold text-white">
+                        <h2 class="font-display t-display font-medium text-white">
                             Momen Ceria &amp; Prestasi Sekolah
                         </h2>
                         <p class="text-slate-300 mt-2 max-w-xl">
@@ -888,7 +890,7 @@
                             <span class="eyebrow-dot"></span>
                             <span>05 — Kabar &amp; Media Sekolah</span>
                         </div>
-                        <h2 class="font-display t-display font-bold text-ink">
+                        <h2 class="font-display t-display font-medium text-ink">
                             Ikuti Aktivitas Terbaru Kami
                         </h2>
                         <p class="text-ink2 mt-2 max-w-xl">
@@ -908,12 +910,12 @@
                     <div class="lg:col-span-5 bg-white rounded-[28px] border border-blue-900/10 p-7 sm:p-8 flex flex-col justify-between gap-6 shadow-sm">
                         <div class="space-y-4">
                             <div class="flex items-center justify-between">
-                                <span class="px-3.5 py-1 rounded-full bg-sky-50 text-patra-blue text-xs font-extrabold uppercase tracking-wider">Portal Berita</span>
+                                <span class="px-3.5 py-1 rounded-full bg-sky-50 text-patra-blue text-xs font-semibold uppercase tracking-wider">Portal Berita</span>
                                 <span class="w-11 h-11 rounded-2xl bg-blue-50 text-patra-royal flex items-center justify-center text-lg">
                                     <i class="fas fa-newspaper"></i>
                                 </span>
                             </div>
-                            <h3 class="font-display text-2xl sm:text-3xl font-bold text-ink">Kabar &amp; Artikel SD Patra Dharma 3</h3>
+                            <h3 class="font-display text-2xl sm:text-3xl font-medium tracking-[-0.025em] text-ink">Kabar &amp; Artikel SD Patra Dharma 3</h3>
                             <p class="text-sm sm:text-base text-ink2 leading-relaxed">
                                 Baca berita kegiatan sekolah, cerita pembelajaran Kurikulum Merdeka, serta pengumuman resmi untuk orang tua dan siswa.
                             </p>
@@ -944,8 +946,8 @@
                                 <i class="fas fa-arrow-up-right-from-square text-xs text-ink3 group-hover:text-pink-600 transition"></i>
                             </div>
                             <div>
-                                <p class="text-xs font-extrabold uppercase tracking-wider text-pink-600 mb-1">@sdpd3bpn</p>
-                                <h4 class="font-display text-xl font-bold text-ink">Instagram</h4>
+                                <p class="text-xs font-semibold uppercase tracking-wider text-pink-600 mb-1">@sdpd3bpn</p>
+                                <h4 class="font-display text-xl font-medium tracking-[-0.02em] text-ink">Instagram</h4>
                                 <p class="text-sm text-ink2 mt-1">Foto &amp; reels kegiatan harian siswa di kelas maupun lapangan.</p>
                             </div>
                         </a>
@@ -959,8 +961,8 @@
                                 <i class="fas fa-arrow-up-right-from-square text-xs text-ink3 group-hover:text-red-600 transition"></i>
                             </div>
                             <div>
-                                <p class="text-xs font-extrabold uppercase tracking-wider text-red-600 mb-1">@sdpd3bpn</p>
-                                <h4 class="font-display text-xl font-bold text-ink">YouTube</h4>
+                                <p class="text-xs font-semibold uppercase tracking-wider text-red-600 mb-1">@sdpd3bpn</p>
+                                <h4 class="font-display text-xl font-medium tracking-[-0.02em] text-ink">YouTube</h4>
                                 <p class="text-sm text-ink2 mt-1">Dokumentasi acara sekolah, pentas seni, dan karya proyek siswa.</p>
                             </div>
                         </a>
@@ -974,8 +976,8 @@
                                 <i class="fas fa-arrow-up-right-from-square text-xs text-ink3 group-hover:text-ink transition"></i>
                             </div>
                             <div>
-                                <p class="text-xs font-extrabold uppercase tracking-wider text-ink2 mb-1">@sdpd3bpn</p>
-                                <h4 class="font-display text-xl font-bold text-ink">TikTok</h4>
+                                <p class="text-xs font-semibold uppercase tracking-wider text-ink2 mb-1">@sdpd3bpn</p>
+                                <h4 class="font-display text-xl font-medium tracking-[-0.02em] text-ink">TikTok</h4>
                                 <p class="text-sm text-ink2 mt-1">Video pendek keseruan ekstrakurikuler dan momen ceria siswa.</p>
                             </div>
                         </a>
@@ -989,8 +991,8 @@
                                 <i class="fas fa-arrow-up-right-from-square text-xs text-ink3 group-hover:text-blue-600 transition"></i>
                             </div>
                             <div>
-                                <p class="text-xs font-extrabold uppercase tracking-wider text-blue-600 mb-1">sdpd3bpn</p>
-                                <h4 class="font-display text-xl font-bold text-ink">Facebook</h4>
+                                <p class="text-xs font-semibold uppercase tracking-wider text-blue-600 mb-1">sdpd3bpn</p>
+                                <h4 class="font-display text-xl font-medium tracking-[-0.02em] text-ink">Facebook</h4>
                                 <p class="text-sm text-ink2 mt-1">Informasi resmi dan galeri kegiatan bersama orang tua murid.</p>
                             </div>
                         </a>
@@ -1011,12 +1013,12 @@
                     <!-- Asymmetric Split Headline -->
                     <div class="grid grid-cols-1 md:grid-cols-12 items-end gap-4">
                         <div class="md:col-span-7">
-                            <h2 class="font-display text-5xl sm:text-6xl lg:text-7xl font-bold text-ink tracking-tight leading-none">
+                            <h2 class="font-display text-5xl sm:text-6xl lg:text-7xl font-medium text-ink tracking-[-0.035em] leading-none">
                                 Pendaftaran
                             </h2>
                         </div>
                         <div class="md:col-span-5 md:text-right">
-                            <p class="font-display text-5xl sm:text-6xl lg:text-7xl font-bold text-ink tracking-tight leading-none">
+                            <p class="font-display text-5xl sm:text-6xl lg:text-7xl font-medium text-ink tracking-[-0.035em] leading-none">
                                 Murid <span class="text-patra-blue">Baru</span>
                             </p>
                         </div>
@@ -1032,10 +1034,10 @@
                     <div class="rounded-[28px] bg-[#E0F2FE] border border-sky-200 p-6 flex flex-col justify-between gap-6 hover:-translate-y-1.5 transition-transform duration-300">
                         <div>
                             <div class="flex items-center justify-between mb-4">
-                                <span class="px-3 py-1 rounded-full bg-white/90 text-xs font-extrabold text-patra-blue">Kelas Reguler</span>
+                                <span class="px-3 py-1 rounded-full bg-white/90 text-xs font-semibold text-patra-blue">Kelas Reguler</span>
                                 <i class="fas fa-child text-patra-blue text-xl"></i>
                             </div>
-                            <h3 class="font-display text-2xl font-bold text-ink mb-2">Program Reguler</h3>
+                            <h3 class="font-display text-2xl font-medium tracking-[-0.02em] text-ink mb-2">Program Reguler</h3>
                             <p class="text-sm text-ink2 leading-relaxed">Pendidikan dasar Kurikulum Merdeka dengan keseimbangan akademik, seni, olahraga, dan karakter.</p>
                         </div>
                         <div class="space-y-4">
@@ -1054,10 +1056,10 @@
                     <div class="rounded-[28px] bg-[#E6ECFA] border border-blue-200 p-6 flex flex-col justify-between gap-6 hover:-translate-y-1.5 transition-transform duration-300">
                         <div>
                             <div class="flex items-center justify-between mb-4">
-                                <span class="px-3 py-1 rounded-full bg-white/90 text-xs font-extrabold text-patra-royal">Kelas IT</span>
+                                <span class="px-3 py-1 rounded-full bg-white/90 text-xs font-semibold text-patra-royal">Kelas IT</span>
                                 <i class="fas fa-laptop-code text-patra-royal text-xl"></i>
                             </div>
-                            <h3 class="font-display text-2xl font-bold text-ink mb-2">Islam Terpadu</h3>
+                            <h3 class="font-display text-2xl font-medium tracking-[-0.02em] text-ink mb-2">Islam Terpadu</h3>
                             <p class="text-sm text-ink2 leading-relaxed">Memadukan pembelajaran kurikulum nasional dengan penguatan nilai keislaman serta praktik kreatif.</p>
                         </div>
                         <div class="space-y-4">
@@ -1076,10 +1078,10 @@
                     <div class="rounded-[28px] bg-[#FEF7D6] border border-yellow-300/80 p-6 flex flex-col justify-between gap-6 hover:-translate-y-1.5 transition-transform duration-300">
                         <div>
                             <div class="flex items-center justify-between mb-4">
-                                <span class="px-3 py-1 rounded-full bg-white/90 text-xs font-extrabold text-[#A16207]">Umum &amp; Inklusi</span>
+                                <span class="px-3 py-1 rounded-full bg-white/90 text-xs font-semibold text-[#A16207]">Umum &amp; Inklusi</span>
                                 <i class="fas fa-heart text-patra-red text-xl"></i>
                             </div>
-                            <h3 class="font-display text-2xl font-bold text-ink mb-2">Ramah Semua Anak</h3>
+                            <h3 class="font-display text-2xl font-medium tracking-[-0.02em] text-ink mb-2">Ramah Semua Anak</h3>
                             <p class="text-sm text-ink2 leading-relaxed">Membuka jalur pendaftaran Umum dan kuota Inklusi untuk mendampingi potensi setiap anak.</p>
                         </div>
                         <div class="space-y-4">
@@ -1107,26 +1109,26 @@
                         <span class="eyebrow-dot"></span>
                         <span>07 — Kontak Panitia PMB &amp; Sekolah</span>
                     </div>
-                    <h2 class="font-display t-display font-bold text-ink mb-2">Hubungi Panitia PMB</h2>
+                    <h2 class="font-display t-display font-medium text-ink mb-2">Hubungi Panitia PMB</h2>
                     <p class="text-ink2 text-base sm:text-lg">Terhubung langsung dengan WhatsApp Panitia PMB SD Patra Dharma 3 Balikpapan atau kunjungi sekretariat sekolah.</p>
                 </div>
 
                 <!-- 3-Column Info Grid (Alamat | Hotline Panitia PMB | Sekretariat Email & Telepon) -->
                 <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 py-8 border-y border-black/10 mb-12 reveal-up">
                     <div>
-                        <p class="text-xs font-extrabold uppercase tracking-widest text-ink3 mb-2.5">Alamat Sekretariat</p>
-                        <p class="font-semibold text-ink leading-relaxed mb-3">
+                        <p class="text-xs font-semibold uppercase tracking-widest text-ink3 mb-2.5">Alamat Sekretariat</p>
+                        <p class="font-medium text-ink leading-relaxed mb-3">
                             Jl. Sekolah No.1, Kel. Prapatan, Kec. Balikpapan Kota, Kota Balikpapan, Kalimantan Timur 76111
                         </p>
                         <a href="https://maps.google.com/?q=SD+Patra+Dharma+3+Balikpapan" target="_blank" rel="noopener noreferrer"
-                           class="inline-flex items-center gap-2 text-sm font-bold text-patra-blue hover:underline">
+                           class="inline-flex items-center gap-2 text-sm font-semibold text-patra-blue hover:underline">
                             <span>Lihat lokasi di Google Maps</span>
                             <i class="fas fa-external-link-alt text-xs"></i>
                         </a>
                     </div>
 
                     <div>
-                        <p class="text-xs font-extrabold uppercase tracking-widest text-ink3 mb-3">WhatsApp Panitia PMB</p>
+                        <p class="text-xs font-semibold uppercase tracking-widest text-ink3 mb-3">WhatsApp Panitia PMB</p>
                         <button type="button" id="kontak-hotline-trigger"
                                 class="btn-pill bg-[#2463A6] hover:bg-[#1B4E85] text-white px-6 py-3.5 text-sm shadow-md shadow-blue-900/15">
                             <i class="fab fa-whatsapp text-lg text-emerald-300"></i>
@@ -1137,17 +1139,17 @@
                     </div>
 
                     <div>
-                        <p class="text-xs font-extrabold uppercase tracking-widest text-ink3 mb-2.5">Email &amp; Telepon Sekolah</p>
+                        <p class="text-xs font-semibold uppercase tracking-widest text-ink3 mb-2.5">Email &amp; Telepon Sekolah</p>
                         <div class="space-y-3">
                             <div>
-                                <p class="text-xs font-bold text-ink3">Email Sekretariat PMB</p>
-                                <a href="mailto:sdpd3bpn@gmail.com" class="font-display text-xl font-bold text-ink hover:text-patra-blue transition break-all block">
+                                <p class="text-xs font-medium text-ink3">Email Sekretariat PMB</p>
+                                <a href="mailto:sdpd3bpn@gmail.com" class="font-display text-xl font-medium tracking-[-0.02em] text-ink hover:text-patra-blue transition break-all block">
                                     sdpd3bpn@gmail.com
                                 </a>
                             </div>
                             <div>
-                                <p class="text-xs font-bold text-ink3">Telepon Kantor Sekolah</p>
-                                <a href="tel:05427517662" class="font-display text-xl font-bold text-ink hover:text-patra-blue transition block">
+                                <p class="text-xs font-medium text-ink3">Telepon Kantor Sekolah</p>
+                                <a href="tel:05427517662" class="font-display text-xl font-medium tracking-[-0.02em] text-ink hover:text-patra-blue transition block">
                                     (0542) 7517662
                                 </a>
                             </div>
@@ -1160,10 +1162,10 @@
                     <img src="assets/upcarasenin.JPG" alt="Halaman SD Patra Dharma 3 Balikpapan" class="w-full h-72 sm:h-80 lg:h-96 object-cover">
                     <div class="absolute inset-0 bg-[#0B1736]/65 p-6 sm:p-10 lg:p-12 flex flex-col justify-end sm:justify-center">
                         <div class="max-w-xl space-y-4">
-                            <span class="inline-flex items-center gap-2 bg-white/15 backdrop-blur-md border border-white/20 text-white px-4 py-1.5 rounded-full text-xs font-bold">
+                            <span class="inline-flex items-center gap-2 bg-white/15 backdrop-blur-md border border-white/20 text-white px-4 py-1.5 rounded-full text-xs font-medium">
                                 <i class="fas fa-school text-yellow-300"></i> NPSN: 30401527 • Akreditasi A
                             </span>
-                            <h3 class="font-display text-2xl sm:text-4xl font-bold text-white leading-tight">
+                            <h3 class="font-display text-2xl sm:text-4xl font-medium tracking-[-0.03em] text-white leading-tight">
                                 SD Patra Dharma 3 Balikpapan
                             </h3>
                             <p class="text-sm sm:text-base text-slate-200">
@@ -1198,8 +1200,8 @@
                     <div class="flex items-center gap-3.5">
                         <img src="assets/logo%20ypdm.png" alt="Logo SD Patra Dharma 3" class="w-12 h-12 object-contain bg-white rounded-full p-1">
                         <div>
-                            <h3 class="font-display text-xl font-bold text-white">SD Patra Dharma 3 Balikpapan</h3>
-                            <p class="text-xs font-bold uppercase tracking-widest text-yellow-300">Mandiri • Unggul • Terpercaya</p>
+                            <h3 class="font-display text-xl font-medium tracking-tight text-white">SD Patra Dharma 3 Balikpapan</h3>
+                            <p class="text-xs font-semibold uppercase tracking-widest text-yellow-300">Mandiri • Unggul • Terpercaya</p>
                         </div>
                     </div>
                     <p class="text-sm sm:text-base text-slate-400 max-w-md leading-relaxed">
@@ -1298,10 +1300,10 @@
                 </div>
                 <div class="flex items-end justify-between gap-4">
                     <div>
-                        <p id="sheet-eyebrow" class="text-xs font-extrabold uppercase tracking-[0.18em] text-white/80 mb-1"></p>
-                        <h3 id="sheet-title" class="font-display text-3xl sm:text-4xl font-bold leading-tight"></h3>
+                        <p id="sheet-eyebrow" class="text-xs font-semibold uppercase tracking-[0.18em] text-white/80 mb-1"></p>
+                        <h3 id="sheet-title" class="font-display text-3xl sm:text-4xl font-medium tracking-[-0.025em] leading-tight"></h3>
                     </div>
-                    <span id="sheet-big-num" class="font-display text-5xl sm:text-6xl font-bold text-white/35 leading-none"></span>
+                    <span id="sheet-big-num" class="font-display text-5xl sm:text-6xl font-normal tracking-[-0.04em] text-white/35 leading-none"></span>
                 </div>
             </div>
 
@@ -1311,20 +1313,20 @@
 
             <div class="p-6 flex-1 overflow-y-auto space-y-5">
                 <div>
-                    <p class="text-xs font-extrabold uppercase tracking-widest text-ink3 mb-2">Deskripsi Program</p>
+                    <p class="text-xs font-semibold uppercase tracking-widest text-ink3 mb-2">Deskripsi Program</p>
                     <p id="sheet-desc" class="text-ink2 text-base leading-relaxed"></p>
                 </div>
                 <div class="bg-canvas rounded-2xl p-4 border border-black/5">
-                    <p class="text-xs font-extrabold uppercase tracking-widest text-ink3 mb-2">Fokus Pengembangan Siswa</p>
+                    <p class="text-xs font-semibold uppercase tracking-widest text-ink3 mb-2">Fokus Pengembangan Siswa</p>
                     <div id="sheet-points" class="flex flex-wrap gap-2"></div>
                 </div>
             </div>
 
             <div class="p-5 border-t border-black/10 bg-canvas flex items-center justify-between gap-3 shrink-0">
-                <button type="button" id="sheet-prev" class="px-4 py-2.5 rounded-full bg-white border border-black/10 hover:border-patra-royal text-xs sm:text-sm font-bold text-ink transition">
+                <button type="button" id="sheet-prev" class="px-4 py-2.5 rounded-full bg-white border border-black/10 hover:border-patra-royal text-xs sm:text-sm font-semibold text-ink transition">
                     <i class="fas fa-arrow-left mr-1.5"></i> Sebelumnya
                 </button>
-                <button type="button" id="sheet-next" class="px-4 py-2.5 rounded-full bg-patra-royal hover:bg-patra-blue text-xs sm:text-sm font-bold text-white transition">
+                <button type="button" id="sheet-next" class="px-4 py-2.5 rounded-full bg-patra-royal hover:bg-patra-blue text-xs sm:text-sm font-semibold text-white transition">
                     Berikutnya <i class="fas fa-arrow-right ml-1.5"></i>
                 </button>
             </div>
@@ -1337,7 +1339,7 @@
             <div class="flex items-center justify-between text-white">
                 <div>
                     <span id="lb-counter" class="text-xs font-mono text-sky-300">1 / 2</span>
-                    <h3 id="lb-title" class="font-display text-lg sm:text-2xl font-bold"></h3>
+                    <h3 id="lb-title" class="font-display text-lg sm:text-2xl font-medium tracking-tight"></h3>
                 </div>
                 <div class="flex items-center gap-2.5">
                     <a id="lb-download" href="#" download class="px-4 py-2 rounded-full bg-white/10 hover:bg-white/20 text-xs sm:text-sm font-bold text-white inline-flex items-center gap-2 transition">
@@ -1379,7 +1381,7 @@
                 <img src="assets/stem2425.JPG" alt="Proyek STEM SD Patra Dharma 3" class="w-full h-64 object-cover">
             </div>
             <div>
-                <h3 class="font-display text-2xl font-bold mb-2">Belajar Aktif Lewat Proyek &amp; Karya Nyata</h3>
+                <h3 class="font-display text-2xl font-medium tracking-[-0.02em] mb-2">Belajar Aktif Lewat Proyek &amp; Karya Nyata</h3>
                 <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
                     Saksikan beragam dokumentasi kegiatan pembelajaran, upacara, lomba, hingga kreativitas siswa di kanal media sosial resmi SD Patra Dharma 3 Balikpapan.
                 </p>
@@ -1409,8 +1411,8 @@
                         <i class="fab fa-whatsapp"></i>
                     </div>
                     <div>
-                        <h3 class="font-display text-xl font-bold text-ink">Hotline WhatsApp PMB</h3>
-                        <p class="text-xs font-bold text-emerald-600 flex items-center gap-1.5">
+                        <h3 class="font-display text-xl font-semibold tracking-tight text-ink">Hotline WhatsApp PMB</h3>
+                        <p class="text-xs font-semibold text-emerald-600 flex items-center gap-1.5">
                             <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span> Online • Panitia PMB Siap Membantu
                         </p>
                     </div>
@@ -1426,13 +1428,13 @@
                 <a href="https://wa.me/6282111156179" target="_blank" rel="noopener noreferrer"
                    class="flex items-center justify-between p-4 rounded-2xl bg-sky-50/70 hover:bg-sky-100 border border-sky-200/80 transition group">
                     <div class="flex items-center gap-3">
-                        <span class="w-10 h-10 rounded-full bg-[#2463A6] text-white font-display font-bold flex items-center justify-center">R</span>
+                        <span class="w-10 h-10 rounded-full bg-[#2463A6] text-white font-display font-semibold flex items-center justify-center">R</span>
                         <div>
-                            <p class="font-bold text-ink text-base">Bu Radiah</p>
+                            <p class="font-semibold text-ink text-base">Bu Radiah</p>
                             <p class="text-xs text-ink2">Panitia PMB</p>
                         </div>
                     </div>
-                    <span class="px-3.5 py-1.5 rounded-full bg-emerald-600 text-white text-xs font-bold group-hover:bg-emerald-500 inline-flex items-center gap-1.5">
+                    <span class="px-3.5 py-1.5 rounded-full bg-emerald-600 text-white text-xs font-semibold group-hover:bg-emerald-500 inline-flex items-center gap-1.5">
                         <i class="fab fa-whatsapp"></i> Chat WA
                     </span>
                 </a>
@@ -1440,13 +1442,13 @@
                 <a href="https://wa.me/6281350889571" target="_blank" rel="noopener noreferrer"
                    class="flex items-center justify-between p-4 rounded-2xl bg-sky-50/70 hover:bg-sky-100 border border-sky-200/80 transition group">
                     <div class="flex items-center gap-3">
-                        <span class="w-10 h-10 rounded-full bg-[#1D4ED8] text-white font-display font-bold flex items-center justify-center">N</span>
+                        <span class="w-10 h-10 rounded-full bg-[#1D4ED8] text-white font-display font-semibold flex items-center justify-center">N</span>
                         <div>
-                            <p class="font-bold text-ink text-base">Bu Nurin</p>
+                            <p class="font-semibold text-ink text-base">Bu Nurin</p>
                             <p class="text-xs text-ink2">Panitia PMB</p>
                         </div>
                     </div>
-                    <span class="px-3.5 py-1.5 rounded-full bg-emerald-600 text-white text-xs font-bold group-hover:bg-emerald-500 inline-flex items-center gap-1.5">
+                    <span class="px-3.5 py-1.5 rounded-full bg-emerald-600 text-white text-xs font-semibold group-hover:bg-emerald-500 inline-flex items-center gap-1.5">
                         <i class="fab fa-whatsapp"></i> Chat WA
                     </span>
                 </a>
@@ -1454,13 +1456,13 @@
                 <a href="https://wa.me/6285387775357" target="_blank" rel="noopener noreferrer"
                    class="flex items-center justify-between p-4 rounded-2xl bg-sky-50/70 hover:bg-sky-100 border border-sky-200/80 transition group">
                     <div class="flex items-center gap-3">
-                        <span class="w-10 h-10 rounded-full bg-[#0B1736] text-white font-display font-bold flex items-center justify-center">L</span>
+                        <span class="w-10 h-10 rounded-full bg-[#0B1736] text-white font-display font-semibold flex items-center justify-center">L</span>
                         <div>
-                            <p class="font-bold text-ink text-base">Bu Lenny</p>
+                            <p class="font-semibold text-ink text-base">Bu Lenny</p>
                             <p class="text-xs text-ink2">Panitia PMB</p>
                         </div>
                     </div>
-                    <span class="px-3.5 py-1.5 rounded-full bg-emerald-600 text-white text-xs font-bold group-hover:bg-emerald-500 inline-flex items-center gap-1.5">
+                    <span class="px-3.5 py-1.5 rounded-full bg-emerald-600 text-white text-xs font-semibold group-hover:bg-emerald-500 inline-flex items-center gap-1.5">
                         <i class="fab fa-whatsapp"></i> Chat WA
                     </span>
                 </a>
@@ -1808,11 +1810,11 @@
                                 <span class="font-mono text-2xl font-bold opacity-20 text-ink">${numStr}</span>
                             </div>
                             <div>
-                                <p class="text-[11px] font-extrabold uppercase tracking-wider mb-1" style="color:${cfg.accent}">${item.sub}</p>
-                                <h3 class="font-display text-2xl font-bold text-ink mb-2">${item.code}</h3>
+                                <p class="text-[11px] font-semibold uppercase tracking-wider mb-1" style="color:${cfg.accent}">${item.sub}</p>
+                                <h3 class="font-display text-2xl font-medium tracking-[-0.02em] text-ink mb-2">${item.code}</h3>
                                 <p class="text-sm text-ink2 line-clamp-3 leading-relaxed">${item.desc}</p>
                             </div>
-                            <div class="pt-3 border-t border-black/5 flex items-center justify-between text-xs font-extrabold" style="color:${cfg.accent}">
+                            <div class="pt-3 border-t border-black/5 flex items-center justify-between text-xs font-semibold" style="color:${cfg.accent}">
                                 <span>Lihat detail program</span>
                                 <i class="fas fa-arrow-right"></i>
                             </div>
@@ -2035,8 +2037,8 @@
                              class="w-full h-full object-cover object-[50%_20%] group-hover:scale-105 transition-transform duration-500">
                     </div>
                     <div class="p-3.5 flex-1 flex flex-col justify-start gap-1">
-                        <span class="text-[10px] font-extrabold uppercase tracking-wider ${item.tag.includes('Guru') ? 'text-yellow-300' : 'text-sky-300'}">${item.tag}</span>
-                        <p class="font-display text-xs sm:text-[13px] font-bold text-white leading-snug">${item.title}</p>
+                        <span class="text-[10px] font-semibold uppercase tracking-wider ${item.tag.includes('Guru') ? 'text-yellow-300' : 'text-sky-300'}">${item.tag}</span>
+                        <p class="font-display text-xs sm:text-[13px] font-medium text-white leading-snug">${item.title}</p>
                     </div>
                 </button>
             `;
@@ -2070,8 +2072,8 @@
                 galTabs.forEach((t) => {
                     const act = t.dataset.gcat === cat;
                     t.className = act
-                        ? 'gal-tab px-4 py-2 rounded-full text-xs sm:text-sm font-bold bg-[#2463A6] text-white shadow transition'
-                        : 'gal-tab px-4 py-2 rounded-full text-xs sm:text-sm font-bold bg-white/10 hover:bg-white/20 text-slate-200 transition';
+                        ? 'gal-tab px-4 py-2 rounded-full text-xs sm:text-sm font-semibold bg-[#2463A6] text-white shadow transition'
+                        : 'gal-tab px-4 py-2 rounded-full text-xs sm:text-sm font-semibold bg-white/10 hover:bg-white/20 text-slate-200 transition';
                 });
 
                 let html = '';
@@ -2081,8 +2083,8 @@
                     html += `
                         <div class="space-y-5">
                             <div>
-                                <span class="text-xs font-extrabold uppercase tracking-[0.2em] text-yellow-300 block mb-1">Kebanggaan Sekolah</span>
-                                <h3 class="font-display text-2xl sm:text-3xl font-bold text-white">Siswa &amp; Guru Berprestasi</h3>
+                                <span class="text-xs font-semibold uppercase tracking-[0.2em] text-yellow-300 block mb-1">Kebanggaan Sekolah</span>
+                                <h3 class="font-display text-2xl sm:text-3xl font-medium tracking-[-0.025em] text-white">Siswa &amp; Guru Berprestasi</h3>
                             </div>
                             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
                                 ${pWide.map((i) => buildCardHtml(i, 'aspect-[16/10]')).join('')}
@@ -2098,8 +2100,8 @@
                     html += `
                         <div class="space-y-5">
                             <div>
-                                <span class="text-xs font-extrabold uppercase tracking-[0.2em] text-sky-300 block mb-1">Akhlak Mulia &amp; Al-Qur’an</span>
-                                <h3 class="font-display text-2xl sm:text-3xl font-bold text-white">Khatmul Qur’an &amp; Imtihan Metode Ummi</h3>
+                                <span class="text-xs font-semibold uppercase tracking-[0.2em] text-sky-300 block mb-1">Akhlak Mulia &amp; Al-Qur’an</span>
+                                <h3 class="font-display text-2xl sm:text-3xl font-medium tracking-[-0.025em] text-white">Khatmul Qur’an &amp; Imtihan Metode Ummi</h3>
                             </div>
                             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
                                 ${khotmulPhotos.map((i) => buildCardHtml(i, 'aspect-[3/2]')).join('')}
@@ -2114,8 +2116,8 @@
                     html += `
                         <div class="space-y-5">
                             <div>
-                                <span class="text-xs font-extrabold uppercase tracking-[0.2em] text-sky-300 block mb-1">Aktivitas &amp; Budaya</span>
-                                <h3 class="font-display text-2xl sm:text-3xl font-bold text-white">Kegiatan Sekolah &amp; Semarak 17 Agustus</h3>
+                                <span class="text-xs font-semibold uppercase tracking-[0.2em] text-sky-300 block mb-1">Aktivitas &amp; Budaya</span>
+                                <h3 class="font-display text-2xl sm:text-3xl font-medium tracking-[-0.025em] text-white">Kegiatan Sekolah &amp; Semarak 17 Agustus</h3>
                             </div>
                             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
                                 ${kWide.map((i) => buildCardHtml(i, 'aspect-[16/10]')).join('')}
