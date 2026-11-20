@@ -737,7 +737,7 @@
                                     </div>
                                 </div>
                                 <div class="lg:col-span-5 rounded-2xl overflow-hidden h-48 lg:h-72 shadow-md">
-                                    <img src="assets/stem2425.JPG" alt="Siswa berkolaborasi mengembangkan kreativitas" class="w-full h-full object-cover object-right">
+                                    <img src="assets/Juara%20Trofeo%20Futsal.JPG" alt="Tim siswa berprestasi meraih piala Juara Trofeo Futsal" class="w-full h-full object-cover object-top">
                                 </div>
                             </article>
 
@@ -827,17 +827,17 @@
             <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[520px] h-[520px] rounded-full bg-sky-500/15 blur-3xl pointer-events-none"></div>
 
             <div class="relative z-10 max-w-[1440px] mx-auto px-5 sm:px-8 lg:px-12">
-                <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12 reveal-up">
+                <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-8 reveal-up">
                     <div>
                         <div class="eyebrow text-slate-300 mb-3">
                             <span class="eyebrow-dot" style="background-color:#38BDF8;"></span>
                             <span>04 — Galeri &amp; Identitas</span>
                         </div>
                         <h2 class="font-display t-display font-bold text-white">
-                            Momen Ceria di Sekolah
+                            Momen Ceria &amp; Prestasi Sekolah
                         </h2>
                         <p class="text-slate-300 mt-2 max-w-xl">
-                            Klik foto untuk memperbesar atau mengunduh dokumentasi kegiatan SD Patra Dharma 3 Balikpapan.
+                            Jelajahi dokumentasi prestasi siswa &amp; guru, wisuda Khatmul Qur’an, hingga kegiatan budaya sekolah. Klik foto untuk memperbesar.
                         </p>
                     </div>
                     <span class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 border border-white/15 text-xs font-bold text-sky-300 self-start md:self-auto">
@@ -845,86 +845,24 @@
                     </span>
                 </div>
 
-                <!-- Interactive Gallery Grid: Kegiatan Sekolah & Prestasi Tim -->
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-12 reveal-up">
-                    <button type="button" class="galeri-item group relative rounded-[24px] overflow-hidden border border-white/15 text-left focus:outline-none focus:ring-2 focus:ring-sky-400"
-                            data-src="assets/upcarasenin.JPG"
-                            data-title="Upacara Hari Senin &amp; Lingkungan Asri"
-                            data-caption="Pembiasaan kedisiplinan, cinta tanah air, dan suasana rindang halaman SD Patra Dharma 3 Balikpapan.">
-                        <img src="assets/upcarasenin.JPG" alt="Upacara Hari Senin SD Patra Dharma 3 Balikpapan" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500">
-                        <div class="absolute inset-0 bg-[#0B1736]/20 p-4 flex flex-col justify-end">
-                            <div class="bg-[#0B1736]/85 backdrop-blur-md border border-white/15 rounded-2xl px-3.5 py-2.5 self-start">
-                                <span class="text-[10px] font-bold uppercase tracking-widest text-sky-300 block mb-0.5">Karakter</span>
-                                <p class="font-display text-base font-bold text-white leading-snug">Upacara Senin &amp; Halaman Asri</p>
-                            </div>
-                        </div>
+                <!-- Filter Tabs Galeri -->
+                <div class="flex flex-wrap gap-2 mb-10 reveal-up" id="galeri-tabs" role="tablist">
+                    <button type="button" data-gcat="all" class="gal-tab px-4 py-2 rounded-full text-xs sm:text-sm font-bold bg-[#2463A6] text-white shadow transition">
+                        Semua <span class="ml-1 opacity-80">27</span>
                     </button>
-
-                    <button type="button" class="galeri-item group relative rounded-[24px] overflow-hidden border border-white/15 text-left focus:outline-none focus:ring-2 focus:ring-sky-400"
-                            data-src="assets/stem2425.JPG"
-                            data-title="Praktik Proyek STEM &amp; Kreativitas"
-                            data-caption="Siswa bekerja sama merancang karya sains dan teknologi secara aktif dan menyenangkan.">
-                        <img src="assets/stem2425.JPG" alt="Pembelajaran STEM siswa SD Patra Dharma 3" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500">
-                        <div class="absolute inset-0 bg-[#0B1736]/20 p-4 flex flex-col justify-end">
-                            <div class="bg-[#0B1736]/85 backdrop-blur-md border border-white/15 rounded-2xl px-3.5 py-2.5 self-start">
-                                <span class="text-[10px] font-bold uppercase tracking-widest text-yellow-300 block mb-0.5">Kurikulum Merdeka</span>
-                                <p class="font-display text-base font-bold text-white leading-snug">Pembelajaran Praktik STEM</p>
-                            </div>
-                        </div>
+                    <button type="button" data-gcat="prestasi" class="gal-tab px-4 py-2 rounded-full text-xs sm:text-sm font-bold bg-white/10 hover:bg-white/20 text-slate-200 transition">
+                        Prestasi <span class="ml-1 opacity-75">10</span>
                     </button>
-
-                    <button type="button" class="galeri-item group relative rounded-[24px] overflow-hidden border border-white/15 text-left focus:outline-none focus:ring-2 focus:ring-sky-400"
-                            data-src="assets/Juara%20Trofeo%20Futsal.JPG"
-                            data-title="Juara Trofeo Futsal"
-                            data-caption="Tim futsal SD Patra Dharma 3 Balikpapan bersama kepala sekolah dan pembina meraih piala Juara Trofeo Futsal.">
-                        <img src="assets/Juara%20Trofeo%20Futsal.JPG" alt="Tim Juara Trofeo Futsal SD Patra Dharma 3" class="w-full h-64 object-cover object-top group-hover:scale-105 transition-transform duration-500">
-                        <div class="absolute inset-0 bg-[#0B1736]/20 p-4 flex flex-col justify-end">
-                            <div class="bg-[#0B1736]/85 backdrop-blur-md border border-white/15 rounded-2xl px-3.5 py-2.5 self-start">
-                                <span class="text-[10px] font-bold uppercase tracking-widest text-sky-300 block mb-0.5">Prestasi Tim</span>
-                                <p class="font-display text-base font-bold text-white leading-snug">Juara Trofeo Futsal</p>
-                            </div>
-                        </div>
+                    <button type="button" data-gcat="khotmul" class="gal-tab px-4 py-2 rounded-full text-xs sm:text-sm font-bold bg-white/10 hover:bg-white/20 text-slate-200 transition">
+                        Khatmul Qur’an &amp; Imtihan <span class="ml-1 opacity-75">10</span>
                     </button>
-
-                    <button type="button" class="galeri-item group relative rounded-[24px] overflow-hidden border border-white/15 text-left focus:outline-none focus:ring-2 focus:ring-sky-400"
-                            data-src="assets/IMG_E1528.JPG"
-                            data-title="Juara II Kejuaraan Hapkido Kaltim"
-                            data-caption="Shaqueel Arsa R meraih Juara II Kejuaraan Daerah Hapkido Provinsi Kalimantan Timur.">
-                        <img src="assets/IMG_E1528.JPG" alt="Juara II Kejuaraan Hapkido Kaltim SD Patra Dharma 3" class="w-full h-64 object-cover object-[50%_20%] group-hover:scale-105 transition-transform duration-500">
-                        <div class="absolute inset-0 bg-[#0B1736]/20 p-4 flex flex-col justify-end">
-                            <div class="bg-[#0B1736]/85 backdrop-blur-md border border-white/15 rounded-2xl px-3.5 py-2.5 self-start">
-                                <span class="text-[10px] font-bold uppercase tracking-widest text-yellow-300 block mb-0.5">Prestasi Siswa</span>
-                                <p class="font-display text-base font-bold text-white leading-snug">Juara II Hapkido Kaltim</p>
-                            </div>
-                        </div>
+                    <button type="button" data-gcat="kegiatan" class="gal-tab px-4 py-2 rounded-full text-xs sm:text-sm font-bold bg-white/10 hover:bg-white/20 text-slate-200 transition">
+                        Kegiatan &amp; Budaya <span class="ml-1 opacity-75">7</span>
                     </button>
                 </div>
 
-                <!-- Galeri Prestasi Siswa & Guru (Portrait Cards) -->
-                <div class="mb-12 reveal-up">
-                    <div class="flex items-center justify-between gap-4 mb-5">
-                        <div>
-                            <span class="text-xs font-extrabold uppercase tracking-[0.2em] text-yellow-300 block mb-1">Kebanggaan Sekolah</span>
-                            <h3 class="font-display text-2xl sm:text-3xl font-bold text-white">Siswa &amp; Guru Berprestasi</h3>
-                        </div>
-                    </div>
-                    <div id="galeri-prestasi-grid" class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
-                        <!-- Rendered dynamically from prestasiSlides -->
-                    </div>
-                </div>
-
-                <!-- Galeri Khatmul Qur'an & Imtihan Metode Ummi -->
-                <div class="mb-14 reveal-up">
-                    <div class="flex items-center justify-between gap-4 mb-5">
-                        <div>
-                            <span class="text-xs font-extrabold uppercase tracking-[0.2em] text-sky-300 block mb-1">Akhlak Mulia &amp; Al-Qur'an</span>
-                            <h3 class="font-display text-2xl sm:text-3xl font-bold text-white">Khatmul Qur'an &amp; Imtihan Metode Ummi</h3>
-                        </div>
-                    </div>
-                    <div id="galeri-khotmul-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                        <!-- Rendered dynamically -->
-                    </div>
-                </div>
+                <!-- Dynamic Gallery Stage -->
+                <div id="galeri-stage" class="space-y-12 mb-14"></div>
 
                 <!-- Continuous Marquee Badges -->
                 <div class="pt-8 border-t border-white/10">
@@ -1977,7 +1915,7 @@
                 </span>`;
             }).join('');
 
-            // 11. Prestasi Siswa & Guru + Khatmul Qur'an & Imtihan
+            // 11. Prestasi Siswa & Guru + Seluruh Galeri Sekolah (27 Foto)
             const prestasiSlides = [
                 {
                     src: 'assets/3%20Emas%20Kaltim%20Open%20Nusantara%20Cup%201%202026.JPG',
@@ -1985,7 +1923,15 @@
                     title: '3 Emas Kaltim Open Nusantara Cup 1 2026',
                     caption: 'Siswa SD Patra Dharma 3 Balikpapan berhasil meraih 3 medali emas pada ajang Kaltim Open Nusantara Cup 1 Tahun 2026.',
                     icon: 'fa-medal',
-                    inGrid: true
+                    portrait: true
+                },
+                {
+                    src: 'assets/Runner%20Up%203x3%20Basketball.jpg',
+                    tag: 'Prestasi Siswa',
+                    title: 'Runner Up 3x3 Basketball (Kategori SD Mix)',
+                    caption: 'Prestasi membanggakan cabang olahraga basket 3x3 tingkat Sekolah Dasar.',
+                    icon: 'fa-basketball-ball',
+                    portrait: false
                 },
                 {
                     src: 'assets/IMG_E1528.JPG',
@@ -1993,7 +1939,7 @@
                     title: 'Juara II Kejuaraan Hapkido Kaltim',
                     caption: 'Shaqueel Arsa R meraih Juara II Kejuaraan Daerah Hapkido Provinsi Kalimantan Timur.',
                     icon: 'fa-medal',
-                    inGrid: false
+                    portrait: false
                 },
                 {
                     src: 'assets/Juara%20Trofeo%20Futsal.JPG',
@@ -2001,7 +1947,17 @@
                     title: 'Juara Trofeo Futsal',
                     caption: 'Tim futsal SD Patra Dharma 3 Balikpapan bersama kepala sekolah dan pembina meraih piala Juara Trofeo Futsal.',
                     icon: 'fa-futbol',
-                    inGrid: false
+                    portrait: false,
+                    hero: false
+                },
+                {
+                    src: 'assets/20260126_080043.jpg',
+                    tag: 'Prestasi Siswa',
+                    title: 'Siswa Berprestasi & Guru Pembina',
+                    caption: 'Penyerahan piala dan sertifikat penghargaan siswa berprestasi bersama kepala sekolah dan guru pembina.',
+                    icon: 'fa-trophy',
+                    portrait: false,
+                    hero: false
                 },
                 {
                     src: 'assets/Juara%203%20Coding%20Cerita%20Bank%20Indonesia.jpg',
@@ -2009,7 +1965,7 @@
                     title: 'Juara 3 Lomba Koding Cerita Bank Indonesia',
                     caption: 'Juara 3 Lomba Koding Cerita CBP Rupiah 2026 yang diselenggarakan oleh Bank Indonesia.',
                     icon: 'fa-laptop-code',
-                    inGrid: true
+                    portrait: true
                 },
                 {
                     src: 'assets/Juara%20Rugby.jpg',
@@ -2017,7 +1973,7 @@
                     title: 'Juara Rugby',
                     caption: 'Guru berprestasi SD Patra Dharma 3 Balikpapan meraih medali juara pada kejuaraan Rugby.',
                     icon: 'fa-trophy',
-                    inGrid: true
+                    portrait: true
                 },
                 {
                     src: 'assets/Top%205%20Winner%20English%20Quiz%20Competition.jpg',
@@ -2025,7 +1981,7 @@
                     title: 'Top 5 Winner English Quiz Competition',
                     caption: 'Prestasi siswa SD Patra Dharma 3 dalam ajang English Quiz Competition tingkat Sekolah Dasar.',
                     icon: 'fa-award',
-                    inGrid: true
+                    portrait: true
                 },
                 {
                     src: 'assets/Juara%20Renang.jpg',
@@ -2033,7 +1989,7 @@
                     title: 'Juara Lomba Renang',
                     caption: 'Deretan medali prestasi cabang olahraga renang oleh siswa SD Patra Dharma 3 Balikpapan.',
                     icon: 'fa-swimmer',
-                    inGrid: true
+                    portrait: true
                 },
                 {
                     src: 'assets/Juara%203%20Lomba%20Bertutur.jpg',
@@ -2041,94 +1997,63 @@
                     title: 'Juara 3 Lomba Bertutur',
                     caption: 'Penampilan penuh kreativitas meraih Juara 3 pada ajang Lomba Bertutur.',
                     icon: 'fa-microphone-alt',
-                    inGrid: true
+                    portrait: true
                 }
             ];
-
-            const prestasiGrid = document.getElementById('galeri-prestasi-grid');
-            if (prestasiGrid) {
-                prestasiGrid.innerHTML = prestasiSlides.filter((item) => item.inGrid).map((item) => `
-                    <button type="button"
-                            class="galeri-item group rounded-[22px] overflow-hidden bg-white/5 hover:bg-white/10 border border-white/15 hover:border-sky-400/60 text-left flex flex-col transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-sky-400"
-                            data-src="${item.src}"
-                            data-title="${item.title}"
-                            data-caption="${item.caption}">
-                        <div class="w-full aspect-[3/4] overflow-hidden bg-night2">
-                            <img src="${item.src}" alt="${item.title}" loading="lazy"
-                                 class="w-full h-full object-cover object-[50%_20%] group-hover:scale-105 transition-transform duration-500">
-                        </div>
-                        <div class="p-3.5 flex-1 flex flex-col justify-start gap-1.5">
-                            <span class="text-[10px] font-extrabold uppercase tracking-wider ${item.tag.includes('Guru') ? 'text-yellow-300' : 'text-sky-300'}">${item.tag}</span>
-                            <p class="font-display text-xs sm:text-[13px] font-bold text-white leading-snug">${item.title}</p>
-                        </div>
-                    </button>
-                `).join('');
-            }
 
             const khotmulPhotos = [
-                {
-                    src: 'assets/khotmulquran%26imtihan2025.jpg',
-                    title: 'Wisuda Khatmul Qur’an & Imtihan Metode Ummi',
-                    caption: 'Foto bersama seluruh peserta Khatmul Qur’an & Imtihan Metode Ummi (Tartil, Turjuman Al-Qur’an, dan Tahfidz) SD Patra Dharma 3 Balikpapan.'
-                },
-                {
-                    src: 'assets/khotmulquran%26imtihan2025%20(6).jpg',
-                    title: 'Penampilan Bersama di Panggung Imtihan',
-                    caption: 'Para siswa tampil khidmat membacakan hafalan Al-Qur’an di hadapan orang tua dan dewan penguji.'
-                },
-                {
-                    src: 'assets/khotmulquran%26imtihan2025%20(2).jpg',
-                    title: 'Uji Publik Kategori Tahfidz & Turjuman',
-                    caption: 'Siswi SD Patra Dharma 3 mengikuti uji publik hafalan Al-Qur’an dan terjemahan secara langsung.'
-                },
-                {
-                    src: 'assets/khotmulquran%26imtihan2025%20(5).jpg',
-                    title: 'Uji Sambung Ayat Bersama Penguji',
-                    caption: 'Ketangguhan hafalan para siswi saat menjawab pertanyaan sambung ayat dari penguji Metode Ummi.'
-                },
-                {
-                    src: 'assets/khotmulquran%26imtihan2025%20(3).jpg',
-                    title: 'Peserta Putra Khatmul Qur’an & Imtihan',
-                    caption: 'Barisan peserta putra kategori Tartil & Tahfidz berdiri gagah penuh percaya diri di panggung Imtihan.'
-                },
-                {
-                    src: 'assets/khotmulquran%26imtihan2025%20(4).jpg',
-                    title: 'Momen Haru Bersama Orang Tua',
-                    caption: 'Kebahagiaan dan rasa syukur orang tua memeluk ananda usai menyelesaikan Khatmul Qur’an & Imtihan.'
-                }
+                { src: 'assets/khotmulquran%26imtihan2025.jpg', tag: 'Khatmul Qur’an', title: 'Wisuda Khatmul Qur’an & Imtihan Metode Ummi', caption: 'Foto bersama seluruh peserta Khatmul Qur’an & Imtihan Metode Ummi (Tartil, Turjuman Al-Qur’an, dan Tahfidz) SD Patra Dharma 3 Balikpapan.' },
+                { src: 'assets/khotmulquran%26imtihan2025%20(2).jpg', tag: 'Uji Publik', title: 'Uji Publik Kategori Tahfidz & Turjuman', caption: 'Siswi SD Patra Dharma 3 mengikuti uji publik hafalan Al-Qur’an dan terjemahan secara langsung.' },
+                { src: 'assets/khotmulquran%26imtihan2025%20(3).jpg', tag: 'Peserta Putra', title: 'Peserta Putra Khatmul Qur’an & Imtihan', caption: 'Barisan peserta putra kategori Tartil & Tahfidz tampil percaya diri di panggung Imtihan.' },
+                { src: 'assets/khotmulquran%26imtihan2025%20(4).jpg', tag: 'Momen Haru', title: 'Momen Haru Bersama Orang Tua', caption: 'Kebahagiaan dan rasa syukur orang tua memeluk ananda usai menyelesaikan Khatmul Qur’an & Imtihan.' },
+                { src: 'assets/khotmulquran%26imtihan2025%20(5).jpg', tag: 'Sambung Ayat', title: 'Uji Sambung Ayat Bersama Penguji', caption: 'Ketangguhan hafalan para siswi saat menjawab pertanyaan sambung ayat dari penguji Metode Ummi.' },
+                { src: 'assets/khotmulquran%26imtihan2025%20(6).jpg', tag: 'Prosesi Panggung', title: 'Penampilan Bersama di Panggung Imtihan', caption: 'Para siswa tampil khidmat membacakan hafalan Al-Qur’an di hadapan orang tua dan dewan penguji.' },
+                { src: 'assets/khotmulquran%26imtihan2025%20(7).jpg', tag: 'Barisan Peserta', title: 'Peserta Menuju Panggung Khatmul Qur’an', caption: 'Para peserta putra berselendang Khatmul Qur’an & Imtihan berbaris khidmat.' },
+                { src: 'assets/khotmulquran%26imtihan2025%20(8).jpg', tag: 'Tartil Bersama', title: 'Pembacaan Surat Pendek di Panggung', caption: 'Penampilan serempak seluruh peserta melantunkan ayat suci Al-Qur’an dengan tartil.' },
+                { src: 'assets/khotmulquran%26imtihan2025%20(9).jpg', tag: 'Tahfidz Al-Qur’an', title: 'Pembacaan Hafalan Ayat Suci', caption: 'Peserta putra membaca ayat suci Al-Qur’an secara serempak dan fasih.' },
+                { src: 'assets/khotmulquran%26imtihan2025%20(10).jpg', tag: 'Orang Tua', title: 'Kebanggaan Orang Tua Hadirin', caption: 'Senyum hangat dan kebanggaan orang tua menyaksikan penampilan putra-putrinya.' }
             ];
 
-            const khotmulGrid = document.getElementById('galeri-khotmul-grid');
-            if (khotmulGrid) {
-                khotmulGrid.innerHTML = khotmulPhotos.map((item) => `
-                    <button type="button"
-                            class="galeri-item group relative rounded-[22px] overflow-hidden bg-white/5 border border-white/15 hover:border-sky-400/60 text-left flex flex-col transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-sky-400"
-                            data-src="${item.src}"
-                            data-title="${item.title}"
-                            data-caption="${item.caption}">
-                        <div class="w-full aspect-[3/2] overflow-hidden bg-night2">
-                            <img src="${item.src}" alt="${item.title}" loading="lazy"
-                                 class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
-                        </div>
-                        <div class="p-4 flex-1 flex flex-col justify-start gap-1">
-                            <span class="text-[10px] font-extrabold uppercase tracking-wider text-sky-300">Khatmul Qur’an &amp; Imtihan</span>
-                            <p class="font-display text-sm font-bold text-white leading-snug">${item.title}</p>
-                        </div>
-                    </button>
-                `).join('');
-            }
+            const kegiatanPhotos = [
+                { src: 'assets/upcarasenin.JPG', tag: 'Karakter', title: 'Upacara Senin & Halaman Asri', caption: 'Pembiasaan kedisiplinan, cinta tanah air, dan suasana rindang halaman SD Patra Dharma 3 Balikpapan.', portrait: false },
+                { src: 'assets/upcarasenin%20(2).jpg', tag: 'Kedisiplinan', title: 'Petugas Upacara Bendera', caption: 'Tim petugas pengibar bendera Merah Putih melaksanakan tugas upacara hari Senin dengan khidmat.', portrait: false },
+                { src: 'assets/stem2425.JPG', tag: 'Kurikulum Merdeka', title: 'Pembelajaran Praktik STEM', caption: 'Siswa bekerja sama merancang karya sains dan teknologi secara aktif dan menyenangkan.', portrait: false },
+                { src: 'assets/Kunjungan%20Syekh%20dari%20Palestina%20bersama%20BMH.jpeg', tag: 'Kepedulian Sosial', title: 'Kunjungan Syekh dari Palestina bersama BMH', caption: 'Kegiatan silaturahmi dan edukasi kepedulian kemanusiaan bersama Syekh dari Palestina dan BMH.', portrait: false },
+                { src: 'assets/semarak17agustus.jpg', tag: 'Semarak 17 Agustus', title: 'Pakaian Adat Nusantara', caption: 'Siswa-siswi tampil anggun dan gagah mengenakan busana adat Nusantara dalam semarak HUT RI.', portrait: true },
+                { src: 'assets/semarak17agustus%20(2).jpg', tag: 'Semarak 17 Agustus', title: 'Busana Adat Dayak Kalimantan', caption: 'Pelestarian budaya lokal Kalimantan Timur dalam peringatan Hari Kemerdekaan di sekolah.', portrait: true },
+                { src: 'assets/semarak17agustus%20(3).jpg', tag: 'Semarak 17 Agustus', title: 'Harmoni Keragaman Budaya', caption: 'Kebersamaan siswa mengenakan ragam pakaian tradisional Indonesia saat Semarak 17 Agustus.', portrait: true }
+            ];
 
-            // 12. Gallery Lightbox
-            const galeriItems = [...document.querySelectorAll('.galeri-item')];
+            const buildCardHtml = (item, aspectClass) => `
+                <button type="button"
+                        class="galeri-item group rounded-[22px] overflow-hidden bg-white/5 hover:bg-white/10 border border-white/15 hover:border-sky-400/60 text-left flex flex-col transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-sky-400"
+                        data-src="${item.src}"
+                        data-title="${item.title}"
+                        data-caption="${item.caption}">
+                    <div class="w-full ${aspectClass} overflow-hidden bg-night2">
+                        <img src="${item.src}" alt="${item.title}" loading="lazy"
+                             class="w-full h-full object-cover object-[50%_20%] group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="p-3.5 flex-1 flex flex-col justify-start gap-1">
+                        <span class="text-[10px] font-extrabold uppercase tracking-wider ${item.tag.includes('Guru') ? 'text-yellow-300' : 'text-sky-300'}">${item.tag}</span>
+                        <p class="font-display text-xs sm:text-[13px] font-bold text-white leading-snug">${item.title}</p>
+                    </div>
+                </button>
+            `;
+
+            const galeriStage = document.getElementById('galeri-stage');
+            const galTabs = document.querySelectorAll('.gal-tab');
             const lightbox = document.getElementById('galeri-lightbox');
             const lbImg = document.getElementById('lb-img');
             const lbTitle = document.getElementById('lb-title');
             const lbCaption = document.getElementById('lb-caption');
             const lbCounter = document.getElementById('lb-counter');
             const lbDownload = document.getElementById('lb-download');
+            let galeriItems = [];
             let lbIndex = 0;
 
             const showLightbox = (idx) => {
+                if (!galeriItems.length) return;
                 lbIndex = (idx + galeriItems.length) % galeriItems.length;
                 const el = galeriItems[lbIndex];
                 lbImg.src = el.dataset.src;
@@ -2140,7 +2065,76 @@
                 lightbox.classList.remove('hidden');
                 lightbox.classList.add('flex');
             };
-            galeriItems.forEach((item, idx) => item.addEventListener('click', () => showLightbox(idx)));
+
+            const renderGaleri = (cat) => {
+                galTabs.forEach((t) => {
+                    const act = t.dataset.gcat === cat;
+                    t.className = act
+                        ? 'gal-tab px-4 py-2 rounded-full text-xs sm:text-sm font-bold bg-[#2463A6] text-white shadow transition'
+                        : 'gal-tab px-4 py-2 rounded-full text-xs sm:text-sm font-bold bg-white/10 hover:bg-white/20 text-slate-200 transition';
+                });
+
+                let html = '';
+                if (cat === 'all' || cat === 'prestasi') {
+                    const pWide = prestasiSlides.filter((i) => !i.portrait);
+                    const pTall = prestasiSlides.filter((i) => i.portrait);
+                    html += `
+                        <div class="space-y-5">
+                            <div>
+                                <span class="text-xs font-extrabold uppercase tracking-[0.2em] text-yellow-300 block mb-1">Kebanggaan Sekolah</span>
+                                <h3 class="font-display text-2xl sm:text-3xl font-bold text-white">Siswa &amp; Guru Berprestasi</h3>
+                            </div>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                                ${pWide.map((i) => buildCardHtml(i, 'aspect-[16/10]')).join('')}
+                            </div>
+                            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
+                                ${pTall.map((i) => buildCardHtml(i, 'aspect-[3/4]')).join('')}
+                            </div>
+                        </div>
+                    `;
+                }
+
+                if (cat === 'all' || cat === 'khotmul') {
+                    html += `
+                        <div class="space-y-5">
+                            <div>
+                                <span class="text-xs font-extrabold uppercase tracking-[0.2em] text-sky-300 block mb-1">Akhlak Mulia &amp; Al-Qur’an</span>
+                                <h3 class="font-display text-2xl sm:text-3xl font-bold text-white">Khatmul Qur’an &amp; Imtihan Metode Ummi</h3>
+                            </div>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
+                                ${khotmulPhotos.map((i) => buildCardHtml(i, 'aspect-[3/2]')).join('')}
+                            </div>
+                        </div>
+                    `;
+                }
+
+                if (cat === 'all' || cat === 'kegiatan') {
+                    const kWide = kegiatanPhotos.filter((i) => !i.portrait);
+                    const kTall = kegiatanPhotos.filter((i) => i.portrait);
+                    html += `
+                        <div class="space-y-5">
+                            <div>
+                                <span class="text-xs font-extrabold uppercase tracking-[0.2em] text-sky-300 block mb-1">Aktivitas &amp; Budaya</span>
+                                <h3 class="font-display text-2xl sm:text-3xl font-bold text-white">Kegiatan Sekolah &amp; Semarak 17 Agustus</h3>
+                            </div>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                                ${kWide.map((i) => buildCardHtml(i, 'aspect-[16/10]')).join('')}
+                            </div>
+                            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-4xl">
+                                ${kTall.map((i) => buildCardHtml(i, 'aspect-[3/4]')).join('')}
+                            </div>
+                        </div>
+                    `;
+                }
+
+                galeriStage.innerHTML = html;
+                galeriItems = [...document.querySelectorAll('#galeri-stage .galeri-item')];
+                galeriItems.forEach((item, idx) => item.addEventListener('click', () => showLightbox(idx)));
+            };
+
+            galTabs.forEach((tab) => tab.addEventListener('click', () => renderGaleri(tab.dataset.gcat)));
+            renderGaleri('all');
+
             document.getElementById('lb-close').addEventListener('click', () => {
                 lightbox.classList.add('hidden');
                 lightbox.classList.remove('flex');
@@ -2202,11 +2196,12 @@
             const heroPrevBtn = document.getElementById('hero-card-prev');
             const heroNextBtn = document.getElementById('hero-card-next');
 
-            if (heroCardImg && prestasiSlides.length > 0) {
+            const heroSlides = prestasiSlides.filter((item) => item.hero !== false);
+            if (heroCardImg && heroSlides.length > 0) {
                 let slideIdx = 0;
                 const setHeroSlide = (nextIdx, instant = false) => {
-                    slideIdx = (nextIdx + prestasiSlides.length) % prestasiSlides.length;
-                    const item = prestasiSlides[slideIdx];
+                    slideIdx = (nextIdx + heroSlides.length) % heroSlides.length;
+                    const item = heroSlides[slideIdx];
                     const applySlide = () => {
                         heroCardImg.src = item.src;
                         heroCardImg.alt = item.title;
@@ -2214,7 +2209,7 @@
                         heroCardTag.className = `text-[11px] uppercase tracking-widest font-extrabold truncate ${item.tag.includes('Guru') ? 'text-yellow-300' : 'text-sky-300'}`;
                         heroCardTitle.textContent = item.title;
                         heroCardIcon.className = `fas ${item.icon}`;
-                        if (heroCardCounter) heroCardCounter.textContent = `${slideIdx + 1} / ${prestasiSlides.length}`;
+                        if (heroCardCounter) heroCardCounter.textContent = `${slideIdx + 1} / ${heroSlides.length}`;
                         heroCardImg.style.opacity = '1';
                     };
                     if (instant) {
@@ -2227,7 +2222,7 @@
                 setHeroSlide(0, true);
                 if (heroPrevBtn) heroPrevBtn.addEventListener('click', () => setHeroSlide(slideIdx - 1));
                 if (heroNextBtn) heroNextBtn.addEventListener('click', () => setHeroSlide(slideIdx + 1));
-                if (prestasiSlides.length > 1 && !prefersReduced) {
+                if (heroSlides.length > 1 && !prefersReduced) {
                     setInterval(() => setHeroSlide(slideIdx + 1), 4000);
                 }
             }
