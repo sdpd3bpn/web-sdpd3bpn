@@ -193,15 +193,9 @@
         }
         .preload-emblem {
             position: relative;
-            width: 78px;
-            height: 78px;
+            width: 104px;
+            height: 104px;
             flex-shrink: 0;
-        }
-        @media (min-width: 640px) {
-            .preload-emblem {
-                width: 104px;
-                height: 104px;
-            }
         }
         .preload-aura {
             position: absolute;
@@ -263,10 +257,10 @@
         .preload-star-spark {
             position: absolute;
             z-index: 3;
-            top: -5px;
+            top: -6px;
             right: 6px;
-            width: 18px;
-            height: 18px;
+            width: 20px;
+            height: 20px;
             opacity: 0;
             transform: scale(0) rotate(-30deg);
             animation: preloadStarPop 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.92s forwards;
@@ -274,24 +268,67 @@
         }
         .preload-wordmark-mask {
             overflow: hidden;
-            max-width: 0;
+            max-width: 100%;
+            max-height: 0;
             opacity: 0;
-            transform: translateX(-10px);
-            animation: preloadWordmarkExpand 0.95s cubic-bezier(0.16, 1, 0.3, 1) 0.76s forwards;
+            transform: translateY(10px);
+            animation: preloadWordmarkRise 0.85s cubic-bezier(0.16, 1, 0.3, 1) 0.72s forwards;
         }
         .preload-accent-bar {
-            height: 2.5px;
+            height: 3px;
             width: 100%;
-            transform-origin: left center;
+            transform-origin: center center;
             transform: scaleX(0);
             border-radius: 9999px;
             background: linear-gradient(90deg, #0284C7 0%, #2563EB 55%, #FACC15 100%);
             animation: preloadBarGrow 0.7s cubic-bezier(0.22, 1, 0.36, 1) 0.92s forwards;
         }
-        .preload-subtitle {
-            opacity: 0;
-            transform: translateY(6px);
-            animation: preloadSubRise 0.52s cubic-bezier(0.22, 1, 0.36, 1) 1s forwards;
+        @media (min-width: 768px) {
+            .preload-emblem {
+                width: 128px;
+                height: 128px;
+            }
+            .preload-rings {
+                inset: -26px;
+                width: calc(100% + 52px);
+                height: calc(100% + 52px);
+            }
+            .preload-star-spark {
+                width: 24px;
+                height: 24px;
+                top: -7px;
+                right: 8px;
+            }
+            .preload-wordmark-mask {
+                max-height: none;
+                max-width: 0;
+                opacity: 0;
+                transform: translateX(-14px);
+                animation: preloadWordmarkExpand 0.95s cubic-bezier(0.16, 1, 0.3, 1) 0.76s forwards;
+            }
+            .preload-accent-bar {
+                transform-origin: left center;
+            }
+        }
+        @media (min-width: 1024px) {
+            .preload-emblem {
+                width: 156px;
+                height: 156px;
+            }
+            .preload-aura {
+                inset: -24px;
+            }
+            .preload-rings {
+                inset: -32px;
+                width: calc(100% + 64px);
+                height: calc(100% + 64px);
+            }
+            .preload-star-spark {
+                width: 28px;
+                height: 28px;
+                top: -8px;
+                right: 10px;
+            }
         }
         .preload-odo {
             display: inline-flex;
@@ -375,24 +412,26 @@
             55% { opacity: 1; transform: scale(1.22) rotate(12deg); }
             100% { opacity: 0.95; transform: scale(1) rotate(0deg); }
         }
+        @keyframes preloadWordmarkRise {
+            0% { max-height: 0; opacity: 0; transform: translateY(10px); }
+            100% { max-height: 120px; opacity: 1; transform: translateY(0); }
+        }
         @keyframes preloadWordmarkExpand {
-            0% { max-width: 0; opacity: 0; transform: translateX(-10px); }
-            100% { max-width: 380px; opacity: 1; transform: translateX(0); }
+            0% { max-width: 0; opacity: 0; transform: translateX(-14px); }
+            100% { max-width: 1050px; opacity: 1; transform: translateX(0); }
         }
         @keyframes preloadBarGrow {
             to { transform: scaleX(1); }
         }
-        @keyframes preloadSubRise {
-            to { opacity: 1; transform: translateY(0); }
-        }
         @media (prefers-reduced-motion: reduce) {
             .preload-aura, .preload-ring-blue, .preload-ring-red, .preload-ring-gold,
             .preload-crest-wrap, .preload-crest-sheen, .preload-star-spark,
-            .preload-wordmark-mask, .preload-accent-bar, .preload-subtitle {
+            .preload-wordmark-mask, .preload-accent-bar {
                 animation: none !important;
                 opacity: 1 !important;
                 transform: none !important;
                 max-width: none !important;
+                max-height: none !important;
             }
             .preload-odo-reel {
                 transition: none !important;
@@ -797,7 +836,7 @@
     <!-- 00. Motion Preloader (School Crest & Wordmark Reveal) -->
     <div id="preloader" role="status" aria-live="polite" aria-label="Memuat halaman SD Patra Dharma 3 Balikpapan" class="fixed inset-0 z-[100] bg-canvas flex items-center justify-center px-5 select-none">
         <!-- Centered Logo Motion Lockup -->
-        <div class="preload-lockup flex items-center justify-center max-w-full">
+        <div class="preload-lockup flex flex-col md:flex-row items-center justify-center max-w-full text-center md:text-left">
             <div class="preload-emblem">
                 <div class="preload-aura" aria-hidden="true"></div>
                 <svg class="preload-rings" viewBox="0 0 120 120" fill="none" aria-hidden="true">
@@ -806,7 +845,7 @@
                     <circle cx="60" cy="60" r="45" stroke="#FACC15" stroke-width="2.2" stroke-linecap="round" class="preload-ring-gold" />
                 </svg>
                 <div class="preload-crest-wrap">
-                    <img src="assets/logo%20ypdm.png" alt="Logo SD Patra Dharma 3 Balikpapan" width="104" height="104" class="w-full h-full object-contain" fetchpriority="high" decoding="sync">
+                    <img src="assets/logo%20ypdm.png" alt="Logo SD Patra Dharma 3 Balikpapan" width="156" height="156" class="w-full h-full object-contain" fetchpriority="high" decoding="sync">
                     <div class="preload-crest-sheen" aria-hidden="true"></div>
                 </div>
                 <div class="preload-star-spark" aria-hidden="true">
@@ -817,12 +856,9 @@
             </div>
 
             <div class="preload-wordmark-mask">
-                <div class="w-max pl-3.5 sm:pl-5 flex flex-col justify-center">
-                    <p class="font-display font-extrabold text-[1.22rem] sm:text-[1.85rem] tracking-tight text-ink leading-[1.08] whitespace-nowrap">SD Patra Dharma 3</p>
-                    <div class="preload-accent-bar my-1.5 sm:my-2" aria-hidden="true"></div>
-                    <p class="preload-subtitle text-[10px] sm:text-xs font-bold uppercase tracking-[0.2em] sm:tracking-[0.22em] text-patra-blue whitespace-nowrap">
-                        Balikpapan <span class="text-slate-400 font-medium mx-1">&middot;</span> Mandiri &middot; Unggul
-                    </p>
+                <div class="w-max pt-8 md:pt-0 md:pl-8 lg:pl-11 flex flex-col justify-center items-center md:items-start">
+                    <p class="font-display font-extrabold text-[clamp(1.05rem,5vw,1.4rem)] md:text-[2rem] lg:text-[2.75rem] xl:text-[3.35rem] tracking-tight text-ink leading-[1.08] whitespace-nowrap">SD Patra Dharma 3 Balikpapan</p>
+                    <div class="preload-accent-bar mt-2.5 md:mt-3" aria-hidden="true"></div>
                 </div>
             </div>
         </div>
