@@ -415,36 +415,36 @@
             left: 0;
             right: 0;
             z-index: 2;
-            height: 20%;
             pointer-events: none;
         }
         .wall::before {
             top: 0;
+            height: 14%;
             background: linear-gradient(to bottom, var(--night), rgba(11, 23, 54, 0));
         }
         .wall::after {
             bottom: 0;
+            height: 18%;
             background: linear-gradient(to top, var(--night), rgba(11, 23, 54, 0));
         }
         .wall__stage {
             position: absolute;
             inset: 0;
-            perspective: 1400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
         }
         .wall__grid {
-            --gw: min(155vw, 2300px);
-            position: absolute;
-            left: 50%;
-            top: 50%;
+            flex: none;
             display: grid;
-            grid-template-columns: repeat(5, minmax(0, 1fr));
+            grid-template-columns: repeat(8, minmax(0, 1fr));
             align-items: start;
             gap: clamp(12px, 1.4vw, 22px);
-            width: var(--gw);
-            height: 250vh;
-            margin: -125vh 0 0 calc(var(--gw) / -2);
+            width: clamp(3100px, 225vw, 4200px);
+            height: clamp(3400px, 400vh, 4500px);
             overflow: hidden;
-            transform: rotateX(52deg) rotate(38deg) scale(0.92);
+            transform: perspective(1400px) rotateX(52deg) rotate(38deg);
             will-change: transform;
         }
         @media (max-width: 639px) {
@@ -452,12 +452,9 @@
                 height: clamp(420px, 62vh, 540px);
             }
             .wall__grid {
-                --gw: min(210vw, 1100px);
-                grid-template-columns: repeat(3, minmax(0, 1fr));
-                transform: rotateX(48deg) rotate(36deg) scale(0.92);
-            }
-            .wall__col:nth-child(n+4) {
-                display: none;
+                width: clamp(1800px, 440vw, 2400px);
+                height: clamp(2100px, 270vh, 2700px);
+                transform: perspective(1400px) rotateX(48deg) rotate(36deg);
             }
         }
         .wall__col {
@@ -2377,7 +2374,7 @@
 
             const buildWallTileHtml = (item, idx) => `
                 <button type="button" class="wall__tile" data-idx="${idx}" aria-label="Lihat foto ${item.title}">
-                    <img src="${item.src}" alt="${item.title}" decoding="async">
+                    <img src="${item.src}" alt="${item.title}" decoding="sync">
                 </button>
             `;
 
@@ -2390,15 +2387,15 @@
                 });
 
                 galeriPhotos = getPhotosByCat(cat);
-                const colsCount = 5;
-                const rowsPerSet = 6;
-                const colDurations = [42, 48, 40, 50, 44];
+                const colsCount = 8;
+                const rowsPerSet = 8;
+                const colDurations = [42, 48, 40, 50, 44, 46, 41, 49];
                 let colsHtml = '';
 
                 for (let c = 0; c < colsCount; c++) {
                     let setHtml = '';
                     for (let r = 0; r < rowsPerSet; r++) {
-                        const photoIdx = (r * colsCount + c) % galeriPhotos.length;
+                        const photoIdx = (r * 9 + c * 3) % galeriPhotos.length;
                         setHtml += buildWallTileHtml(galeriPhotos[photoIdx], photoIdx);
                     }
                     const dir = c % 2 === 0 ? '1' : '-1';
