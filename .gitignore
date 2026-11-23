@@ -1,2 +1,10 @@
+# Raw Apple HEIC source images
 *.HEIC
 *.heic
+
+# Portal Blog Subdomain & Database Lokal (khusus server, tidak diunggah ke GitHub publik)
+blog/
+*.sqlite
+*.sqlite3
+*.db
+.env
