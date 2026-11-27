@@ -907,6 +907,34 @@
         </div>
     </header>
 
+    <!-- Floating Live Countdown Alert (< 24 Jam Menuju Kegiatan Sekolah) -->
+    <aside id="site-event-countdown" aria-live="polite"
+           class="hidden fixed bottom-4 left-4 right-4 sm:left-auto sm:right-6 sm:w-[390px] z-40 rounded-[24px] bg-[#0B1736]/95 backdrop-blur-xl text-white border border-sky-400/25 shadow-2xl p-4">
+        <div class="flex items-start justify-between gap-3">
+            <div class="flex items-start gap-3 min-w-0">
+                <span class="w-10 h-10 rounded-2xl bg-sky-500/20 border border-sky-400/30 text-yellow-300 flex items-center justify-center shrink-0 mt-0.5">
+                    <i class="fas fa-clock text-sm"></i>
+                </span>
+                <div class="min-w-0">
+                    <div class="flex flex-wrap items-center gap-1.5 mb-1">
+                        <span id="site-cd-badge" class="px-2 py-0.5 rounded-full bg-yellow-400/20 text-yellow-300 text-[10px] font-bold uppercase tracking-wider">Mulai &lt; 24 Jam</span>
+                        <span id="site-cd-timer" class="font-mono text-xs font-extrabold text-sky-300 tabular-nums">--:--:--</span>
+                    </div>
+                    <p id="site-cd-title" class="font-display font-bold text-sm text-white leading-snug line-clamp-2"></p>
+                    <p id="site-cd-meta" class="text-[11px] text-slate-300 mt-1 truncate"></p>
+                </div>
+            </div>
+            <button type="button" id="site-cd-close" aria-label="Tutup pengingat"
+                    class="w-7 h-7 rounded-full bg-white/10 hover:bg-white/20 text-slate-300 hover:text-white flex items-center justify-center shrink-0 text-xs transition">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="mt-3 pt-2.5 border-t border-white/10 flex items-center justify-between gap-2 text-xs">
+            <a href="#kalender-sekolah" class="font-semibold text-sky-300 hover:text-yellow-300 transition">Lihat Kalender Sekolah &rarr;</a>
+            <a href="https://blog.sdpd3balikpapan.sch.id/#kalender" target="_blank" rel="noopener noreferrer" class="text-slate-300 hover:text-white transition">Detail Agenda</a>
+        </div>
+    </aside>
+
     <!-- Mobile Fullscreen Dual-Card Menu Overlay -->
     <div id="mobile-drawer" class="fixed inset-0 z-40 bg-canvas/90 backdrop-blur-2xl hidden lg:hidden flex-col justify-between p-4 pt-20 pb-6">
         <div class="bg-white rounded-[28px] border border-blue-900/10 shadow-xl overflow-hidden divide-y divide-black/5">
@@ -1573,6 +1601,29 @@
                                 <p class="text-sm text-ink2 mt-1">Informasi resmi dan galeri kegiatan bersama orang tua murid.</p>
                             </div>
                         </a>
+                    </div>
+                </div>
+
+                <!-- Kalender Kegiatan Sekolah (Terhubung Real-Time dengan Portal Admin & Countdown < 24 Jam) -->
+                <div id="kalender-sekolah" class="mt-10 bg-white rounded-[28px] border border-blue-900/10 p-6 sm:p-8 shadow-sm reveal-up scroll-mt-24">
+                    <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4 pb-6 border-b border-black/5">
+                        <div>
+                            <div class="flex items-center gap-2 text-xs font-bold uppercase tracking-[0.18em] text-patra-blue mb-1.5">
+                                <i class="fas fa-calendar-days"></i>
+                                <span>Kalender Kegiatan Sekolah</span>
+                            </div>
+                            <h3 class="font-display text-2xl sm:text-3xl font-medium tracking-[-0.025em] text-ink">Agenda &amp; Jadwal Terdekat</h3>
+                            <p class="text-sm text-ink2 mt-1">Hitung mundur aktif otomatis bila kegiatan dimulai dalam &le; 24 jam (WITA).</p>
+                        </div>
+                        <a href="https://blog.sdpd3balikpapan.sch.id/#kalender" target="_blank" rel="noopener noreferrer"
+                           class="btn-pill bg-canvas border border-blue-900/15 hover:border-patra-royal hover:text-patra-royal text-ink px-5 py-2.5 text-xs sm:text-sm self-start sm:self-auto">
+                            <span>Buka di Portal Blog</span>
+                            <i class="fas fa-external-link-alt text-[10px] btn-chev"></i>
+                        </a>
+                    </div>
+
+                    <div id="site-calendar-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 pt-6">
+                        <div class="col-span-full text-sm text-ink3 py-4">Memuat jadwal kegiatan sekolah...</div>
                     </div>
                 </div>
             </div>
@@ -3123,6 +3174,124 @@
                 window.addEventListener('resize', checkVisiReveal);
                 setTimeout(checkVisiReveal, 150);
             }
+
+            // 13. Kalender Kegiatan Sekolah + Countdown Otomatis (< 24 Jam WITA)
+            (() => {
+                const gridEl = document.getElementById('site-calendar-grid');
+                const floatEl = document.getElementById('site-event-countdown');
+                const cdBadge = document.getElementById('site-cd-badge');
+                const cdTimer = document.getElementById('site-cd-timer');
+                const cdTitle = document.getElementById('site-cd-title');
+                const cdMeta = document.getElementById('site-cd-meta');
+                const cdClose = document.getElementById('site-cd-close');
+                if (!gridEl) return;
+
+                const isLocal = location.hostname === '127.0.0.1' || location.hostname === 'localhost';
+                const apiUrl = isLocal
+                    ? 'http://127.0.0.1:8109/api/events.php'
+                    : 'https://blog.sdpd3balikpapan.sch.id/api/events.php';
+
+                const pad = (n) => String(Math.max(0, Math.floor(n))).padStart(2, '0');
+                const fmtClock = (ms) => {
+                    const s = Math.max(0, Math.floor(ms / 1000));
+                    return `${pad(s / 3600)}:${pad((s % 3600) / 60)}:${pad(s % 60)}`;
+                };
+                const esc = (s) => String(s || '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+                const months = ['JAN', 'FEB', 'MAR', 'APR', 'MEI', 'JUN', 'JUL', 'AGU', 'SEP', 'OKT', 'NOV', 'DES'];
+
+                let timerInterval = null;
+                if (cdClose && floatEl) {
+                    cdClose.addEventListener('click', () => {
+                        floatEl.classList.add('hidden');
+                        floatEl.dataset.dismissed = '1';
+                    });
+                }
+
+                const startLiveTick = (events) => {
+                    const spotlight = events.find((ev) => ev.is_countdown_24h || ev.is_ongoing);
+                    if (spotlight && floatEl && floatEl.dataset.dismissed !== '1') {
+                        cdTitle.textContent = spotlight.title;
+                        cdMeta.textContent = `${spotlight.date_label} • ${spotlight.time_label}${spotlight.location ? ' • ' + spotlight.location : ''}`;
+                        floatEl.classList.remove('hidden');
+                    }
+
+                    const updateTicks = () => {
+                        const now = Date.now();
+                        if (spotlight && floatEl && floatEl.dataset.dismissed !== '1') {
+                            const diff = spotlight.start_ms - now;
+                            if (now >= spotlight.start_ms && now <= spotlight.end_ms) {
+                                cdBadge.textContent = 'Sedang Berlangsung';
+                                cdTimer.textContent = 'LIVE';
+                            } else if (diff > 0 && diff <= 86400000) {
+                                cdBadge.textContent = 'Mulai < 24 Jam';
+                                cdTimer.textContent = fmtClock(diff);
+                            } else if (now > spotlight.end_ms) {
+                                floatEl.classList.add('hidden');
+                            }
+                        }
+
+                        gridEl.querySelectorAll('[data-ev-start]').forEach((badge) => {
+                            const st = Number(badge.dataset.evStart);
+                            const en = Number(badge.dataset.evEnd);
+                            const diff = st - now;
+                            if (now >= st && now <= en) {
+                                badge.textContent = 'Berlangsung';
+                                badge.className = 'px-2.5 py-0.5 rounded-full bg-emerald-100 text-emerald-700 text-[10px] font-bold';
+                            } else if (diff > 0 && diff <= 86400000) {
+                                badge.textContent = fmtClock(diff);
+                                badge.className = 'px-2.5 py-0.5 rounded-full bg-amber-100 text-amber-800 text-[10px] font-bold font-mono';
+                            }
+                        });
+                    };
+
+                    updateTicks();
+                    if (timerInterval) clearInterval(timerInterval);
+                    timerInterval = setInterval(updateTicks, 1000);
+                };
+
+                const renderEvents = (events) => {
+                    if (!Array.isArray(events) || events.length === 0) {
+                        gridEl.innerHTML = `<div class="col-span-full rounded-2xl bg-canvas border border-black/5 p-6 text-sm text-ink2 text-center">Belum ada agenda kegiatan terjadwal dalam waktu dekat. Ikuti pengumuman terbaru di <a href="https://blog.sdpd3balikpapan.sch.id/#kalender" target="_blank" rel="noopener noreferrer" class="font-bold text-patra-blue hover:underline">blog.sdpd3balikpapan.sch.id</a>.</div>`;
+                        return;
+                    }
+
+                    gridEl.innerHTML = events.slice(0, 6).map((ev) => {
+                        const d = new Date(ev.start_iso);
+                        const day = pad(d.getDate());
+                        const mon = months[d.getMonth()] || 'BLN';
+                        const daysLeft = Math.max(1, Math.ceil((ev.start_ms - Date.now()) / 86400000));
+                        const isSoon = ev.is_countdown_24h || ev.is_ongoing;
+                        return `
+                            <article class="rounded-2xl border ${ev.is_countdown_24h ? 'border-amber-300 bg-amber-50/40' : (ev.is_ongoing ? 'border-emerald-300 bg-emerald-50/40' : 'border-blue-900/10 bg-canvas/70')} p-4 flex gap-3.5 items-start">
+                                <div class="w-12 h-12 rounded-2xl ${ev.is_countdown_24h ? 'bg-amber-500 text-white' : (ev.is_ongoing ? 'bg-emerald-600 text-white' : 'bg-sky-100 text-patra-blue')} flex flex-col items-center justify-center shrink-0">
+                                    <span class="text-[9px] font-extrabold tracking-wider">${mon}</span>
+                                    <span class="text-lg font-extrabold leading-none">${day}</span>
+                                </div>
+                                <div class="min-w-0 flex-1">
+                                    <div class="flex flex-wrap items-center gap-1.5 mb-1">
+                                        <span class="text-[11px] font-bold text-patra-blue">${esc(ev.category)}</span>
+                                        <span data-ev-start="${ev.start_ms}" data-ev-end="${ev.end_ms}"
+                                              class="px-2.5 py-0.5 rounded-full ${isSoon ? 'bg-amber-100 text-amber-800 font-mono' : 'bg-white text-ink2'} text-[10px] font-bold">
+                                            ${ev.is_ongoing ? 'Berlangsung' : (ev.is_countdown_24h ? '--:--:--' : `${daysLeft} hari lagi`)}
+                                        </span>
+                                    </div>
+                                    <h4 class="font-display font-bold text-sm text-ink leading-snug">${esc(ev.title)}</h4>
+                                    <p class="text-xs text-ink2 mt-1">${esc(ev.time_label)}${ev.location ? ' &bull; ' + esc(ev.location) : ''}</p>
+                                </div>
+                            </article>
+                        `;
+                    }).join('');
+
+                    startLiveTick(events);
+                };
+
+                fetch(apiUrl, { mode: 'cors' })
+                    .then((r) => (r.ok ? r.json() : Promise.reject(new Error('HTTP ' + r.status))))
+                    .then((data) => renderEvents(data && data.events ? data.events : []))
+                    .catch(() => {
+                        gridEl.innerHTML = `<div class="col-span-full rounded-2xl bg-canvas border border-black/5 p-6 text-sm text-ink2 text-center">Jadwal kegiatan sekolah terbaru tersedia di <a href="https://blog.sdpd3balikpapan.sch.id/#kalender" target="_blank" rel="noopener noreferrer" class="font-bold text-patra-blue hover:underline">Kalender Blog Sekolah</a>.</div>`;
+                    });
+            })();
         })();
     </script>
 </body>
