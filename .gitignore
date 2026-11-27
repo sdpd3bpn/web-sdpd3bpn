@@ -8,3 +8,6 @@ blog/
 *.sqlite3
 *.db
 .env
+
+# File video profil berukuran besar (lokal/YouTube)
+*.mp4
